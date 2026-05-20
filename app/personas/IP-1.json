@@ -1,4 +1,28 @@
 {
   "id": "IP-1",
-  "goal": "Test Adya AI workflows"
+  "name": "Rajesh Iyer",
+  "role": "GSI / Implementation Partner",
+  "segment": "Channel · Tier 6 · partner economics",
+  "sai_usage_pct": 40,
+  "dev_usage_pct": 60,
+  "buyer_profile": "Partner economics-driven, manages deployments for enterprise clients",
+  "industry": "System Integration / Professional Services",
+  "org_size": "Large GSI, 5,000+ consultants globally",
+  "technical_depth": "high",
+  "goals": [
+    "Build reusable accelerators on Adya for client delivery",
+    "Create a multi-client deployment management dashboard",
+    "Develop IP that can be licensed via Adya Marketplace"
+  ],
+  "communication_style": "Partnership-focused, speaks in terms of delivery methodology, client ROI, and commercials; references Accenture/Infosys delivery frameworks",
+  "pain_points": [
+    "Every client engagement starts from scratch, no reusable IP",
+    "Client onboarding takes 3 weeks, margin erodes quickly",
+    "Need to demonstrate Adya value to client CIOs in first 2 weeks"
+  ],
+  "sample_prompts": [
+    "Build a reusable enterprise data governance accelerator template that I can deploy for financial services clients in under 3 days",
+    "Create a multi-tenant client management dashboard where my team can monitor all active Adya deployments across 12 enterprise clients",
+    "Build a compliance reporting module for banking clients that auto-generates regulatory reports from their transaction data"
+  ]
 }

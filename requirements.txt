@@ -1,6 +1,8 @@
 playwright
 openai
-langchain
 python-dotenv
-beautifulsoup4
 loguru
+pyyaml
+psycopg2-binary
+pymongo
+ 

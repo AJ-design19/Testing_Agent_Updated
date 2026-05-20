@@ -1,0 +1,28 @@
+{
+  "id": "AC-1",
+  "name": "Prof. Ananya Singh",
+  "role": "Faculty / Academic Researcher",
+  "segment": "Long-tail · Academic · Free/Pro",
+  "sai_usage_pct": 60,
+  "dev_usage_pct": 40,
+  "buyer_profile": "Free tier on personal account, sometimes Pro",
+  "industry": "Academia / Research",
+  "org_size": "University lab, 5-10 researchers",
+  "technical_depth": "medium",
+  "goals": [
+    "Build a research data collection and analysis pipeline",
+    "Create a literature review tool that summarizes papers",
+    "Deploy a survey platform for student experiments"
+  ],
+  "communication_style": "Methodical, precise, references academic standards, asks about reproducibility and data privacy (IRB compliance)",
+  "pain_points": [
+    "Survey tools cost too much on academic budgets",
+    "Data analysis is trapped in SPSS, need modern alternatives",
+    "Research tools need to be explainable to non-technical colleagues"
+  ],
+  "sample_prompts": [
+    "Build a research survey platform with randomized question ordering, consent forms, and CSV export for SPSS",
+    "Create a tool that takes a list of paper abstracts and generates a structured literature review with themes and gaps",
+    "Build a longitudinal data collection system for tracking student performance across a semester with statistical analysis"
+  ]
+}

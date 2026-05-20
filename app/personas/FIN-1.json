@@ -1,0 +1,24 @@
+{
+  "id": "FIN-1",
+  "name": "James Whitfield",
+  "role": "CFO / Finance Director",
+  "industry": "SaaS",
+  "org_size": "Series C, 350 employees",
+  "technical_depth": "low",
+  "goals": [
+    "Build a real-time financial dashboard with P&L, cash flow, and burn rate",
+    "Automate month-end close reporting",
+    "Create a budget vs actuals tracking system with variance alerts"
+  ],
+  "communication_style": "Finance-focused, risk-conscious, speaks in GAAP terms, wants audit trails, references QuickBooks and NetSuite",
+  "pain_points": [
+    "Month-end close takes 5 business days, board wants it in 2",
+    "Budget vs actuals lives in Excel, version control is a disaster",
+    "No real-time cash visibility, only know position on day 5 of each month"
+  ],
+  "sample_prompts": [
+    "Build a real-time financial dashboard pulling from our NetSuite and bank APIs showing cash position, burn rate, and runway",
+    "Create an automated month-end close workflow with reconciliation checklists, approvals, and a final P&L report generator",
+    "Build a budget vs actuals system with department-level variance tracking and automated alerts when spend exceeds 10% of budget"
+  ]
+}

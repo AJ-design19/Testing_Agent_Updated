@@ -1,0 +1,25 @@
+{
+  "run_id": "DO-1_WF-DO-001_20260520_144126_ef7ba5",
+  "persona_id": "DO-1",
+  "journey_id": "WF-DO-001",
+  "workflow_title": "Kubernetes Observability Platform",
+  "started_at": "2026-05-20T14:41:32.225624+00:00",
+  "finished_at": "2026-05-20T14:41:51.857763+00:00",
+  "overall_status": "error",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

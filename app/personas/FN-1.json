@@ -1,0 +1,28 @@
+{
+  "id": "FN-1",
+  "name": "Arjun Kapoor",
+  "role": "Startup Founder / Early-Stage CTO",
+  "segment": "SMB · Pro → Enterprise · velocity-driven",
+  "sai_usage_pct": 80,
+  "dev_usage_pct": 20,
+  "buyer_profile": "Pro tier early, moves to Enterprise at Series A",
+  "industry": "B2B SaaS",
+  "org_size": "Pre-seed, 8 employees",
+  "technical_depth": "medium-high",
+  "goals": [
+    "Launch an MVP in 2 weeks for investor demo",
+    "Build investor reporting dashboard",
+    "Create automated lead qualification workflow"
+  ],
+  "communication_style": "Fast-paced, startup jargon, references YC and Product Hunt, wants speed over perfection",
+  "pain_points": [
+    "No engineering resources available for internal tooling",
+    "Investors want a demo in 2 weeks",
+    "Every tool costs money, needs a lean stack"
+  ],
+  "sample_prompts": [
+    "Ship an MVP customer onboarding portal with email verification and a welcome flow, needs to be live in 2 days",
+    "Build an investor reporting dashboard showing MRR, runway, and top customer logos — clean and professional",
+    "Create a lead scoring system that auto-qualifies inbound leads from our website contact form"
+  ]
+}

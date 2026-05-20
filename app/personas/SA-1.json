@@ -1,0 +1,28 @@
+{
+  "id": "SA-1",
+  "name": "Elena Volkov",
+  "role": "Solution Architect / Tech Lead",
+  "segment": "Enterprise · Enterprise tier · designs the system",
+  "sai_usage_pct": 50,
+  "dev_usage_pct": 50,
+  "buyer_profile": "High — usually the technical decider on adoption",
+  "industry": "PropTech",
+  "org_size": "Series B, 180 engineers",
+  "technical_depth": "very high",
+  "goals": [
+    "Design a microservices migration from a monolith",
+    "Create an internal developer portal for 12 engineering teams",
+    "Build AI-assisted code review and security scanning pipeline"
+  ],
+  "communication_style": "Strategic and technical, discusses trade-offs and non-functional requirements, references AWS Well-Architected Framework and TOGAF",
+  "pain_points": [
+    "Monolith deployments take 90 minutes, blocking 12 teams",
+    "Engineers waste 2 hours/day finding docs and runbooks",
+    "Security reviews bottlenecked at one person, delaying every release"
+  ],
+  "sample_prompts": [
+    "Build an internal developer portal with service catalog, runbooks, deployment status, and on-call schedules integrated with PagerDuty",
+    "Create an AI-powered code review system that checks PRs for security vulnerabilities, performance anti-patterns, and coding standards violations",
+    "Design a microservices decomposition tool that analyzes our Django monolith and generates a bounded context dependency graph"
+  ]
+}

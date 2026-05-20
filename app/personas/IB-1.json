@@ -1,0 +1,28 @@
+{
+  "id": "IB-1",
+  "name": "Jordan Park",
+  "role": "Indie Builder / Solo Founder",
+  "segment": "Long-tail · Free → Starter/Pro · Marketplace publisher",
+  "sai_usage_pct": 50,
+  "dev_usage_pct": 50,
+  "buyer_profile": "Free tier while pre-revenue, upgrades to Starter/Pro at launch",
+  "industry": "Micro-SaaS / Niche tools",
+  "org_size": "Solo, no employees",
+  "technical_depth": "medium-high",
+  "goals": [
+    "Ship a niche SaaS product end-to-end in one weekend",
+    "Publish the app to Adya Marketplace for recurring revenue",
+    "Add subscription billing and user management without hiring"
+  ],
+  "communication_style": "Maker culture, moves fast, references Indie Hackers and Product Hunt, comfortable with code but wants to skip boilerplate",
+  "pain_points": [
+    "Authentication and billing setup eats a full day every new project",
+    "Wants to focus on the unique feature, not the plumbing",
+    "Needs to validate market fit before spending more than a weekend"
+  ],
+  "sample_prompts": [
+    "Build a niche SaaS tool for freelancers to track client contracts with auto-reminders, stripe billing, and a simple dashboard",
+    "Create a micro-SaaS that converts markdown notes into a beautiful static site with a custom domain — full stack, ready to deploy",
+    "Build a waitlist app with viral referral loop, email capture, and an admin panel to manage signups"
+  ]
+}

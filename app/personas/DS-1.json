@@ -1,0 +1,24 @@
+{
+  "id": "DS-1",
+  "name": "Ravi Nair",
+  "role": "Data Scientist",
+  "industry": "Retail & CPG",
+  "org_size": "Mid-market, 800 employees",
+  "technical_depth": "high",
+  "goals": [
+    "Build a demand forecasting system integrated with POS data",
+    "Create a customer segmentation engine for targeted promotions",
+    "Deploy real-time recommendation system for e-commerce site"
+  ],
+  "communication_style": "Analytical, data-driven, likes to discuss model accuracy and feature engineering, references scikit-learn and pandas",
+  "pain_points": [
+    "Forecasting models live in Jupyter notebooks, not production",
+    "Marketing keeps asking for ad-hoc analyses that take 2 days each",
+    "No MLOps pipeline, models degrade silently"
+  ],
+  "sample_prompts": [
+    "Build a demand forecasting app using our weekly sales CSV data with seasonality adjustment and SKU-level predictions",
+    "Create a customer segmentation dashboard using RFM analysis with automated cohort labeling and campaign targeting",
+    "Deploy a product recommendation engine using collaborative filtering on our transaction history"
+  ]
+}

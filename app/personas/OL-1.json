@@ -1,0 +1,24 @@
+{
+  "id": "OL-1",
+  "name": "Sandra Kim",
+  "role": "Operations Lead",
+  "industry": "Logistics & Supply Chain",
+  "org_size": "Growth-stage, 450 employees",
+  "technical_depth": "low",
+  "goals": [
+    "Digitize manual warehouse intake process",
+    "Build real-time shipment tracking dashboard for customers",
+    "Automate SLA breach alerts to operations team"
+  ],
+  "communication_style": "Process-oriented, describes workflows in step-by-step terms, non-technical, wants things to work without maintenance",
+  "pain_points": [
+    "Warehouse staff still use paper forms, data entry takes 3 hours daily",
+    "Customers call to ask where their shipment is, no self-service tracking",
+    "SLA breaches discovered reactively, always firefighting"
+  ],
+  "sample_prompts": [
+    "Build a mobile-friendly warehouse intake form that scans barcodes and logs into our inventory system automatically",
+    "Create a customer-facing shipment tracking portal that shows real-time status from our carrier APIs",
+    "Build an automated SLA monitoring system that sends Slack and email alerts when a shipment is at risk of breaching"
+  ]
+}

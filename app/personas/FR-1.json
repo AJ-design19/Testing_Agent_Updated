@@ -1,0 +1,28 @@
+{
+  "id": "FR-1",
+  "name": "Fatima Al-Rashid",
+  "role": "Freelancer / Contractor",
+  "segment": "Long-tail · Pro tier · client-billable",
+  "sai_usage_pct": 55,
+  "dev_usage_pct": 45,
+  "buyer_profile": "Pro tier on her own account, bills cost to client",
+  "industry": "E-commerce / Web agencies",
+  "org_size": "Solo, 8-12 SMB clients",
+  "technical_depth": "medium",
+  "goals": [
+    "Build reusable e-commerce client deliverables fast",
+    "Automate client reporting and invoicing",
+    "Create a white-label client portal reskinnable per client"
+  ],
+  "communication_style": "Pragmatic, cost-conscious, wants reusable solutions, explains in business terms not tech terms",
+  "pain_points": [
+    "Every client wants custom but budget is $5-10K",
+    "Spends 40% of time on manual reporting",
+    "No team to maintain what gets built"
+  ],
+  "sample_prompts": [
+    "Build a white-label e-commerce dashboard with sales, inventory, and customer metrics that I can reskin per client",
+    "Create an automated client reporting system that generates PDF reports from Shopify data weekly and emails the client",
+    "Build a multi-client portal where each of my clients logs in and sees only their own project status and invoices"
+  ]
+}

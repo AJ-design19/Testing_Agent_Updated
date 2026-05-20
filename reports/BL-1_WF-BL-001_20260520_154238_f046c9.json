@@ -1,0 +1,51 @@
+{
+  "run_id": "BL-1_WF-BL-001_20260520_154238_f046c9",
+  "persona_id": "BL-1",
+  "persona_name": "James Whitfield",
+  "workflow_id": "WF-BL-001",
+  "workflow_title": "Executive Financial Dashboard",
+  "start_time": "2026-05-20T15:42:41.781475+00:00",
+  "end_time": "2026-05-20T15:45:32.087103+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-20T15:42:43.149765+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-20T15:45:32.079743+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "Current URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-20T15:45:32.086685+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: Missing credentials. Please pass an `api_key`, `workload_identity`, `admin_api_key`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

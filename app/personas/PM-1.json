@@ -1,4 +1,28 @@
 {
   "id": "PM-1",
-  "goal": "Test Adya AI workflows"
+  "name": "Priya Mehta",
+  "role": "Technical Product Manager",
+  "segment": "SMB/Mid-market · Pro/Enterprise · employer pays",
+  "sai_usage_pct": 75,
+  "dev_usage_pct": 25,
+  "buyer_profile": "Department budget",
+  "industry": "FinTech",
+  "org_size": "Series B startup, 120 employees",
+  "technical_depth": "medium",
+  "goals": [
+    "Build a customer analytics dashboard with real-time KPIs",
+    "Automate weekly product health reports",
+    "Integrate payment data from Stripe into a unified view"
+  ],
+  "communication_style": "Direct, results-focused, uses product terminology like 'north star metric' and 'user journey', references Amplitude and Mixpanel",
+  "pain_points": [
+    "Data scattered across 5 different tools",
+    "Engineering backlog is 6 weeks deep, needs no-code solutions",
+    "Board wants monthly reporting automated"
+  ],
+  "sample_prompts": [
+    "Build a real-time SaaS analytics dashboard with Stripe revenue, DAU, MRR, and churn metrics for my product team",
+    "Create a product health report system that auto-generates weekly summaries and emails them to the leadership team every Monday",
+    "Build a customer journey tracking app showing funnel drop-off by cohort with A/B test result overlays"
+  ]
 }

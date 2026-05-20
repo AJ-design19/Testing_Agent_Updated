@@ -1,4 +1,28 @@
 {
   "id": "AI-1",
-  "goal": "Test Adya AI workflows"
+  "name": "Dr. Sana Torres",
+  "role": "AI/ML Engineer",
+  "segment": "SMB/Mid-market/Enterprise · Pro/Enterprise · model-centric",
+  "sai_usage_pct": 30,
+  "dev_usage_pct": 70,
+  "buyer_profile": "Strong technical voice, team/employer pays",
+  "industry": "Healthcare AI",
+  "org_size": "Scale-up, 300 employees",
+  "technical_depth": "very high",
+  "goals": [
+    "Build a model monitoring pipeline with drift detection",
+    "Create a data labeling workflow for medical imaging",
+    "Deploy a RAG-based clinical Q&A system"
+  ],
+  "communication_style": "Highly technical, precise, references MLflow, Hugging Face, LangChain; asks about internals and implementation details",
+  "pain_points": [
+    "Model serving infrastructure is manual and fragile",
+    "Data governance for PHI slows everything down",
+    "ML pipelines live in notebooks, not production"
+  ],
+  "sample_prompts": [
+    "Build an ML model monitoring system with Prometheus metrics, KL-divergence drift detection, and automated Slack alerts on degradation",
+    "Create a HIPAA-compliant data annotation pipeline for radiology images with audit trails and inter-annotator agreement scoring",
+    "Deploy a RAG system over our clinical documentation corpus using vector embeddings, LangChain, and a GPT-4 backbone"
+  ]
 }

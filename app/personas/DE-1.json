@@ -1,0 +1,24 @@
+{
+  "id": "DE-1",
+  "name": "Yuki Tanaka",
+  "role": "Data Engineer",
+  "industry": "Media & Entertainment",
+  "org_size": "Mid-size, 600 employees",
+  "technical_depth": "very high",
+  "goals": [
+    "Build a real-time streaming data pipeline for content engagement metrics",
+    "Create a data quality monitoring system for our data lake",
+    "Migrate ETL pipelines from on-prem Informatica to cloud-native"
+  ],
+  "communication_style": "Highly technical, talks about partitioning strategies, CAP theorem, idempotency; uses dbt, Spark, Kafka terminology",
+  "pain_points": [
+    "Data lake is a swamp, lineage is unknown, nobody trusts the numbers",
+    "Informatica licenses cost $400K/year, board wants cloud migration",
+    "Kafka consumer lag spikes every morning at 9am, root cause unknown"
+  ],
+  "sample_prompts": [
+    "Build a Kafka-based real-time pipeline ingesting clickstream events with exactly-once semantics and a consumer lag monitoring dashboard",
+    "Create a data quality framework using Great Expectations over our S3 data lake with automated anomaly alerts and lineage tracking",
+    "Design a dbt-based transformation layer replacing our Informatica pipelines with incremental models, tests, and documentation"
+  ]
+}

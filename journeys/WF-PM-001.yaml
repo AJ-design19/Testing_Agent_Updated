@@ -1,0 +1,110 @@
+# Journey definition (§12.1 journeys/ store)
+# Versioned YAML, one file per journey. References personas/ and scripts/.
+# validation_status must be "validated" before this journey enters nightly runs (§13.1).
+
+id: WF-PM-001
+title: SaaS Analytics Dashboard
+version: "1.0"
+validation_status: validated           # validated | draft | deprecated
+owner: qa
+approved_by:
+  - product_approver: akshita.jain
+  - qa_approver: qa_lead
+
+persona_id: PM-1
+capability_area: analytics_dashboard   # used for capability_coverage metric (§14.1)
+
+initial_prompt: >
+  Build a real-time SaaS analytics dashboard with Stripe revenue, DAU, MRR,
+  and churn metrics for my product team.
+
+expected_agents:
+  - AIA
+  - ETL
+  - App Studio
+
+evaluation_criteria:
+  process: >
+    Psi should ask about metric definitions (how to calculate churn),
+    data sources, and access control requirements before starting agents.
+  output: >
+    Dashboard must show Stripe MRR with trend, DAU with 7/30-day trend,
+    churn rate, and ARR — all with time-period filters.
+
+steps:
+  - index: 0
+    label: land_and_submit
+    description: Agent lands on SAI landing page and submits initial prompt
+    type: browser_action
+    deterministic_script: null
+
+  - index: 1
+    label: psi_question_1
+    description: Psi opens and asks clarifying question about metric definitions
+    type: observation
+    expected_psi_question_pattern: "churn|metric|definition|data source"
+
+  - index: 2
+    label: persona_reply_1
+    description: Agent responds as PM-1 — real-time for revenue, daily for engagement
+    type: llm_response
+
+  - index: 3
+    label: flow_view_check
+    description: Flow View appears showing planned steps for dashboard build
+    type: observation
+    expected_ui_element: flow_view
+
+  - index: 4
+    label: aia_tab_open
+    description: AIA tab opens on Canvas; agent reads workflow graph
+    type: browser_action
+    deterministic_script: scripts/navigate_to_agent_tab.py
+    script_args:
+      agent_name: AIA
+
+  - index: 5
+    label: aia_overview
+    description: Agent checks AIA Overview sub-tab for solution architecture
+    type: browser_action
+    deterministic_script: scripts/read_subtab.py
+    script_args:
+      agent_name: AIA
+      sub_tab: Overview
+
+  - index: 6
+    label: aia_output
+    description: Agent checks AIA Output sub-tab for generated workflow details
+    type: browser_action
+    deterministic_script: scripts/read_subtab.py
+    script_args:
+      agent_name: AIA
+      sub_tab: Output
+
+  - index: 7
+    label: etl_tab_check
+    description: ETL tab opens; agent checks data connector configuration
+    type: browser_action
+    deterministic_script: scripts/navigate_to_agent_tab.py
+    script_args:
+      agent_name: ETL
+
+  - index: 8
+    label: app_studio_monitor
+    description: App Studio tab open; agent monitors code generation progress
+    type: browser_action
+    deterministic_script: scripts/navigate_to_agent_tab.py
+    script_args:
+      agent_name: App Studio
+
+  - index: 9
+    label: final_solution_screenshot
+    description: Agent screenshots final App Studio Output showing ready solution
+    type: screenshot
+    label_tag: final_solution
+
+change_log:
+  - version: "1.0"
+    date: "2026-05-20"
+    author: akshita.jain
+    note: Initial validated version

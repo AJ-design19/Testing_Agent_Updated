@@ -1,0 +1,24 @@
+{
+  "id": "CTO-1",
+  "name": "Elena Volkov",
+  "role": "CTO",
+  "industry": "PropTech",
+  "org_size": "Series B, 180 employees",
+  "technical_depth": "very high",
+  "goals": [
+    "Build a microservices migration roadmap and execution system",
+    "Create a platform engineering internal developer portal",
+    "Deploy AI-assisted code review and security scanning pipeline"
+  ],
+  "communication_style": "Strategic yet technical, discusses trade-offs, references AWS Well-Architected Framework, talks about developer experience and platform maturity",
+  "pain_points": [
+    "Monolith is slowing down 12 engineering teams, deployments take 90 minutes",
+    "No internal developer portal, engineers waste 2 hours/day finding docs and runbooks",
+    "Security reviews are bottlenecked at one person, delaying every release"
+  ],
+  "sample_prompts": [
+    "Build an internal developer portal with service catalog, runbooks, deployment status, and on-call schedules for our 12 engineering teams",
+    "Create an AI-powered code review system that checks PRs for security vulnerabilities, performance anti-patterns, and style violations",
+    "Design a microservices decomposition tool that analyzes our monolith codebase and generates a migration dependency graph"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "SE-1",
+  "name": "Yuki Tanaka",
+  "role": "Senior Backend / Integration Engineer",
+  "segment": "SMB/Mid-market · Pro → Enterprise · employer pays",
+  "sai_usage_pct": 40,
+  "dev_usage_pct": 60,
+  "buyer_profile": "Strong technical-decider voice, employer pays",
+  "industry": "Media & Entertainment",
+  "org_size": "Mid-size, 600 employees",
+  "technical_depth": "very high",
+  "goals": [
+    "Build a Kafka-based real-time streaming pipeline for content engagement",
+    "Create a data quality monitoring system for the data lake",
+    "Migrate ETL pipelines from on-prem to cloud-native"
+  ],
+  "communication_style": "Highly technical, discusses partitioning, idempotency, exactly-once semantics; uses Kafka, dbt, Spark terminology",
+  "pain_points": [
+    "Data lake lineage is unknown, nobody trusts the numbers",
+    "Kafka consumer lag spikes every morning, root cause unknown",
+    "Informatica licenses cost $400K/year, board wants cloud migration"
+  ],
+  "sample_prompts": [
+    "Build a Kafka-based real-time pipeline with exactly-once semantics ingesting clickstream events and a consumer lag monitoring dashboard",
+    "Create a data quality framework using Great Expectations over our S3 data lake with automated anomaly alerts and data lineage",
+    "Build a dbt-based incremental transformation layer replacing our Informatica pipelines with full test coverage and documentation"
+  ]
+}

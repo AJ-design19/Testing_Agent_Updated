@@ -1,0 +1,28 @@
+{
+  "id": "AG-1",
+  "name": "Marco Delgado",
+  "role": "Small Agency Owner / Boutique Studio",
+  "segment": "Long-tail/SMB · Pro → Enterprise · serves bigger businesses",
+  "sai_usage_pct": 55,
+  "dev_usage_pct": 45,
+  "buyer_profile": "Enterprise tier internally, bills to client projects",
+  "industry": "Digital Agency",
+  "org_size": "Agency, 15 employees, serves mid-market clients",
+  "technical_depth": "medium",
+  "goals": [
+    "Deliver enterprise-grade client projects at agency speed",
+    "Build reusable component libraries for faster client delivery",
+    "Create internal agency operations dashboard"
+  ],
+  "communication_style": "Client-facing, polished, talks about project delivery, timelines, and client satisfaction; balances technical and business language",
+  "pain_points": [
+    "Margins shrink when a project takes longer than estimated",
+    "Clients want enterprise features on SMB budgets",
+    "Context-switching between 6 active client projects"
+  ],
+  "sample_prompts": [
+    "Build a project management dashboard for our agency that tracks all client projects, team utilization, deadlines, and billing status",
+    "Create a client-facing reporting portal where each of our enterprise clients can see campaign performance and project milestones",
+    "Build a proposal generation tool that takes a brief and outputs a formatted project scope, timeline, and cost estimate"
+  ]
+}

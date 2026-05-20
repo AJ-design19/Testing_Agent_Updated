@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from dotenv import load_dotenv; import os; load_dotenv\\(\\); print\\('URL:', os.getenv\\('ADYA_URL'\\)\\); print\\('EMAIL set:', bool\\(os.getenv\\('ADYA_EMAIL'\\)\\)\\); print\\('PASSWORD set:', bool\\(os.getenv\\('ADYA_PASSWORD'\\)\\)\\)\")",
+      "Bash(python -c \"import scripts.inspect_page\")",
+      "Bash(python scripts/inspect_page.py)"
+    ]
+  }
+}

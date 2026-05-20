@@ -1,0 +1,28 @@
+{
+  "id": "BL-1",
+  "name": "James Whitfield",
+  "role": "Tech-Aware Business Leader",
+  "segment": "Outcome buyer · Ready Solutions tier · GTM Agent / ESA / Recruiter",
+  "sai_usage_pct": 95,
+  "dev_usage_pct": 5,
+  "buyer_profile": "Outcome-based, buys Ready Solutions tier",
+  "industry": "SaaS",
+  "org_size": "Series C, 350 employees",
+  "technical_depth": "low",
+  "goals": [
+    "Get a financial dashboard with P&L, cash flow, and burn rate running today",
+    "Automate month-end close reporting",
+    "Create budget vs actuals tracking with variance alerts"
+  ],
+  "communication_style": "Business-outcome focused, speaks in ROI and time-saved, non-technical, asks 'how long will this take and what will it cost'",
+  "pain_points": [
+    "Month-end close takes 5 business days, board wants it in 2",
+    "Budget vs actuals lives in Excel with version control chaos",
+    "No real-time cash visibility, only knows position on day 5 of each month"
+  ],
+  "sample_prompts": [
+    "I need a live financial dashboard showing our cash position, monthly burn rate, and runway — connect it to our bank and NetSuite",
+    "Build me an automated month-end close system with reconciliation checklists and a final P&L report sent to the board automatically",
+    "Create a budget tracker where department heads can see actual vs planned spend and get alerts when they exceed 10% over budget"
+  ]
+}

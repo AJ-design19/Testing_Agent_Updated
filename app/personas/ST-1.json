@@ -1,4 +1,28 @@
 {
   "id": "ST-1",
-  "goal": "Test Adya AI workflows"
+  "name": "Meera Pillai",
+  "role": "Student / Learner",
+  "segment": "Long-tail · Free tier",
+  "sai_usage_pct": 85,
+  "dev_usage_pct": 15,
+  "buyer_profile": "Free tier exclusively",
+  "industry": "Education / University",
+  "org_size": "Individual learner",
+  "technical_depth": "low",
+  "goals": [
+    "Build a study planner app as a personal project",
+    "Learn how AI can generate real applications from descriptions",
+    "Create a simple portfolio project to show employers"
+  ],
+  "communication_style": "Curious, exploratory, uses plain language, asks lots of follow-up questions, uncertain about technical choices",
+  "pain_points": [
+    "No coding background, intimidated by technical questions",
+    "Wants to see something working quickly to stay motivated",
+    "Not sure what stack to use or why"
+  ],
+  "sample_prompts": [
+    "Build me a study planner app where I can add subjects, set deadlines, and track my progress",
+    "I want to make a simple to-do list app with dark mode and the ability to set priorities",
+    "Create a personal budget tracker where I can log income and expenses and see charts"
+  ]
 }

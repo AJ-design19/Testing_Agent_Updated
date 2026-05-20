@@ -1,0 +1,24 @@
+{
+  "id": "CISO-1",
+  "name": "David Okonkwo",
+  "role": "Enterprise CISO",
+  "industry": "Banking & Financial Services",
+  "org_size": "Large enterprise, 25,000 employees",
+  "technical_depth": "high",
+  "goals": [
+    "Build a unified security incident dashboard across all SIEM sources",
+    "Automate SOC analyst Level-1 triage with AI",
+    "Create a vendor risk assessment workflow"
+  ],
+  "communication_style": "Compliance-focused, risk-averse, references NIST, ISO 27001, PCI-DSS, always asks about data residency and encryption",
+  "pain_points": [
+    "SOC team drowning in 50,000 alerts/day, only 3% are real",
+    "Vendor risk assessments take 6 weeks, board wants them in 1 week",
+    "No single view of security posture across 12 subsidiaries"
+  ],
+  "sample_prompts": [
+    "Build a SOC dashboard that correlates alerts from Splunk, CrowdStrike, and Palo Alto with AI-powered triage and severity scoring",
+    "Create an automated vendor risk assessment system using our security questionnaire with AI scoring against NIST framework",
+    "Build a unified security posture dashboard across all subsidiaries with real-time compliance status and risk heatmap"
+  ]
+}

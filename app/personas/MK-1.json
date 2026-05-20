@@ -1,0 +1,24 @@
+{
+  "id": "MK-1",
+  "name": "Sofia Reyes",
+  "role": "Growth Marketing Manager",
+  "industry": "Consumer Tech",
+  "org_size": "Series A, 60 employees",
+  "technical_depth": "medium-low",
+  "goals": [
+    "Build a marketing attribution dashboard across all paid channels",
+    "Automate weekly campaign performance reports",
+    "Create a lead nurture email sequence system"
+  ],
+  "communication_style": "Creative and data-literate, talks about CAC, LTV, ROAS, A/B testing; uses HubSpot and GA4 terminology",
+  "pain_points": [
+    "Attribution is broken, Facebook, Google, and internal all claim credit for the same conversion",
+    "Manually pulling reports every Monday takes half the day",
+    "Email sequences are maintained in spreadsheets, embarrassingly manual"
+  ],
+  "sample_prompts": [
+    "Build a multi-touch attribution dashboard that unifies spend and conversion data from Google Ads, Meta, and HubSpot with ROAS by channel",
+    "Create an automated campaign performance report system that runs every Monday and sends a branded PDF summary to leadership",
+    "Build a lead nurture workflow engine that triggers personalized email sequences based on user behavior and lead score"
+  ]
+}

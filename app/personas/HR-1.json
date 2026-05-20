@@ -1,0 +1,24 @@
+{
+  "id": "HR-1",
+  "name": "Amara Osei",
+  "role": "HR Director",
+  "industry": "Professional Services",
+  "org_size": "Mid-market, 1,200 employees",
+  "technical_depth": "very low",
+  "goals": [
+    "Automate employee onboarding workflow",
+    "Build a people analytics dashboard for leadership",
+    "Create an AI-powered job description and interview question generator"
+  ],
+  "communication_style": "People-focused, non-technical, describes things in terms of employee experience, references GDPR and data privacy concerns",
+  "pain_points": [
+    "Onboarding takes 3 days of manual work per employee, 200 hires/year",
+    "CHRO wants weekly people metrics but data is in 4 HR systems",
+    "Job descriptions are inconsistent, leading to bad candidate fit"
+  ],
+  "sample_prompts": [
+    "Build an automated employee onboarding system that sends welcome emails, assigns training, and tracks completion in one place",
+    "Create a people analytics dashboard showing headcount, attrition, time-to-hire, and diversity metrics for our leadership team",
+    "Build an AI tool that generates standardized job descriptions and structured interview questions from a job title and department"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "run_id": "DO-1_WF-DO-001_20260520_144126_ef7ba5",
+  "persona_id": "DO-1",
+  "persona_name": "Ravi Nair",
+  "workflow_id": "WF-DO-001",
+  "workflow_title": "Kubernetes Observability Platform",
+  "start_time": "2026-05-20T14:41:29.857342+00:00",
+  "end_time": "2026-05-20T14:41:51.855022+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-20T14:41:32.227357+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-20T14:41:51.668939+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "Current URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-20T14:41:51.854656+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: Missing credentials. Please pass an `api_key`, `workload_identity`, `admin_api_key`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/DO-1_WF-DO-001_20260520_144126_ef7ba5_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

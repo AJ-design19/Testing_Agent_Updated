@@ -1,0 +1,28 @@
+{
+  "id": "CD-1",
+  "name": "Sandra Kim",
+  "role": "Citizen Developer / Operations Power User",
+  "segment": "Long-tail · Pro tier · pays personally or via team budget",
+  "sai_usage_pct": 85,
+  "dev_usage_pct": 15,
+  "buyer_profile": "Pro tier, usually team budget",
+  "industry": "Logistics & Supply Chain",
+  "org_size": "Growth-stage, 450 employees",
+  "technical_depth": "low",
+  "goals": [
+    "Digitize manual warehouse intake process without involving IT",
+    "Build a real-time shipment tracking dashboard for customers",
+    "Automate SLA breach alerts for the operations team"
+  ],
+  "communication_style": "Process-oriented, describes workflows step-by-step, non-technical, wants things to work without maintenance",
+  "pain_points": [
+    "Warehouse staff use paper forms, data entry takes 3 hours daily",
+    "Customers call to check shipment status, no self-service tracking",
+    "SLA breaches discovered reactively, always firefighting"
+  ],
+  "sample_prompts": [
+    "Build a mobile-friendly warehouse intake form that scans barcodes and updates our inventory automatically",
+    "Create a customer-facing shipment tracking portal showing real-time delivery status from our carrier",
+    "Build an SLA monitoring dashboard that sends Slack alerts when a shipment is at risk of being late"
+  ]
+}

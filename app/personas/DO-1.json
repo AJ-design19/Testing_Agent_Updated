@@ -1,0 +1,28 @@
+{
+  "id": "DO-1",
+  "name": "Ravi Nair",
+  "role": "DevOps / Platform Engineer",
+  "segment": "Enterprise · Enterprise tier · operational",
+  "sai_usage_pct": 30,
+  "dev_usage_pct": 70,
+  "buyer_profile": "Operational decider, employer pays",
+  "industry": "Retail & CPG",
+  "org_size": "Mid-market, 800 employees",
+  "technical_depth": "very high",
+  "goals": [
+    "Build a Kubernetes cluster observability platform",
+    "Automate infrastructure provisioning with Terraform",
+    "Create a CI/CD pipeline health dashboard"
+  ],
+  "communication_style": "Operational, SRE mindset, talks about SLOs/SLIs/error budgets, references Prometheus, Grafana, Terraform, Helm",
+  "pain_points": [
+    "MTTR is 45 minutes, management wants it under 10 minutes",
+    "Terraform state drift causes weekly production incidents",
+    "Jenkins pipelines are a mess, 200+ jobs, nobody knows what half of them do"
+  ],
+  "sample_prompts": [
+    "Build a Kubernetes observability dashboard with Prometheus metrics, pod health, resource utilization, and SLO tracking per service",
+    "Create a Terraform drift detection system that runs every 30 minutes and sends Slack alerts when infrastructure diverges from desired state",
+    "Build a CI/CD pipeline health dashboard showing build success rates, deployment frequency, MTTR, and change failure rate per team"
+  ]
+}
