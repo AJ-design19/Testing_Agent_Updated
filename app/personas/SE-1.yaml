@@ -1,0 +1,53 @@
+persona_id: SE-1
+display_name: "Priya Ramanathan"
+role: "Senior Software Engineer"
+segment: "Power User · Engineering · Pro"
+industry: "Technology / SaaS"
+org_size: "Mid-size startup, 50-200 engineers"
+
+technical_depth: very_high
+
+goals:
+  - Build production-grade real-time data pipelines
+  - Automate infrastructure with IaC and CI/CD pipelines
+  - Create internal tooling to reduce developer toil
+
+pain_points:
+  - Boilerplate setup for new services takes days instead of minutes
+  - Keeping up with security patching across 30+ microservices
+  - Lack of standardized observability across the stack
+
+communication_style: >
+  Direct and precise. References specific frameworks, tools, and version numbers.
+  Asks about architecture trade-offs, performance characteristics, and failure modes.
+  Comfortable discussing distributed systems, CAP theorem, and concurrency primitives.
+
+sample_prompts:
+  - "Build a Kafka-based real-time pipeline with exactly-once semantics ingesting
+    clickstream events and a consumer lag monitoring dashboard"
+  - "Build a dbt-based incremental transformation layer replacing our Informatica
+    pipelines with full test coverage and documentation"
+  - "Create an ML model monitoring system with Prometheus metrics, KL-divergence
+    drift detection, and automated Slack alerts on model degradation"
+
+vocabulary_signals:
+  - exactly-once semantics
+  - idempotent consumer
+  - dead-letter queue
+  - eventual consistency
+  - schema evolution
+  - backpressure
+  - SLO / SLI / error budget
+
+preferred_modalities:
+  - structured
+  - visual
+
+expected_journeys:
+  - WF-SE-001
+  - WF-SE-002
+
+tier_visibility: project
+confidence: 0.92
+version: "1.0"
+created_by: adya_team

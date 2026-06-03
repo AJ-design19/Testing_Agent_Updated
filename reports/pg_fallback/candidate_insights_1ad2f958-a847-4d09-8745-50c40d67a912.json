@@ -1,0 +1,23 @@
+{
+  "candidate_id": "1ad2f958-a847-4d09-8745-50c40d67a912",
+  "insight_id": "a7b90ae6-7914-4a76-b9c9-1682f376705d",
+  "target_tier": "project",
+  "persona_id": "AI-1",
+  "journey_id": "WF-AI-001",
+  "proposed_action": "Improve Psi clarification questions for this persona type",
+  "pattern_description": "Psi question quality 'poor' for persona AI-1. Process evaluation: Psi failed to ask relevant clarifying questions, and the conversation log showed no evidence of discussing model type, feature count, drift detection method preference, or alerting threshold. The user",
+  "confidence_score": 0.7,
+  "evidence_summary": "Run evidence: ['AI-1_WF-AI-001_20260522_041827_cb6b7d']",
+  "agp_review_template_id": "agp_tmpl_project_review_v1",
+  "review_status": "pending",
+  "reviewer_id": null,
+  "reviewer_role": "",
+  "review_deadline": "2026-05-24T04:28:56.302087+00:00",
+  "reviewed_at": null,
+  "review_notes": null,
+  "counter_proposal": null,
+  "is_anonymised": false,
+  "anonymisation_verified": false,
+  "created_at": "2026-05-22T04:28:56.302058+00:00",
+  "updated_at": "2026-05-22T04:28:56.302076+00:00"
+}

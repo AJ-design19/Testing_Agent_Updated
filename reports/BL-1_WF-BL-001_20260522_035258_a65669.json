@@ -1,0 +1,39 @@
+{
+  "run_id": "BL-1_WF-BL-001_20260522_035258_a65669",
+  "persona_id": "BL-1",
+  "persona_name": "James Whitfield",
+  "workflow_id": "WF-BL-001",
+  "workflow_title": "Executive Financial Dashboard",
+  "start_time": "2026-05-22T03:53:01.755444+00:00",
+  "end_time": "2026-05-22T03:54:44.452986+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T03:53:04.992261+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T03:54:44.452109+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/BL-1_WF-BL-001_20260522_035258_a65669_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

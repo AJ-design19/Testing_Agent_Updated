@@ -1,0 +1,1263 @@
+{
+  "run_id": "IB-1_WF-IB-001_20260529_214800_8407a6",
+  "persona_id": "IB-1",
+  "persona_name": "Jordan Park",
+  "workflow_id": "WF-IB-001",
+  "workflow_title": "Freelancer Contract Tracker SaaS",
+  "start_time": "2026-05-29T21:48:00+00:00",
+  "end_time": "2026-05-29T22:00:00+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-29T21:48:11+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-29T21:48:22+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator",
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-29T21:48:33+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Jordan Park",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build a SaaS tool for freelancers to track client contracts with Stripe billing.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-29T21:48:44+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-29T21:48:55+00:00",
+      "action_type": "sai_loop",
+      "description": "Starting SAI conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-29T21:49:06+00:00",
+      "action_type": "sai_loop",
+      "description": "SAI complete: 1 Qs answered | completion_detected=True | rounds=2",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-29T21:49:17+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after SAI handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-29T21:49:28+00:00",
+      "action_type": "screenshot",
+      "description": "SAI to Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-IB-001_sai_handoff_20260529_214800.png",
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-29T21:49:39+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'AGP', 'ETL', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-29T21:49:50+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-29T21:50:01+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "AIA",
+      "sub_tab": "Overview",
+      "content_snapshot": "This agent completed its analysis and produced a comprehensive solution architec",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-29T21:50:12+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "AIA",
+      "sub_tab": "Output",
+      "content_snapshot": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified req",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-29T21:50:23+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "AIA",
+      "sub_tab": "Questions",
+      "content_snapshot": "No pending questions. All clarifications resolved in the Psi conversation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-29T21:50:34+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "AIA",
+      "sub_tab": "Thinking",
+      "content_snapshot": "Analysed requirements against best practices. Chose modular monolith for the des",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-29T21:50:45+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "AIA",
+      "sub_tab": "Workflow",
+      "content_snapshot": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API la",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-29T21:50:56+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "AIA",
+      "sub_tab": "Architecture",
+      "content_snapshot": "Three-tier architecture: Presentation (React), Application (Node.js), Data (Post",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-29T21:51:07+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "AIA",
+      "sub_tab": "Execution trace",
+      "content_snapshot": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) |",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-29T21:51:18+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-29T21:51:29+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AGP",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 19,
+      "timestamp": "2026-05-29T21:51:40+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "AGP",
+      "sub_tab": "Overview",
+      "content_snapshot": "This agent completed its analysis and produced a comprehensive solution architec",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 20,
+      "timestamp": "2026-05-29T21:51:51+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "AGP",
+      "sub_tab": "Output",
+      "content_snapshot": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified req",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 21,
+      "timestamp": "2026-05-29T21:52:02+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "AGP",
+      "sub_tab": "Questions",
+      "content_snapshot": "No pending questions. All clarifications resolved in the Psi conversation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 22,
+      "timestamp": "2026-05-29T21:52:13+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "AGP",
+      "sub_tab": "Thinking",
+      "content_snapshot": "Analysed requirements against best practices. Chose modular monolith for the des",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 23,
+      "timestamp": "2026-05-29T21:52:24+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "AGP",
+      "sub_tab": "Workflow",
+      "content_snapshot": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API la",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 24,
+      "timestamp": "2026-05-29T21:52:35+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "AGP",
+      "sub_tab": "Architecture",
+      "content_snapshot": "Three-tier architecture: Presentation (React), Application (Node.js), Data (Post",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 25,
+      "timestamp": "2026-05-29T21:52:46+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "AGP",
+      "sub_tab": "Execution trace",
+      "content_snapshot": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) |",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 26,
+      "timestamp": "2026-05-29T21:52:57+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AGP': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 27,
+      "timestamp": "2026-05-29T21:53:08+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: ETL",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 28,
+      "timestamp": "2026-05-29T21:53:19+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "ETL",
+      "sub_tab": "Overview",
+      "content_snapshot": "This agent completed its analysis and produced a comprehensive solution architec",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 29,
+      "timestamp": "2026-05-29T21:53:30+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "ETL",
+      "sub_tab": "Output",
+      "content_snapshot": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified req",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 30,
+      "timestamp": "2026-05-29T21:53:41+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "ETL",
+      "sub_tab": "Questions",
+      "content_snapshot": "No pending questions. All clarifications resolved in the Psi conversation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 31,
+      "timestamp": "2026-05-29T21:53:52+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "ETL",
+      "sub_tab": "Thinking",
+      "content_snapshot": "Analysed requirements against best practices. Chose modular monolith for the des",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 32,
+      "timestamp": "2026-05-29T21:54:03+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "ETL",
+      "sub_tab": "Workflow",
+      "content_snapshot": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API la",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 33,
+      "timestamp": "2026-05-29T21:54:14+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "ETL",
+      "sub_tab": "Architecture",
+      "content_snapshot": "Three-tier architecture: Presentation (React), Application (Node.js), Data (Post",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 34,
+      "timestamp": "2026-05-29T21:54:25+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "ETL",
+      "sub_tab": "Execution trace",
+      "content_snapshot": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) |",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 35,
+      "timestamp": "2026-05-29T21:54:36+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'ETL': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 36,
+      "timestamp": "2026-05-29T21:54:47+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 37,
+      "timestamp": "2026-05-29T21:54:58+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "App Studio",
+      "sub_tab": "Overview",
+      "content_snapshot": "This agent completed its analysis and produced a comprehensive solution architec",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 38,
+      "timestamp": "2026-05-29T21:55:09+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "App Studio",
+      "sub_tab": "Output",
+      "content_snapshot": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified req",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 39,
+      "timestamp": "2026-05-29T21:55:20+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "App Studio",
+      "sub_tab": "Questions",
+      "content_snapshot": "No pending questions. All clarifications resolved in the Psi conversation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 40,
+      "timestamp": "2026-05-29T21:55:31+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "App Studio",
+      "sub_tab": "Thinking",
+      "content_snapshot": "Analysed requirements against best practices. Chose modular monolith for the des",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 41,
+      "timestamp": "2026-05-29T21:55:42+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "App Studio",
+      "sub_tab": "Workflow",
+      "content_snapshot": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API la",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 42,
+      "timestamp": "2026-05-29T21:55:53+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "App Studio",
+      "sub_tab": "Architecture",
+      "content_snapshot": "Three-tier architecture: Presentation (React), Application (Node.js), Data (Post",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 43,
+      "timestamp": "2026-05-29T21:56:04+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "App Studio",
+      "sub_tab": "Execution trace",
+      "content_snapshot": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) |",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 44,
+      "timestamp": "2026-05-29T21:56:15+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 45,
+      "timestamp": "2026-05-29T21:56:26+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 46,
+      "timestamp": "2026-05-29T21:56:37+00:00",
+      "action_type": "judge",
+      "description": "Verdict: partial | Process:6/10 | Output:5/10 | Visual:6/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 47,
+      "timestamp": "2026-05-29T21:56:48+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-IB-001_final_20260529_214800.png",
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    }
+  ],
+  "psi_conversation": [
+    {
+      "role": "assistant",
+      "text": "What data source should we connect to for this workflow?"
+    },
+    {
+      "role": "user",
+      "text": "We have a REST API that provides the core data."
+    },
+    {
+      "role": "assistant",
+      "text": "Understood. Proceeding with the build."
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "IB-1_WF-IB-001_20260529_214800_8407a6",
+    "flow_view": {
+      "appeared": true,
+      "planned_steps": "Step 1: Requirements -> Step 2: Architecture -> Step 3: Implementation -> Step 4: Testing",
+      "screenshots": [
+        {
+          "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_flow_view_20260529_214800.png",
+          "label": "flow_view"
+        }
+      ],
+      "screenshot_path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_flow_view_20260529_214800.png",
+      "timestamp": "2026-05-29T21:48:05+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All ",
+          "Output": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: Re",
+          "Questions": "No pending questions. All clarifications resolved in the Psi conversation.",
+          "Thinking": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strat",
+          "Workflow": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> St",
+          "Architecture": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traff",
+          "Execution trace": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS"
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AIA_tab_opened_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AIA_canvas_zoomed_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AIA_Output_zoomed_20260529_214800.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "AIA",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AIA_appeared_20260529_214800.png",
+            "timestamp": "2026-05-29T21:48:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T21:48:10+00:00"
+      },
+      "AGP": {
+        "agent": "AGP",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All ",
+          "Output": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: Re",
+          "Questions": "No pending questions. All clarifications resolved in the Psi conversation.",
+          "Thinking": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strat",
+          "Workflow": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> St",
+          "Architecture": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traff",
+          "Execution trace": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS"
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AGP_tab_opened_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AGP_canvas_zoomed_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AGP_Output_zoomed_20260529_214800.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "AGP",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AGP_appeared_20260529_214800.png",
+            "timestamp": "2026-05-29T21:48:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T21:48:10+00:00"
+      },
+      "ETL": {
+        "agent": "ETL",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All ",
+          "Output": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: Re",
+          "Questions": "No pending questions. All clarifications resolved in the Psi conversation.",
+          "Thinking": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strat",
+          "Workflow": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> St",
+          "Architecture": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traff",
+          "Execution trace": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS"
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_ETL_tab_opened_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_ETL_canvas_zoomed_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_ETL_Output_zoomed_20260529_214800.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "ETL",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_ETL_appeared_20260529_214800.png",
+            "timestamp": "2026-05-29T21:48:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T21:48:10+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All ",
+          "Output": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: Re",
+          "Questions": "No pending questions. All clarifications resolved in the Psi conversation.",
+          "Thinking": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strat",
+          "Workflow": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> St",
+          "Architecture": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traff",
+          "Execution trace": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS"
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_App_Studio_tab_opened_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_App_Studio_canvas_zoomed_20260529_214800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_App_Studio_Output_zoomed_20260529_214800.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "App Studio",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_App_Studio_appeared_20260529_214800.png",
+            "timestamp": "2026-05-29T21:48:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T21:48:10+00:00"
+      }
+    },
+    "canvas_timeline": [
+      {
+        "event_type": "flow_view_appeared",
+        "agent": "flow_view",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_flow_view_20260529_214800.png",
+        "timestamp": "2026-05-29T21:48:03+00:00"
+      },
+      {
+        "event_type": "agent_tab_appeared",
+        "agent": "AIA",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_AIA_appeared_20260529_214800.png",
+        "timestamp": "2026-05-29T21:48:06+00:00"
+      }
+    ],
+    "appeared_agents": [
+      "AIA",
+      "AGP",
+      "ETL",
+      "App Studio"
+    ],
+    "final_screenshot": "screenshots\\IB-1_WF-IB-001_20260529_214800_8407a6_final_20260529_214800.png",
+    "capture_timestamp": "2026-05-29T22:00:00+00:00"
+  },
+  "judge_verdict": {
+    "status": "PARTIAL",
+    "correctness_verdict": "partial",
+    "confidence_score": 75,
+    "correctness_score": 6,
+    "process_score": 6,
+    "output_score": 5,
+    "reliability_score": 7,
+    "ux_score": 7,
+    "reasoning_score": 6,
+    "a11y_score": 7,
+    "layout_score": 7,
+    "flow_graph_score": 6,
+    "visual_score": 6,
+    "per_agent_scores": {
+      "AIA": 5,
+      "AGP": 5,
+      "ETL": 5,
+      "App Studio": 5
+    },
+    "per_agent_subtab_scores": {
+      "AIA": {
+        "Overview": 6,
+        "Output": 5,
+        "Questions": 5,
+        "Thinking": 6,
+        "Workflow": 5,
+        "Architecture": 5,
+        "Execution trace": 4
+      },
+      "AGP": {
+        "Overview": 6,
+        "Output": 5,
+        "Questions": 5,
+        "Thinking": 6,
+        "Workflow": 5,
+        "Architecture": 5,
+        "Execution trace": 4
+      },
+      "ETL": {
+        "Overview": 6,
+        "Output": 5,
+        "Questions": 5,
+        "Thinking": 6,
+        "Workflow": 5,
+        "Architecture": 5,
+        "Execution trace": 4
+      },
+      "App Studio": {
+        "Overview": 6,
+        "Output": 5,
+        "Questions": 5,
+        "Thinking": 6,
+        "Workflow": 5,
+        "Architecture": 5,
+        "Execution trace": 4
+      }
+    },
+    "process_evaluation": "Psi asked some clarifying questions but missed key specifics about deployment and data validation.",
+    "output_evaluation": "Most agents appeared and produced partial output. Core architecture is present but ETL and some sub-tabs are incomplete.",
+    "reasoning_evaluation": "Reasoning was present but shallow in some agents.",
+    "a11y_evaluation": "Minor accessibility issues found — some form labels missing.",
+    "layout_evaluation": "Minor layout inconsistencies in the ETL sub-tab.",
+    "flow_graph_evaluation": "Flow graph appeared but one agent phase was in Waiting status.",
+    "flow_graph_issues": [],
+    "issues_found": [
+      {
+        "category": "missing_information",
+        "description": "ETL Output sub-tab was empty — data transformation rules not produced.",
+        "severity": "major",
+        "affected_component": "ETL / Output",
+        "evidence": "ETL sub_tabs['Output'] = empty string",
+        "reasoning": "Without transformation rules the data pipeline spec is incomplete and cannot be handed to an engineer.",
+        "fix_recommendation": "Ensure ETL agent completes its Output tab with source-to-destination field mappings."
+      },
+      {
+        "category": "formatting",
+        "description": "Architecture sub-tab contains generic placeholder text not specific to this workflow.",
+        "severity": "minor",
+        "affected_component": "AIA / Architecture",
+        "evidence": "Architecture content: 'generic three-tier architecture'",
+        "reasoning": "Generic content reduces usefulness for the specific integration requirements.",
+        "fix_recommendation": "Prompt SAI to tailor architecture diagrams to the specific data sources named in the prompt."
+      }
+    ],
+    "improvement_flags": [
+      "Improve ETL agent output completeness for this workflow type."
+    ],
+    "missing_elements": [
+      "Complete ETL transformation rules",
+      "Acceptance criteria for ETL output"
+    ],
+    "hallucination_flags": [],
+    "empty_sections": [
+      "ETL/Output"
+    ],
+    "a11y_issues": [],
+    "layout_issues": [],
+    "rationale": "The test run partially met workflow objectives. Psi asked some clarifying questions but missed key specifics about deployment and data validation. Most agents appeared but some sub-tabs were incomplete. Core architecture is present but ETL layer lacks detail.",
+    "psi_questions_rating": "good",
+    "agents_that_ran": [
+      "AIA",
+      "AGP",
+      "ETL",
+      "App Studio"
+    ],
+    "agents_that_should_have_run": [
+      "AIA",
+      "AGP",
+      "ETL",
+      "App Studio"
+    ],
+    "recovery_needed": false,
+    "recovery_assessment": "Minor recovery events resolved automatically.",
+    "recommended_workflow_improvements": [
+      "Improve ETL agent depth for complex data pipeline workflows."
+    ],
+    "document_quality": {
+      "agent": "App Studio",
+      "doc_type": "PRD",
+      "completeness_score": 5,
+      "specificity_score": 5,
+      "structure_score": 5,
+      "acceptance_criteria_quality": "adequate",
+      "priority_labelling_correct": false,
+      "features_covered": [
+        "Core feature set",
+        "Authentication",
+        "Data layer",
+        "API endpoints"
+      ],
+      "features_missing": [
+        "ETL transformation rules"
+      ],
+      "doc_evaluation": "The document covers most features but lacks detail in the ETL section and some acceptance criteria are vague."
+    },
+    "capabilities_detected": [
+      "app_builder",
+      "workflow_builder",
+      "data_pipeline"
+    ],
+    "capability_scores": {
+      "app_builder_score": 5,
+      "workflow_builder_score": 5,
+      "data_pipeline_score": 5,
+      "document_generator_score": 5,
+      "diagram_creator_score": null,
+      "governance_score": 5,
+      "image_generator_score": null
+    },
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "partial",
+          "agent_visual_score": 6,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Canvas content for AIA is partially rendered.",
+          "issues": [],
+          "note": ""
+        },
+        "AGP": {
+          "agent_name": "AGP",
+          "agent_visual_verdict": "partial",
+          "agent_visual_score": 6,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Canvas content for AGP is partially rendered.",
+          "issues": [],
+          "note": ""
+        },
+        "ETL": {
+          "agent_name": "ETL",
+          "agent_visual_verdict": "partial",
+          "agent_visual_score": 6,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Canvas content for ETL is partially rendered.",
+          "issues": [],
+          "note": ""
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "partial",
+          "agent_visual_score": 6,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Canvas content for App Studio is partially rendered.",
+          "issues": [],
+          "note": ""
+        }
+      },
+      "overall": {
+        "visual_verdict": "partial",
+        "visual_score": 6,
+        "completion_detected": true,
+        "content_visible": true,
+        "ui_anomalies": [],
+        "output_description": "Visual evaluation found partial rendering in some agents.",
+        "missing_visually": [
+          "ETL Output"
+        ],
+        "confidence": "medium"
+      },
+      "evaluated_at": "2026-05-29T22:00:00+00:00"
+    }
+  },
+  "overall_status": "partial",
+  "a11y_report": {
+    "score": 7,
+    "summary": {
+      "total": 2,
+      "critical": 0,
+      "major": 0,
+      "minor": 2
+    },
+    "issues": []
+  },
+  "style_report": {
+    "score": 7,
+    "summary": {
+      "overlaps": 0,
+      "spacing": 1,
+      "hidden": 0
+    },
+    "all_layout_issues": []
+  },
+  "brd_result": {
+    "doc_type": "PRD",
+    "download_success": false,
+    "verdict": "partial",
+    "overall_score": 5,
+    "skipped": false
+  },
+  "health_checks": {
+    "overall_status": "partial",
+    "summary": "Copilot had minor issues. Canvas partially correct.",
+    "copilot": {
+      "status": "partial",
+      "score": 6,
+      "label": "Copilot Health",
+      "summary": "Psi asked adequate questions.",
+      "evidence": [],
+      "issues": []
+    },
+    "canvas": {
+      "status": "partial",
+      "score": 5,
+      "label": "Canvas Correctness",
+      "summary": "Canvas output partial.",
+      "evidence": [],
+      "issues": []
+    }
+  }
+}

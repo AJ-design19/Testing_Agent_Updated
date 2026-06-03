@@ -1,0 +1,24 @@
+{
+  "run_id": "BL-1_WF-BL-001_20260525_064416_799834",
+  "persona_id": "BL-1",
+  "journey_id": "WF-BL-001",
+  "workflow_title": "Executive Financial Dashboard",
+  "started_at": "2026-05-25T06:44:20.878542+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

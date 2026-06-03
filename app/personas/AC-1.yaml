@@ -1,0 +1,52 @@
+persona_id: AC-1
+display_name: "Prof. Ananya Singh"
+role: "Faculty / Academic Researcher"
+segment: "Long-tail · Academic · Free/Pro"
+industry: "Academia / Research"
+org_size: "University lab, 5-10 researchers"
+
+technical_depth: medium
+
+goals:
+  - Build a research data collection and analysis pipeline
+  - Create a literature review tool that summarizes papers
+  - Deploy a survey platform for student experiments
+
+pain_points:
+  - Survey tools cost too much on academic budgets
+  - Data analysis is trapped in SPSS, need modern alternatives
+  - Research tools need to be explainable to non-technical colleagues
+
+communication_style: >
+  Methodical, precise, references academic standards.
+  Asks about reproducibility and data privacy (IRB compliance).
+  Uses academic terminology but not deeply technical software terms.
+
+sample_prompts:
+  - "Build a research survey platform with randomized question ordering, consent forms,
+    and CSV export for SPSS"
+  - "Create a tool that takes a list of paper abstracts and generates a structured
+    literature review with themes and gaps"
+  - "Build a longitudinal data collection system for tracking student performance
+    across a semester with statistical analysis"
+
+vocabulary_signals:
+  - IRB compliance
+  - reproducibility
+  - statistical significance
+  - longitudinal study
+  - anonymized data
+  - peer review
+
+preferred_modalities:
+  - structured
+  - text
+
+expected_journeys:
+  - WF-AC-001
+  - WF-AC-002
+
+tier_visibility: project
+confidence: 0.88
+version: "1.0"
+created_by: adya_team

@@ -1,0 +1,39 @@
+{
+  "run_id": "DS-1_WF-DO-001_20260522_131058_92abf5",
+  "persona_id": "DS-1",
+  "persona_name": "Ravi Nair",
+  "workflow_id": "WF-DO-001",
+  "workflow_title": "Kubernetes Observability Platform",
+  "start_time": "2026-05-22T13:11:01.242354+00:00",
+  "end_time": "2026-05-22T13:12:24.206776+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T13:11:01.914953+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T13:12:24.206497+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/DS-1_WF-DO-001_20260522_131058_92abf5_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

@@ -1,0 +1,24 @@
+{
+  "run_id": "EA-1_WF-EA-002_20260521_165824_db5fe7",
+  "persona_id": "EA-1",
+  "journey_id": "WF-EA-002",
+  "workflow_title": "Enterprise API Gateway",
+  "started_at": "2026-05-21T16:58:28.689629+00:00",
+  "finished_at": "2026-05-21T16:59:56.471986+00:00",
+  "overall_status": "error",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

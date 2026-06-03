@@ -1,0 +1,24 @@
+{
+  "run_id": "PM-1_WF-PM-002_20260528_120034_f5d467",
+  "persona_id": "PM-1",
+  "journey_id": "WF-PM-002",
+  "workflow_title": "Customer Journey Funnel Tracker",
+  "started_at": "2026-05-28T12:00:38.622162+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

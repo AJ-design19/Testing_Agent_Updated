@@ -1,0 +1,39 @@
+{
+  "run_id": "AC-1_WF-AC-001_20260526_125610_51b69c",
+  "persona_id": "AC-1",
+  "persona_name": "Prof. Ananya Singh",
+  "workflow_id": "WF-AC-001",
+  "workflow_title": "Research Survey Platform",
+  "start_time": "2026-05-26T12:56:13.888871+00:00",
+  "end_time": "2026-05-26T12:57:32.405706+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-26T12:56:15.425340+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-26T12:57:32.405229+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/AC-1_WF-AC-001_20260526_125610_51b69c_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

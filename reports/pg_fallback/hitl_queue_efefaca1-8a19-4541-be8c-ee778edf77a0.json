@@ -1,0 +1,21 @@
+{
+  "item_id": "efefaca1-8a19-4541-be8c-ee778edf77a0",
+  "item_type": "candidate_insight",
+  "source_id": "1d55f124-77cb-412a-bfcb-433455f02f1a",
+  "persona_id": "AG-1",
+  "journey_id": "WF-AG-001",
+  "target_tier": "project",
+  "description": "[PROJECT] sai.persona.pattern: Psi question quality 'poor' for persona AG-1. Process evaluation: The process failed as Psi did not ask relevant questions and the conversation log was filled with repetitive and irrelevant answers. T",
+  "evidence": {
+    "proposed_action": "Improve Psi clarification questions for this persona type",
+    "confidence": 0.7,
+    "insight_type": "sai.persona.pattern"
+  },
+  "agp_template_id": "agp_tmpl_project_review_v1",
+  "status": "open",
+  "assigned_to": null,
+  "deadline": "2026-05-24T03:00:38.999598+00:00",
+  "resolved_at": null,
+  "resolution": null,
+  "created_at": "2026-05-22T03:00:38.999654+00:00"
+}

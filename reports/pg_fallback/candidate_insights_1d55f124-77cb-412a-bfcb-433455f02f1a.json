@@ -1,0 +1,23 @@
+{
+  "candidate_id": "1d55f124-77cb-412a-bfcb-433455f02f1a",
+  "insight_id": "60024cda-41dd-46ea-af97-4fe1cc9bea7f",
+  "target_tier": "project",
+  "persona_id": "AG-1",
+  "journey_id": "WF-AG-001",
+  "proposed_action": "Improve Psi clarification questions for this persona type",
+  "pattern_description": "Psi question quality 'poor' for persona AG-1. Process evaluation: The process failed as Psi did not ask relevant questions and the conversation log was filled with repetitive and irrelevant answers. The expected questions about team size, existing PM tools, and bill",
+  "confidence_score": 0.7,
+  "evidence_summary": "Run evidence: ['AG-1_WF-AG-001_20260522_025604_b8a7d8']",
+  "agp_review_template_id": "agp_tmpl_project_review_v1",
+  "review_status": "pending",
+  "reviewer_id": null,
+  "reviewer_role": "",
+  "review_deadline": "2026-05-24T03:00:38.998184+00:00",
+  "reviewed_at": null,
+  "review_notes": null,
+  "counter_proposal": null,
+  "is_anonymised": false,
+  "anonymisation_verified": false,
+  "created_at": "2026-05-22T03:00:38.998169+00:00",
+  "updated_at": "2026-05-22T03:00:38.998178+00:00"
+}

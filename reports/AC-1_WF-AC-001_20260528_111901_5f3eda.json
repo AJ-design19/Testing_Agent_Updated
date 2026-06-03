@@ -1,0 +1,39 @@
+{
+  "run_id": "AC-1_WF-AC-001_20260528_111901_5f3eda",
+  "persona_id": "AC-1",
+  "persona_name": "Prof. Ananya Singh",
+  "workflow_id": "WF-AC-001",
+  "workflow_title": "Research Survey Platform",
+  "start_time": "2026-05-28T11:19:04.458720+00:00",
+  "end_time": "2026-05-28T11:20:46.706597+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-28T11:19:05.131320+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-28T11:20:46.706334+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: Keyboard.press: Target page, context or browser has been closed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

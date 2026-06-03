@@ -1,0 +1,25 @@
+{
+  "run_id": "OL-1_WF-AI-002_20260528_142108_20e71f",
+  "persona_id": "OL-1",
+  "journey_id": "WF-AI-002",
+  "workflow_title": "RAG Clinical Q&A System",
+  "started_at": "2026-05-28T14:21:13.065052+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

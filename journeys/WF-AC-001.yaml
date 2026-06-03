@@ -1,0 +1,153 @@
+id: WF-AC-001
+title: "Research Survey Platform"
+persona_id: AC-1
+capability_area: research
+validation_status: validated
+version: "1.0"
+created_by: adya_team
+execution_mode: automated
+
+initial_prompt: >
+  Build a research survey platform with randomized question ordering,
+  consent forms, and CSV export compatible with SPSS.
+
+preconditions:
+  - SAI is accessible and login credentials are valid
+  - The user is authenticated with persona AC-1
+
+steps:
+  - index: 1
+    label: submit_initial_prompt
+    description: Agent submits initial workflow prompt as persona AC-1
+    action_type: prompt_submit
+    assertions:
+      - type: ui_element_present
+        selector: '[placeholder*="Ask"], textarea'
+        description: Chat input must be visible
+      - type: page_not_error
+        description: Page should not show error state after submission
+
+  - index: 2
+    label: sai_clarification_question
+    description: SAI asks about IRB compliance requirements and data anonymisation
+    action_type: observe
+    expected_content_patterns:
+      - IRB
+      - consent
+      - anonymi
+      - data privacy
+    assertions:
+      - type: content_match
+        patterns: ["IRB", "consent", "anonymi"]
+        description: SAI must ask about IRB/consent requirements for academic research
+
+  - index: 3
+    label: persona_response_irb
+    description: Agent responds in AC-1 voice — needs IRB-compliant consent, anonymous responses
+    action_type: chat_reply
+    answer_context: "IRB compliance, anonymous responses, CSV for SPSS"
+    assertions:
+      - type: reply_sent
+        description: Answer must be sent to SAI
+
+  - index: 4
+    label: flow_view_appears
+    description: Flow View shows all planned agents and sequence
+    action_type: observe
+    assertions:
+      - type: canvas_element_visible
+        description: Canvas / Flow View must appear after SAI handoff
+
+  - index: 5
+    label: navigate_aia_tab
+    description: AIA tab opens with survey platform workflow graph
+    action_type: navigate_canvas_tab
+    tab_name: AIA
+    assertions:
+      - type: agent_tab_present
+        agent: AIA
+        description: AIA tab must appear in canvas
+
+  - index: 6
+    label: navigate_agp_tab
+    description: AGP tab opens — agent checks governance rules for data privacy compliance
+    action_type: navigate_canvas_tab
+    tab_name: AGP
+    assertions:
+      - type: agent_tab_present
+        agent: AGP
+        description: AGP tab must appear given privacy requirements
+
+  - index: 7
+    label: read_agp_output
+    description: AGP Output sub-tab checked for privacy and consent policy rules
+    action_type: read_sub_tab
+    tab_name: AGP
+    sub_tab: Output
+    assertions:
+      - type: sub_tab_has_content
+        min_chars: 50
+        description: AGP Output must contain policy content
+
+  - index: 8
+    label: navigate_etl_tab
+    description: ETL tab opens for data schema and CSV export mapping
+    action_type: navigate_canvas_tab
+    tab_name: ETL
+    assertions:
+      - type: agent_tab_present
+        agent: ETL
+        description: ETL tab must appear for CSV export pipeline
+
+  - index: 9
+    label: navigate_app_studio_tab
+    description: App Studio opens — agent monitors form builder and export code
+    action_type: navigate_canvas_tab
+    tab_name: App Studio
+    assertions:
+      - type: agent_tab_present
+        agent: App Studio
+        description: App Studio must appear with generated code
+
+  - index: 10
+    label: final_screenshot
+    description: Agent screenshots final platform showing survey builder and export options
+    action_type: screenshot
+    event_type: final
+    assertions:
+      - type: screenshot_captured
+        description: Final evidence screenshot must be saved
+
+expected_agents:
+  - AIA
+  - AGP
+  - ETL
+  - App Studio
+
+evaluation_criteria:
+  process: >
+    SAI must ask about IRB consent requirements, data anonymisation policy,
+    and SPSS-compatible export format before proceeding.
+  output: >
+    Platform should include: consent form with IRB language, randomised question
+    ordering, anonymous response collection, and SPSS-compatible CSV export.
+  quality_threshold:
+    process_score_min: 7
+    output_score_min: 6
+
+expected_outcomes:
+  - Consent form with IRB-compliant language present in output
+  - Question randomisation mechanism implemented
+  - CSV export schema compatible with SPSS (variable labels, numeric coding)
+  - Response anonymisation in place (no PII in exported data)
+
+failure_modes:
+  - SAI does not ask about IRB/consent — governance gap
+  - ETL agent absent — CSV export pipeline missing
+  - App Studio generates app without form builder component
+
+tags:
+  - academic
+  - survey
+  - compliance
+  - data-export

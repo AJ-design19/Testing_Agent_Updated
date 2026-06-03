@@ -1,0 +1,24 @@
+{
+  "run_id": "PM-1_WF-PM-001_20260528_110100_fc72a8",
+  "persona_id": "PM-1",
+  "journey_id": "WF-PM-001",
+  "workflow_title": "SaaS Analytics Dashboard",
+  "started_at": "2026-05-28T11:01:04.207187+00:00",
+  "finished_at": "2026-05-28T11:01:48.121220+00:00",
+  "overall_status": "error",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

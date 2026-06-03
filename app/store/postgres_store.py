@@ -122,7 +122,7 @@ class PostgresStore:
         if _PG_AVAILABLE:
             dsn = os.getenv("DATABASE_URL", "")
             if not dsn:
-                logger.warning("[PostgresStore] DATABASE_URL not set — JSON fallback mode")
+                logger.debug("[PostgresStore] DATABASE_URL not set — JSON fallback mode")
                 self._dry_run = True
             else:
                 try:

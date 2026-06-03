@@ -1,0 +1,21 @@
+{
+  "item_id": "ab847df4-b63b-4a25-8302-f8045fef0dc4",
+  "item_type": "candidate_insight",
+  "source_id": "7f05e185-8041-4d79-a054-bba508f7958c",
+  "persona_id": "MK-1",
+  "journey_id": "WF-CD-002",
+  "target_tier": "project",
+  "description": "[PROJECT] sai.persona.pattern: Psi question quality 'poor' for persona MK-1. Process evaluation: Evaluation failed \u2014 judge error.",
+  "evidence": {
+    "proposed_action": "Improve Psi clarification questions for this persona type",
+    "confidence": 0.7,
+    "insight_type": "sai.persona.pattern"
+  },
+  "agp_template_id": "agp_tmpl_project_review_v1",
+  "status": "open",
+  "assigned_to": null,
+  "deadline": "2026-05-24T09:21:33.015631+00:00",
+  "resolved_at": null,
+  "resolution": null,
+  "created_at": "2026-05-22T09:21:33.015721+00:00"
+}

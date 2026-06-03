@@ -1,0 +1,44 @@
+{
+  "run_id": "PM-1_WF-AC-001_20260528_160935_3f7e8e",
+  "workflow_id": "WF-AC-001",
+  "total_count": 11,
+  "generated_at": "2026-05-28T16:35:17.215124+00:00",
+  "screenshots": [
+    {
+      "index": 1,
+      "path": "screenshots\\WF-AC-001_initial_prompt_sent_20260528_161247_432.png",
+      "filename": "WF-AC-001_initial_prompt_sent_20260528_161247_432.png",
+      "timestamp": "2026-05-28T16:12:47.656695+00:00",
+      "label": "initial_prompt_sent",
+      "agent": "",
+      "sub_tab": "",
+      "event_type": "chat_interaction",
+      "url": "https://vanijstaging.adya.ai/orchestrator",
+      "dom_snapshot": ""
+    },
+    {
+      "index": 2,
+      "path": "screenshots\\WF-AC-001_prompt_submitted_20260528_161247_661.png",
+      "filename": "WF-AC-001_prompt_submitted_20260528_161247_661.png",
+      "timestamp": "2026-05-28T16:12:47.882845+00:00",
+      "label": "prompt_submitted",
+      "agent": "",
+      "sub_tab": "",
+      "event_type": "prompt",
+      "url": "https://vanijstaging.adya.ai/orchestrator",
+      "dom_snapshot": "dom_snapshots\\WF-AC-001_prompt_submitted_20260528_161247_661.html"
+    },
+    {
+      "index": 3,
+      "path": "screenshots\\WF-AC-001_sai_round1_20260528_161258_799.png",
+      "filename": "WF-AC-001_sai_round1_20260528_161258_799.png",
+      "timestamp": "2026-05-28T16:12:59.348711+00:00",
+      "label": "sai_round1",
+      "agent": "",
+      "sub_tab": "",
+      "event_type": "chat_interaction",
+      "url": "https://vanijstaging.adya.ai/orchestrator/v2/workspace?workspaceId=db6bbca1-7b7c-4ebe-9a1a-0c3ab664e6d5",
+      "dom_snapshot": ""
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "run_id": "AC-1_WF-AC-001_20260525_122818_f45a11",
+  "persona_id": "AC-1",
+  "persona_name": "Prof. Ananya Singh",
+  "workflow_id": "WF-AC-001",
+  "workflow_title": "Research Survey Platform",
+  "start_time": "2026-05-25T12:28:21.126673+00:00",
+  "end_time": "2026-05-25T12:32:44.004144+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-25T12:28:21.895081+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-25T12:29:05.003133+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanij.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-25T12:29:05.966943+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Prof. Ananya Singh",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build a research survey platform with randomized question ordering, consent forms, and CSV export compatible with SPSS.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-25T12:29:12.882710+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-25T12:29:13.659366+00:00",
+      "action_type": "sai_loop",
+      "description": "Starting SAI conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-25T12:32:44.003750+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: Keyboard.press: Target page, context or browser has been closed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

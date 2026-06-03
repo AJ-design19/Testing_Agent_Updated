@@ -1,7 +1,7 @@
 """
 Canvas reader module.
 
-After Psi hands off to the canvas agents, this module:
+After SAI hands off to the canvas agents, this module:
   - Detects which agent tabs appeared (AIA / AGP / ETL / App Studio)
   - For each agent tab, reads all sub-tabs: Overview · Output · Questions · Thinking
   - Captures screenshots of workflow graphs, code generation, and final solutions
@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 SCREENSHOTS_DIR = "screenshots"
 
-# How long to wait (seconds) for an agent tab to appear after Psi hands off
+# How long to wait (seconds) for an agent tab to appear after SAI hands off
 AGENT_WAIT_TIMEOUT = 120  # seconds — agents can be slow to start
 
 # Selectors that indicate a canvas agent is still loading / processing
@@ -53,7 +53,7 @@ AGENT_DESCRIPTIONS = {
 
 class CanvasReader:
     """
-    Reads the SAI canvas after Psi hands off to agents.
+    Reads the SAI canvas after SAI hands off to agents.
     Produces a structured evidence dict consumed by the LLM Judge.
     """
 
@@ -298,9 +298,9 @@ class CanvasReader:
     # ── Evidence summary for LLM Judge ────────────────────────────────────
 
     @staticmethod
-    def build_evidence_text(canvas_evidence: dict, psi_log: list[dict]) -> str:
+    def build_evidence_text(canvas_evidence: dict, sai_log: list[dict]) -> str:
         """
-        Flatten canvas evidence + Psi conversation log into a single text block
+        Flatten canvas evidence + SAI conversation log into a single text block
         suitable for sending to the LLM Judge.
         """
         lines = []
@@ -312,7 +312,7 @@ class CanvasReader:
         lines.append("")
 
         lines.append("=== PSI CONVERSATION LOG ===")
-        for entry in psi_log:
+        for entry in sai_log:
             role = entry.get("role", "?").upper()
             text = entry.get("text", "")
             lines.append(f"[{role}]: {text}")

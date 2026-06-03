@@ -1,0 +1,23 @@
+{
+  "run_id": "IB-1_WF-IB-002_20260521_135531_6f9129",
+  "persona_id": "IB-1",
+  "journey_id": "WF-IB-002",
+  "workflow_title": "Waitlist App with Viral Referral",
+  "started_at": "2026-05-21T13:55:35.203255+00:00",
+  "finished_at": "2026-05-21T13:57:19.475361+00:00",
+  "overall_status": "error",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

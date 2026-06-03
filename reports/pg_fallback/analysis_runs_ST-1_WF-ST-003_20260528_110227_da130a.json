@@ -1,0 +1,23 @@
+{
+  "run_id": "ST-1_WF-ST-003_20260528_110227_da130a",
+  "persona_id": "ST-1",
+  "journey_id": "WF-ST-003",
+  "workflow_title": "Flashcard Study App",
+  "started_at": "2026-05-28T11:02:31.271174+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

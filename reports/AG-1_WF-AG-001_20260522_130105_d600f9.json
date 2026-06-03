@@ -1,0 +1,39 @@
+{
+  "run_id": "AG-1_WF-AG-001_20260522_130105_d600f9",
+  "persona_id": "AG-1",
+  "persona_name": "Marco Delgado",
+  "workflow_id": "WF-AG-001",
+  "workflow_title": "Agency Project Management Dashboard",
+  "start_time": "2026-05-22T13:01:08.628461+00:00",
+  "end_time": "2026-05-22T13:02:25.827358+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T13:01:09.435994+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T13:02:25.827014+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/AG-1_WF-AG-001_20260522_130105_d600f9_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

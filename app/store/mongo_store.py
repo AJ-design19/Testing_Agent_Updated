@@ -57,7 +57,7 @@ class MongoStore:
                 self._ensure_indexes()
                 logger.info("[MongoStore] Connected to %s / %s", uri, db_name)
             except Exception as e:
-                logger.warning("[MongoStore] Cannot connect to MongoDB (%s) — dry-run mode", e)
+                logger.debug("[MongoStore] MongoDB not available (%s) — dry-run mode", e)
                 self._dry_run = True
 
     def _col(self, name: str):

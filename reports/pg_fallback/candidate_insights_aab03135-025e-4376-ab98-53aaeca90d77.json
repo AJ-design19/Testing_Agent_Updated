@@ -1,0 +1,23 @@
+{
+  "candidate_id": "aab03135-025e-4376-ab98-53aaeca90d77",
+  "insight_id": "bf38a671-1835-4bc1-85dd-c2df483e6618",
+  "target_tier": "project",
+  "persona_id": "CISO-1",
+  "journey_id": "WF-ST-002",
+  "proposed_action": "Improve Psi clarification questions for this persona type",
+  "pattern_description": "Psi question quality 'poor' for persona CISO-1. Process evaluation: The process failed as Psi did not ask any clarifying questions and the conversation was incomplete.",
+  "confidence_score": 0.7,
+  "evidence_summary": "Run evidence: ['CISO-1_WF-ST-002_20260522_165206_2288c1']",
+  "agp_review_template_id": "agp_tmpl_project_review_v1",
+  "review_status": "pending",
+  "reviewer_id": null,
+  "reviewer_role": "",
+  "review_deadline": "2026-05-24T17:00:24.545102+00:00",
+  "reviewed_at": null,
+  "review_notes": null,
+  "counter_proposal": null,
+  "is_anonymised": false,
+  "anonymisation_verified": false,
+  "created_at": "2026-05-22T17:00:24.545087+00:00",
+  "updated_at": "2026-05-22T17:00:24.545095+00:00"
+}

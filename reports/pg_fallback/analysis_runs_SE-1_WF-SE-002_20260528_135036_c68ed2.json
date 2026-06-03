@@ -1,0 +1,24 @@
+{
+  "run_id": "SE-1_WF-SE-002_20260528_135036_c68ed2",
+  "persona_id": "SE-1",
+  "journey_id": "WF-SE-002",
+  "workflow_title": "dbt Data Transformation Layer",
+  "started_at": "2026-05-28T13:50:40.613938+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

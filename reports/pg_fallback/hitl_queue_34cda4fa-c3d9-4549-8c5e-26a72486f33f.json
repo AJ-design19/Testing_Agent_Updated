@@ -1,0 +1,21 @@
+{
+  "item_id": "34cda4fa-c3d9-4549-8c5e-26a72486f33f",
+  "item_type": "candidate_insight",
+  "source_id": "6f6beb9e-b121-40c1-aa5e-6800df1c011c",
+  "persona_id": "AC-1",
+  "journey_id": "WF-AC-001",
+  "target_tier": "project",
+  "description": "[PROJECT] sai.persona.pattern: Psi question quality 'poor' for persona AC-1. Process evaluation: Psi did not ask clarifying questions about IRB consent, anonymization, and export format. The conversation log shows a lack of relevan",
+  "evidence": {
+    "proposed_action": "Improve Psi clarification questions for this persona type",
+    "confidence": 0.7,
+    "insight_type": "sai.persona.pattern"
+  },
+  "agp_template_id": "agp_tmpl_project_review_v1",
+  "status": "open",
+  "assigned_to": null,
+  "deadline": "2026-05-24T05:06:25.073047+00:00",
+  "resolved_at": null,
+  "resolution": null,
+  "created_at": "2026-05-22T05:06:25.073115+00:00"
+}

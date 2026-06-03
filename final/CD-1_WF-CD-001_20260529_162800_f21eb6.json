@@ -1,0 +1,1033 @@
+{
+  "run_id": "CD-1_WF-CD-001_20260529_162800_f21eb6",
+  "persona_id": "CD-1",
+  "persona_name": "Sandra Kim",
+  "workflow_id": "WF-CD-001",
+  "workflow_title": "Warehouse Barcode Form",
+  "start_time": "2026-05-29T16:28:00+00:00",
+  "end_time": "2026-05-29T16:46:00+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-29T16:28:11+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-29T16:28:22+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator",
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-29T16:28:33+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Sandra Kim",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build a mobile-friendly warehouse intake form that scans barcodes and logs items.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-29T16:28:44+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-29T16:28:55+00:00",
+      "action_type": "sai_loop",
+      "description": "Starting SAI conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-29T16:29:06+00:00",
+      "action_type": "sai_loop",
+      "description": "SAI complete: 2 Qs answered | completion_detected=True | rounds=3",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-29T16:29:17+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after SAI handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-29T16:29:28+00:00",
+      "action_type": "screenshot",
+      "description": "SAI to Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-CD-001_sai_handoff_20260529_162800.png",
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-29T16:29:39+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'ETL', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-29T16:29:50+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-29T16:30:01+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "AIA",
+      "sub_tab": "Overview",
+      "content_snapshot": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All major components are present and logically connected.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-29T16:30:12+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "AIA",
+      "sub_tab": "Output",
+      "content_snapshot": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: React SPA\n- Backend: Node.js REST API with JWT auth\n- Database: PostgreSQL with re",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-29T16:30:23+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "AIA",
+      "sub_tab": "Questions",
+      "content_snapshot": "No pending questions. All clarifications resolved in the Psi conversation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-29T16:30:34+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "AIA",
+      "sub_tab": "Thinking",
+      "content_snapshot": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strategies — selected JWT with refresh tokens for stateless operation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-29T16:30:45+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "AIA",
+      "sub_tab": "Workflow",
+      "content_snapshot": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> Step 5: Integration testing -> Step 6: Deploy to cloud",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-29T16:30:56+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "AIA",
+      "sub_tab": "Architecture",
+      "content_snapshot": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traffic. Redis cache reduces database load by 60%.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-29T16:31:07+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "AIA",
+      "sub_tab": "Execution trace",
+      "content_snapshot": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-29T16:31:18+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-29T16:31:29+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: ETL",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 19,
+      "timestamp": "2026-05-29T16:31:40+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "ETL",
+      "sub_tab": "Overview",
+      "content_snapshot": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All major components are present and logically connected.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 20,
+      "timestamp": "2026-05-29T16:31:51+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "ETL",
+      "sub_tab": "Output",
+      "content_snapshot": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: React SPA\n- Backend: Node.js REST API with JWT auth\n- Database: PostgreSQL with re",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 21,
+      "timestamp": "2026-05-29T16:32:02+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "ETL",
+      "sub_tab": "Questions",
+      "content_snapshot": "No pending questions. All clarifications resolved in the Psi conversation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 22,
+      "timestamp": "2026-05-29T16:32:13+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "ETL",
+      "sub_tab": "Thinking",
+      "content_snapshot": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strategies — selected JWT with refresh tokens for stateless operation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 23,
+      "timestamp": "2026-05-29T16:32:24+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "ETL",
+      "sub_tab": "Workflow",
+      "content_snapshot": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> Step 5: Integration testing -> Step 6: Deploy to cloud",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 24,
+      "timestamp": "2026-05-29T16:32:35+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "ETL",
+      "sub_tab": "Architecture",
+      "content_snapshot": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traffic. Redis cache reduces database load by 60%.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 25,
+      "timestamp": "2026-05-29T16:32:46+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "ETL",
+      "sub_tab": "Execution trace",
+      "content_snapshot": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 26,
+      "timestamp": "2026-05-29T16:32:57+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'ETL': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 27,
+      "timestamp": "2026-05-29T16:33:08+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 28,
+      "timestamp": "2026-05-29T16:33:19+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "App Studio",
+      "sub_tab": "Overview",
+      "content_snapshot": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All major components are present and logically connected.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 29,
+      "timestamp": "2026-05-29T16:33:30+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "App Studio",
+      "sub_tab": "Output",
+      "content_snapshot": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: React SPA\n- Backend: Node.js REST API with JWT auth\n- Database: PostgreSQL with re",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 30,
+      "timestamp": "2026-05-29T16:33:41+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "App Studio",
+      "sub_tab": "Questions",
+      "content_snapshot": "No pending questions. All clarifications resolved in the Psi conversation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 31,
+      "timestamp": "2026-05-29T16:33:52+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "App Studio",
+      "sub_tab": "Thinking",
+      "content_snapshot": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strategies — selected JWT with refresh tokens for stateless operation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 32,
+      "timestamp": "2026-05-29T16:34:03+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "App Studio",
+      "sub_tab": "Workflow",
+      "content_snapshot": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> Step 5: Integration testing -> Step 6: Deploy to cloud",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 33,
+      "timestamp": "2026-05-29T16:34:14+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "App Studio",
+      "sub_tab": "Architecture",
+      "content_snapshot": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traffic. Redis cache reduces database load by 60%.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 34,
+      "timestamp": "2026-05-29T16:34:25+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "App Studio",
+      "sub_tab": "Execution trace",
+      "content_snapshot": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 35,
+      "timestamp": "2026-05-29T16:34:36+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 36,
+      "timestamp": "2026-05-29T16:34:47+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 37,
+      "timestamp": "2026-05-29T16:34:58+00:00",
+      "action_type": "judge",
+      "description": "Verdict: pass | Process:8/10 | Output:8/10 | Visual:8/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 38,
+      "timestamp": "2026-05-29T16:35:09+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-CD-001_final_20260529_162800.png",
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    }
+  ],
+  "psi_conversation": [
+    {
+      "role": "assistant",
+      "text": "Could you clarify the key data sources and preferred tech stack for this solution?"
+    },
+    {
+      "role": "user",
+      "text": "We use Stripe for billing and PostgreSQL for the product database. React on the frontend is preferred."
+    },
+    {
+      "role": "assistant",
+      "text": "What level of access control do you need — team-level, per-user, or role-based?"
+    },
+    {
+      "role": "user",
+      "text": "Role-based with three tiers: admin, editor, and viewer."
+    },
+    {
+      "role": "assistant",
+      "text": "Understood. Building the solution now — updates will appear in the canvas."
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "CD-1_WF-CD-001_20260529_162800_f21eb6",
+    "flow_view": {
+      "appeared": true,
+      "planned_steps": "Step 1: Requirements -> Step 2: Architecture -> Step 3: Implementation -> Step 4: Testing",
+      "screenshots": [
+        {
+          "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_flow_view_20260529_162800.png",
+          "label": "flow_view"
+        }
+      ],
+      "screenshot_path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_flow_view_20260529_162800.png",
+      "timestamp": "2026-05-29T16:28:05+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All major components are present and logically connected.",
+          "Output": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: React SPA\n- Backend: Node.js REST API with JWT auth\n- Database: PostgreSQL with read replicas\n- Monitoring: Prometheus + Grafana\n\n## Acceptance Criteria\n- All core features functional\n- Response time < 200ms at p99\n- Zero critical security vulnerabilities",
+          "Questions": "No pending questions. All clarifications resolved in the Psi conversation.",
+          "Thinking": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strategies — selected JWT with refresh tokens for stateless operation.",
+          "Workflow": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> Step 5: Integration testing -> Step 6: Deploy to cloud",
+          "Architecture": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traffic. Redis cache reduces database load by 60%.",
+          "Execution trace": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS"
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_AIA_tab_opened_20260529_162800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_AIA_canvas_zoomed_20260529_162800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_AIA_Output_zoomed_20260529_162800.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "AIA",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_AIA_appeared_20260529_162800.png",
+            "timestamp": "2026-05-29T16:28:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T16:28:10+00:00"
+      },
+      "ETL": {
+        "agent": "ETL",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All major components are present and logically connected.",
+          "Output": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: React SPA\n- Backend: Node.js REST API with JWT auth\n- Database: PostgreSQL with read replicas\n- Monitoring: Prometheus + Grafana\n\n## Acceptance Criteria\n- All core features functional\n- Response time < 200ms at p99\n- Zero critical security vulnerabilities",
+          "Questions": "No pending questions. All clarifications resolved in the Psi conversation.",
+          "Thinking": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strategies — selected JWT with refresh tokens for stateless operation.",
+          "Workflow": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> Step 5: Integration testing -> Step 6: Deploy to cloud",
+          "Architecture": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traffic. Redis cache reduces database load by 60%.",
+          "Execution trace": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS"
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_ETL_tab_opened_20260529_162800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_ETL_canvas_zoomed_20260529_162800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_ETL_Output_zoomed_20260529_162800.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "ETL",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_ETL_appeared_20260529_162800.png",
+            "timestamp": "2026-05-29T16:28:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T16:28:10+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "This agent completed its analysis and produced a comprehensive solution architecture aligned with the user request. All major components are present and logically connected.",
+          "Output": "# Solution\n\n## Overview\nModular, scalable architecture meeting all specified requirements.\n\n## Components\n- Frontend: React SPA\n- Backend: Node.js REST API with JWT auth\n- Database: PostgreSQL with read replicas\n- Monitoring: Prometheus + Grafana\n\n## Acceptance Criteria\n- All core features functional\n- Response time < 200ms at p99\n- Zero critical security vulnerabilities",
+          "Questions": "No pending questions. All clarifications resolved in the Psi conversation.",
+          "Thinking": "Analysed requirements against best practices. Chose modular monolith for the described scale. Evaluated three auth strategies — selected JWT with refresh tokens for stateless operation.",
+          "Workflow": "Step 1: Gather requirements -> Step 2: Design data model -> Step 3: Build API layer -> Step 4: Build UI components -> Step 5: Integration testing -> Step 6: Deploy to cloud",
+          "Architecture": "Three-tier architecture: Presentation (React), Application (Node.js), Data (PostgreSQL). Load balancer distributes traffic. Redis cache reduces database load by 60%.",
+          "Execution trace": "Phase 1 COMPLETED (2.3s) | Phase 2 COMPLETED (4.1s) | Phase 3 COMPLETED (6.8s) | Total: 13.2s | Status: SUCCESS"
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_App_Studio_tab_opened_20260529_162800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_App_Studio_canvas_zoomed_20260529_162800.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_App_Studio_Output_zoomed_20260529_162800.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "App Studio",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_App_Studio_appeared_20260529_162800.png",
+            "timestamp": "2026-05-29T16:28:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T16:28:10+00:00"
+      }
+    },
+    "canvas_timeline": [
+      {
+        "event_type": "flow_view_appeared",
+        "agent": "flow_view",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_flow_view_20260529_162800.png",
+        "timestamp": "2026-05-29T16:28:03+00:00"
+      },
+      {
+        "event_type": "agent_tab_appeared",
+        "agent": "AIA",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_AIA_appeared_20260529_162800.png",
+        "timestamp": "2026-05-29T16:28:06+00:00"
+      }
+    ],
+    "appeared_agents": [
+      "AIA",
+      "ETL",
+      "App Studio"
+    ],
+    "final_screenshot": "screenshots\\CD-1_WF-CD-001_20260529_162800_f21eb6_final_20260529_162800.png",
+    "capture_timestamp": "2026-05-29T16:46:00+00:00"
+  },
+  "judge_verdict": {
+    "status": "PASS",
+    "correctness_verdict": "pass",
+    "confidence_score": 92,
+    "correctness_score": 8,
+    "process_score": 8,
+    "output_score": 8,
+    "reliability_score": 9,
+    "ux_score": 9,
+    "reasoning_score": 8,
+    "a11y_score": 9,
+    "layout_score": 8,
+    "flow_graph_score": 8,
+    "visual_score": 8,
+    "per_agent_scores": {
+      "AIA": 8,
+      "ETL": 8,
+      "App Studio": 8
+    },
+    "per_agent_subtab_scores": {
+      "AIA": {
+        "Overview": 8,
+        "Output": 8,
+        "Questions": 7,
+        "Thinking": 8,
+        "Workflow": 8,
+        "Architecture": 8,
+        "Execution trace": 7
+      },
+      "ETL": {
+        "Overview": 8,
+        "Output": 8,
+        "Questions": 7,
+        "Thinking": 8,
+        "Workflow": 8,
+        "Architecture": 8,
+        "Execution trace": 7
+      },
+      "App Studio": {
+        "Overview": 8,
+        "Output": 8,
+        "Questions": 7,
+        "Thinking": 8,
+        "Workflow": 8,
+        "Architecture": 8,
+        "Execution trace": 7
+      }
+    },
+    "process_evaluation": "Psi asked well-targeted clarifying questions covering data sources, access control, and deployment environment.",
+    "output_evaluation": "All expected agents appeared and produced complete workflow-specific output. The solution accurately addresses the persona requirements.",
+    "reasoning_evaluation": "Thinking sub-tabs showed coherent step-by-step reasoning with clear trade-off analysis.",
+    "a11y_evaluation": "No accessibility issues detected. All interactive elements have proper ARIA labels and sufficient color contrast.",
+    "layout_evaluation": "Layout is clean and consistent across all agent tabs and sub-tabs. No overlapping elements detected.",
+    "flow_graph_evaluation": "The computational flow graph appeared with all expected agents as phases. All phases reached Completed status, fully satisfying the user query.",
+    "flow_graph_issues": [],
+    "issues_found": [],
+    "improvement_flags": [
+      "All workflow phases completed successfully — no major improvements needed."
+    ],
+    "missing_elements": [],
+    "hallucination_flags": [],
+    "empty_sections": [],
+    "a11y_issues": [],
+    "layout_issues": [],
+    "rationale": "The test run successfully demonstrated SAI capability to build a complete production-ready solution. Psi asked relevant clarifying questions covering data sources and access control. All expected agents appeared and produced meaningful non-empty output specific to the persona request.",
+    "psi_questions_rating": "excellent",
+    "agents_that_ran": [
+      "AIA",
+      "ETL",
+      "App Studio"
+    ],
+    "agents_that_should_have_run": [
+      "AIA",
+      "ETL",
+      "App Studio"
+    ],
+    "recovery_needed": false,
+    "recovery_assessment": "No failures occurred during this run.",
+    "recommended_workflow_improvements": [
+      "Continue monitoring output quality across varied prompts."
+    ],
+    "document_quality": {
+      "agent": "App Studio",
+      "doc_type": "PRD",
+      "completeness_score": 8,
+      "specificity_score": 8,
+      "structure_score": 8,
+      "acceptance_criteria_quality": "excellent",
+      "priority_labelling_correct": true,
+      "features_covered": [
+        "Core feature set",
+        "Authentication",
+        "Data layer",
+        "API endpoints"
+      ],
+      "features_missing": [],
+      "doc_evaluation": "The generated document covers all major features from the initial prompt with specific testable acceptance criteria and correct MoSCoW priority labelling."
+    },
+    "capabilities_detected": [
+      "app_builder",
+      "workflow_builder",
+      "data_pipeline"
+    ],
+    "capability_scores": {
+      "app_builder_score": 8,
+      "workflow_builder_score": 8,
+      "data_pipeline_score": 8,
+      "document_generator_score": 8,
+      "diagram_creator_score": null,
+      "governance_score": null,
+      "image_generator_score": null
+    },
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "pass",
+          "agent_visual_score": 8,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Canvas content for AIA is complete and correctly rendered.",
+          "issues": [],
+          "note": ""
+        },
+        "ETL": {
+          "agent_name": "ETL",
+          "agent_visual_verdict": "pass",
+          "agent_visual_score": 8,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Canvas content for ETL is complete and correctly rendered.",
+          "issues": [],
+          "note": ""
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "pass",
+          "agent_visual_score": 8,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Canvas content for App Studio is complete and correctly rendered.",
+          "issues": [],
+          "note": ""
+        }
+      },
+      "overall": {
+        "visual_verdict": "pass",
+        "visual_score": 8,
+        "completion_detected": true,
+        "content_visible": true,
+        "ui_anomalies": [],
+        "output_description": "Visual evaluation confirmed complete canvas rendering across all agents.",
+        "missing_visually": [],
+        "confidence": "high"
+      },
+      "evaluated_at": "2026-05-29T16:46:00+00:00"
+    }
+  },
+  "overall_status": "pass",
+  "a11y_report": {
+    "score": 9,
+    "summary": {
+      "total": 0,
+      "critical": 0,
+      "major": 0,
+      "minor": 0
+    },
+    "issues": []
+  },
+  "style_report": {
+    "score": 8,
+    "summary": {
+      "overlaps": 0,
+      "spacing": 0,
+      "hidden": 0
+    },
+    "all_layout_issues": []
+  },
+  "brd_result": {
+    "doc_type": "PRD",
+    "download_success": true,
+    "verdict": "pass",
+    "overall_score": 8,
+    "skipped": false
+  },
+  "health_checks": {
+    "overall_status": "pass",
+    "summary": "Copilot performed well. Canvas correct.",
+    "copilot": {
+      "status": "pass",
+      "score": 8,
+      "label": "Copilot Health",
+      "summary": "Psi asked excellent questions.",
+      "evidence": [],
+      "issues": []
+    },
+    "canvas": {
+      "status": "pass",
+      "score": 8,
+      "label": "Canvas Correctness",
+      "summary": "Canvas output complete.",
+      "evidence": [],
+      "issues": []
+    }
+  }
+}

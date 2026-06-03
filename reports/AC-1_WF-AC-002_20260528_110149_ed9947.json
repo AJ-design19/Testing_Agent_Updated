@@ -1,0 +1,39 @@
+{
+  "run_id": "AC-1_WF-AC-002_20260528_110149_ed9947",
+  "persona_id": "AC-1",
+  "persona_name": "Prof. Ananya Singh",
+  "workflow_id": "WF-AC-002",
+  "workflow_title": "Literature Review Tool",
+  "start_time": "2026-05-28T11:01:52.682529+00:00",
+  "end_time": "2026-05-28T11:02:26.106905+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-28T11:01:53.150249+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-28T11:02:26.106604+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Could not click Sign In button",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/AC-1_WF-AC-002_20260528_110149_ed9947_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

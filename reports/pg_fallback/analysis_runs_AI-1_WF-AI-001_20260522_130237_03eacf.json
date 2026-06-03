@@ -1,0 +1,25 @@
+{
+  "run_id": "AI-1_WF-AI-001_20260522_130237_03eacf",
+  "persona_id": "AI-1",
+  "journey_id": "WF-AI-001",
+  "workflow_title": "ML Model Monitoring System",
+  "started_at": "2026-05-22T13:02:40.850617+00:00",
+  "finished_at": "2026-05-22T13:03:46.380064+00:00",
+  "overall_status": "error",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

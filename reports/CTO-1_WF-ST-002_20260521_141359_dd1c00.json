@@ -1,0 +1,75 @@
+{
+  "run_id": "CTO-1_WF-ST-002_20260521_141359_dd1c00",
+  "persona_id": "CTO-1",
+  "persona_name": "Elena Volkov",
+  "workflow_id": "WF-ST-002",
+  "workflow_title": "Personal Budget Tracker",
+  "start_time": "2026-05-21T14:14:02.569644+00:00",
+  "end_time": "2026-05-21T15:09:42.552525+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-21T14:14:03.823018+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-21T14:14:31.310566+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-21T14:14:32.953239+00:00",
+      "action_type": "health_check",
+      "description": "Page health issues detected",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": "['page_unresponsive']"
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-21T14:14:32.953594+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Elena Volkov",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Create a personal budget tracker where I can log income and expenses and see charts of where my money goes.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-21T15:09:42.552120+00:00",
+      "action_type": "send_prompt",
+      "description": "Failed to send initial prompt",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

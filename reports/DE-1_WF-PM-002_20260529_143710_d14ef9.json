@@ -1,0 +1,49 @@
+{
+  "run_id": "DE-1_WF-PM-002_20260529_143710_d14ef9",
+  "persona_id": "DE-1",
+  "persona_name": "Yuki Tanaka",
+  "workflow_id": "WF-PM-002",
+  "workflow_title": "Customer Journey Funnel Tracker",
+  "start_time": "2026-05-29T14:37:13.518787+00:00",
+  "end_time": "2026-05-29T14:40:54.252544+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-29T14:37:14.352524+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-29T14:40:54.252026+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/DE-1_WF-PM-002_20260529_143710_d14ef9_fatal_error.png",
+      "success": false,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error",
+  "interaction_log": [],
+  "learning_summary": {}
+}

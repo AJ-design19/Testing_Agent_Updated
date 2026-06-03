@@ -1,0 +1,23 @@
+{
+  "candidate_id": "715c2a8a-9d5e-4e87-a2ed-d7e54f20628f",
+  "insight_id": "8e84cda4-c59f-47ec-a02a-77e0342af6fa",
+  "target_tier": "project",
+  "persona_id": "SE-1",
+  "journey_id": "WF-SE-001",
+  "proposed_action": "Improve Psi clarification questions for this persona type",
+  "pattern_description": "Psi question quality 'poor' for persona SE-1. Process evaluation: Psi did not ask any clarifying questions and did not understand the persona's context and needs. The conversation was incomplete and did not address the required topics such as event volume, partition",
+  "confidence_score": 0.7,
+  "evidence_summary": "Run evidence: ['SE-1_WF-SE-001_20260521_101915_831ff3']",
+  "agp_review_template_id": "agp_tmpl_project_review_v1",
+  "review_status": "pending",
+  "reviewer_id": null,
+  "reviewer_role": "",
+  "review_deadline": "2026-05-23T10:32:47.154591+00:00",
+  "reviewed_at": null,
+  "review_notes": null,
+  "counter_proposal": null,
+  "is_anonymised": false,
+  "anonymisation_verified": false,
+  "created_at": "2026-05-21T10:32:47.154561+00:00",
+  "updated_at": "2026-05-21T10:32:47.154578+00:00"
+}

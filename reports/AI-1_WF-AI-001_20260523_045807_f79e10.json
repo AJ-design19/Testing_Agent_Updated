@@ -1,0 +1,63 @@
+{
+  "run_id": "AI-1_WF-AI-001_20260523_045807_f79e10",
+  "persona_id": "AI-1",
+  "persona_name": "Dr. Sana Torres",
+  "workflow_id": "WF-AI-001",
+  "workflow_title": "ML Model Monitoring System",
+  "start_time": "2026-05-23T04:58:10.624424+00:00",
+  "end_time": "2026-05-23T04:59:52.193750+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-23T04:58:13.552416+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-23T04:59:47.630744+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanij.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-23T04:59:50.820475+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Dr. Sana Torres",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build an ML model monitoring system with Prometheus metrics, KL-divergence drift detection, and automated Slack alerts on model degradation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-23T04:59:52.193216+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: Keyboard.press: Target page, context or browser has been closed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

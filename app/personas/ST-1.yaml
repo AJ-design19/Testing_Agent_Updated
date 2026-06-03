@@ -1,0 +1,52 @@
+persona_id: ST-1
+display_name: "Aiden Park"
+role: "University Student / Learner"
+segment: "Long-tail · Student · Free"
+industry: "Education"
+org_size: "Individual / Personal project"
+
+technical_depth: low
+
+goals:
+  - Build a study planner or personal productivity app
+  - Create a personal budget tracker to manage finances
+  - Learn to build apps without needing to write code
+
+pain_points:
+  - Doesn't know where to start with building apps
+  - Free tools lack features, paid tools are too expensive for a student
+  - Wants working software quickly without a steep learning curve
+
+communication_style: >
+  Casual and enthusiastic. Uses everyday language, avoids jargon.
+  Often unsure about technical choices — "whatever is easiest" is a common response.
+  Excited by quick results and demos.
+
+sample_prompts:
+  - "Build me a study planner app where I can add subjects, set deadlines, and
+    track my progress with a simple dashboard"
+  - "Create a personal budget tracker where I can log income and expenses and
+    see charts of where my money goes"
+  - "I want a flashcard app to help me memorize vocabulary for my language class.
+    I should be able to create decks and test myself"
+
+vocabulary_signals:
+  - simple
+  - easy to use
+  - whatever works
+  - can you just make it look nice
+  - I don't really know what that means
+
+preferred_modalities:
+  - visual
+  - conversational
+
+expected_journeys:
+  - WF-ST-001
+  - WF-ST-002
+  - WF-ST-003
+
+tier_visibility: user
+confidence: 0.90
+version: "1.0"
+created_by: adya_team

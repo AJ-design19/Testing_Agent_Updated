@@ -1,0 +1,23 @@
+{
+  "candidate_id": "ed9f2d7e-8bfb-460b-ad42-b48c193df765",
+  "insight_id": "ed326668-207e-41e8-b100-d4622b69efb9",
+  "target_tier": "project",
+  "persona_id": "CTO-1",
+  "journey_id": "WF-CD-001",
+  "proposed_action": "Improve Psi clarification questions for this persona type",
+  "pattern_description": "Psi question quality 'poor' for persona CTO-1. Process evaluation: Psi failed to ask relevant questions about the existing inventory system, barcode type, and offline capability needs. The conversation log shows no evidence of Psi attempting to clarify these points.",
+  "confidence_score": 0.7,
+  "evidence_summary": "Run evidence: ['CTO-1_WF-CD-001_20260521_180947_27138f']",
+  "agp_review_template_id": "agp_tmpl_project_review_v1",
+  "review_status": "pending",
+  "reviewer_id": null,
+  "reviewer_role": "",
+  "review_deadline": "2026-05-23T18:18:02.178941+00:00",
+  "reviewed_at": null,
+  "review_notes": null,
+  "counter_proposal": null,
+  "is_anonymised": false,
+  "anonymisation_verified": false,
+  "created_at": "2026-05-21T18:18:02.178917+00:00",
+  "updated_at": "2026-05-21T18:18:02.178931+00:00"
+}

@@ -5,4 +5,4 @@ loguru
 pyyaml
 psycopg2-binary
 pymongo
- 
+Pillow

@@ -1,0 +1,24 @@
+{
+  "run_id": "HR-1_WF-FN-001_20260522_115420_d41cbb",
+  "persona_id": "HR-1",
+  "journey_id": "WF-FN-001",
+  "workflow_title": "Investor Reporting Dashboard",
+  "started_at": "2026-05-22T11:54:23.916577+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

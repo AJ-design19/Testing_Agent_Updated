@@ -17,7 +17,7 @@ import asyncio
 import logging
 import os
 from datetime import datetime, timezone
-from typing import Optional, Callable, Any
+from typing import Any, Callable, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -86,6 +86,18 @@ class RecoveryEvent:
 class SelfHealer:
     """
     Autonomous recovery agent. Monitors the browser state and heals automatically.
+
+    Error categories handled (per spec):
+      - timeout              : element / page load timed out
+      - stale_locator        : element detached from DOM (React re-render)
+      - missing_element      : selector matched nothing
+      - rendering_failure    : content area blank / still loading after timeout
+      - invalid_ai_response  : Psi returned an error message
+      - modal_blocked        : overlay / modal blocking interaction
+      - session_expired      : redirected to login
+      - page_stuck           : JS freeze or unresponsive page
+      - canvas_missing       : canvas never appeared after Psi handoff
+
     All recovery attempts are recorded in recovery_log.
     """
 
@@ -93,6 +105,156 @@ class SelfHealer:
         self.page = page
         self.run_id = run_id
         self.recovery_log: list[dict] = []
+
+    # ── Stale element / locator retry ─────────────────────────────────────────
+
+    async def retry_stale_action(
+        self,
+        selectors: list[str],
+        action: str = "click",
+        max_retries: int = 3,
+        retry_delay: float = 1.0,
+    ) -> bool:
+        """
+        Retry an action against a list of selectors, re-evaluating the DOM each
+        time to handle stale locators caused by React re-renders.
+
+        action: "click" | "focus" | "check_visible"
+        Returns True on success.
+        """
+        for attempt in range(max_retries):
+            for sel in selectors:
+                try:
+                    el = self.page.locator(sel).first
+                    # Re-evaluate whether element is attached and visible
+                    if await el.count() == 0:
+                        continue
+                    if not await el.is_visible():
+                        continue
+                    if action == "click":
+                        await el.click()
+                    elif action == "focus":
+                        await el.focus()
+                    self._log(
+                        "stale_locator",
+                        f"retry_attempt_{attempt + 1}:{sel}",
+                        True,
+                        f"action={action}",
+                    )
+                    return True
+                except Exception as e:
+                    if "detached" in str(e).lower() or "stale" in str(e).lower():
+                        logger.debug(
+                            "[SelfHealer] Stale element on attempt %d/%d (%s): %s",
+                            attempt + 1, max_retries, sel, e,
+                        )
+                    continue
+            await asyncio.sleep(retry_delay)
+
+        self._log("stale_locator", "all_retries_failed", False,
+                  f"selectors={selectors[:2]}")
+        return False
+
+    async def retry_with_timeout(
+        self,
+        coroutine_factory,
+        max_retries: int = 3,
+        retry_delay: float = 2.0,
+        label: str = "action",
+    ) -> Optional[Any]:
+        """
+        Retry an async coroutine on timeout or element-not-found errors.
+        coroutine_factory: a zero-arg callable returning a coroutine.
+        Returns the coroutine result or None if all retries fail.
+        """
+        for attempt in range(max_retries):
+            try:
+                result = await coroutine_factory()
+                return result
+            except Exception as e:
+                err_lower = str(e).lower()
+                is_timeout = "timeout" in err_lower or "timed out" in err_lower
+                is_missing = "not found" in err_lower or "no element" in err_lower
+                if is_timeout or is_missing:
+                    self._log(
+                        "timeout" if is_timeout else "missing_element",
+                        f"retry_{attempt + 1}/{max_retries}:{label}",
+                        False,
+                        str(e)[:120],
+                    )
+                    if attempt < max_retries - 1:
+                        await asyncio.sleep(retry_delay)
+                    continue
+                raise  # non-retriable error — re-raise immediately
+
+        self._log(label, "all_retries_exhausted", False)
+        return None
+
+    async def wait_for_dom_stable(self, timeout_seconds: float = 10.0) -> bool:
+        """
+        Wait until the DOM stops mutating (React has finished rendering).
+        Uses a JS MutationObserver to detect when the DOM is quiescent.
+        Returns True when stable, False if timeout exceeded.
+        """
+        js = """(timeout_ms) => new Promise((resolve) => {
+            let timer = null;
+            const reset = () => {
+                if (timer) clearTimeout(timer);
+                timer = setTimeout(() => {
+                    observer.disconnect();
+                    resolve(true);
+                }, 300);   // 300 ms of no mutations = stable
+            };
+            const observer = new MutationObserver(reset);
+            observer.observe(document.body, {
+                childList: true, subtree: true,
+                attributes: true, characterData: true,
+            });
+            reset();  // start the timer immediately
+            // Hard deadline
+            setTimeout(() => {
+                observer.disconnect();
+                resolve(false);
+            }, timeout_ms);
+        })"""
+        try:
+            return await self.page.evaluate(js, int(timeout_seconds * 1000))
+        except Exception as e:
+            logger.debug("[SelfHealer] wait_for_dom_stable error: %s", e)
+            return True  # assume stable on error
+
+    async def check_rendering_failure(self, content_selectors: list[str]) -> bool:
+        """
+        Detect a rendering failure: the content area is present but blank/still loading.
+        Returns True if a rendering failure is detected.
+        """
+        for sel in content_selectors:
+            try:
+                el = await self.page.query_selector(sel)
+                if not el or not await el.is_visible():
+                    continue
+                text = (await el.inner_text()).strip()
+                # Blank or only whitespace = rendering failure
+                if not text:
+                    self._log(
+                        "rendering_failure",
+                        f"blank_content_area:{sel}",
+                        False,
+                        "content area visible but empty",
+                    )
+                    return True
+                # Still has loading indicator text
+                if any(w in text.lower() for w in ["loading", "please wait", "generating"]):
+                    self._log(
+                        "rendering_failure",
+                        f"still_loading:{sel}",
+                        False,
+                        f"text starts with: {text[:60]}",
+                    )
+                    return True
+            except Exception:
+                continue
+        return False
 
     def _log(self, issue: str, strategy: str, success: bool, notes: str = "") -> None:
         event = RecoveryEvent(issue, strategy, success, notes)
@@ -171,8 +333,11 @@ class SelfHealer:
     async def check_page_responsive(self, timeout_ms: int = 5000) -> bool:
         """Check that the page JS is still responsive."""
         try:
-            result = await self.page.evaluate(
-                "() => document.readyState", timeout=timeout_ms
+            # NOTE: page.evaluate() does NOT accept a timeout kwarg in Playwright Python.
+            # Use asyncio.wait_for to apply a timeout externally.
+            result = await asyncio.wait_for(
+                self.page.evaluate("() => document.readyState"),
+                timeout=timeout_ms / 1000.0,
             )
             return result in ("complete", "interactive")
         except Exception as e:
@@ -180,15 +345,28 @@ class SelfHealer:
             return False
 
     async def recover_stuck_page(self) -> bool:
-        """Try to recover a frozen page by reloading."""
+        """
+        Try to recover a frozen page.
+        DOES NOT reload — a reload destroys the active workspace/conversation.
+        Instead tries: dismiss modals → scroll to top → wait for DOM to settle.
+        """
         try:
             await self._ss_error("stuck_page_before_reload")
-            await self.page.reload(wait_until="domcontentloaded", timeout=30000)
-            await asyncio.sleep(2)
-            self._log("page_stuck", "page_reload", True)
-            return True
+            # Step 1: dismiss any blocking overlay
+            await self.dismiss_modals()
+            await asyncio.sleep(1.0)
+            # Step 2: scroll to top to reveal any hidden content
+            try:
+                await self.page.evaluate("() => window.scrollTo(0, 0)")
+            except Exception:
+                pass
+            await asyncio.sleep(1.0)
+            # Step 3: verify page is now responsive
+            responsive = await self.check_page_responsive()
+            self._log("page_stuck", "dismiss_and_scroll", responsive)
+            return responsive
         except Exception as e:
-            self._log("page_stuck", "page_reload", False, str(e))
+            self._log("page_stuck", "dismiss_and_scroll", False, str(e))
             return False
 
     # ── Element not found recovery ────────────────────────────────────────────

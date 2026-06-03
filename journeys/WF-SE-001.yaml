@@ -1,0 +1,146 @@
+id: WF-SE-001
+title: "Kafka Real-Time Streaming Pipeline"
+persona_id: SE-1
+capability_area: data_engineering
+validation_status: validated
+version: "1.0"
+created_by: adya_team
+execution_mode: automated
+
+initial_prompt: >
+  Build a Kafka-based real-time pipeline with exactly-once semantics ingesting
+  clickstream events and a consumer lag monitoring dashboard.
+
+preconditions:
+  - SAI is accessible and login credentials are valid
+  - Persona SE-1 loaded with very_high technical depth
+
+steps:
+  - index: 1
+    label: submit_initial_prompt
+    description: Agent submits Kafka pipeline prompt as persona SE-1
+    action_type: prompt_submit
+    assertions:
+      - type: ui_element_present
+        selector: '[placeholder*="Ask"], textarea'
+        description: Chat input must be visible
+
+  - index: 2
+    label: sai_clarification_question
+    description: SAI asks about event volume, topic partitioning strategy, and downstream sink
+    action_type: observe
+    expected_content_patterns:
+      - partition
+      - throughput
+      - consumer
+      - sink
+      - volume
+    assertions:
+      - type: content_match
+        patterns: ["partition", "consumer", "volume", "sink"]
+        description: SAI must ask technical Kafka configuration questions
+
+  - index: 3
+    label: persona_response_technical
+    description: Agent responds — 50K events/sec, 12 partitions, sink to ClickHouse
+    action_type: chat_reply
+    answer_context: "50K events per second, 12 partitions, ClickHouse as sink"
+    assertions:
+      - type: reply_sent
+
+  - index: 4
+    label: flow_view_appears
+    description: Flow View shows streaming architecture with Kafka, ClickHouse, and monitoring
+    action_type: observe
+    assertions:
+      - type: canvas_element_visible
+
+  - index: 5
+    label: navigate_aia_tab
+    description: AIA tab shows streaming workflow graph with producer/consumer topology
+    action_type: navigate_canvas_tab
+    tab_name: AIA
+    assertions:
+      - type: agent_tab_present
+        agent: AIA
+
+  - index: 6
+    label: navigate_etl_tab
+    description: ETL tab shows event schema and ClickHouse sink mapping
+    action_type: navigate_canvas_tab
+    tab_name: ETL
+    assertions:
+      - type: agent_tab_present
+        agent: ETL
+
+  - index: 7
+    label: read_etl_thinking
+    description: ETL Thinking sub-tab checked for deduplication strategy discussion
+    action_type: read_sub_tab
+    tab_name: ETL
+    sub_tab: Thinking
+    assertions:
+      - type: sub_tab_has_content
+        min_chars: 30
+
+  - index: 8
+    label: navigate_agp_tab
+    description: AGP tab shows data retention and exactly-once transaction governance rules
+    action_type: navigate_canvas_tab
+    tab_name: AGP
+    assertions:
+      - type: agent_tab_present
+        agent: AGP
+
+  - index: 9
+    label: navigate_app_studio_tab
+    description: App Studio opens with Kafka consumer group and lag monitoring dashboard code
+    action_type: navigate_canvas_tab
+    tab_name: App Studio
+    assertions:
+      - type: agent_tab_present
+        agent: App Studio
+
+  - index: 10
+    label: final_screenshot
+    description: Agent screenshots consumer lag dashboard with partition-level metrics
+    action_type: screenshot
+    event_type: final
+    assertions:
+      - type: screenshot_captured
+
+expected_agents:
+  - AIA
+  - AGP
+  - ETL
+  - App Studio
+
+evaluation_criteria:
+  process: >
+    SAI must ask about event volume per second, partition count, consumer group design,
+    and downstream storage system before generating the architecture.
+  output: >
+    Solution should include: Kafka producer config with idempotency enabled,
+    consumer group with exactly-once semantics, ClickHouse sink connector,
+    and consumer lag monitoring dashboard showing per-partition metrics.
+  quality_threshold:
+    process_score_min: 8
+    output_score_min: 7
+
+expected_outcomes:
+  - Kafka producer config with acks=all and idempotent producer
+  - Consumer group config with isolation.level=read_committed
+  - ClickHouse sink with batch ingestion
+  - Consumer lag dashboard with Prometheus metrics per partition
+
+failure_modes:
+  - SAI does not ask about partitioning strategy
+  - ETL agent absent — no ClickHouse sink generated
+  - Consumer lag monitoring missing from App Studio output
+
+tags:
+  - streaming
+  - kafka
+  - real-time
+  - data-engineering
+  - clickhouse

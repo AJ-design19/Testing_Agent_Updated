@@ -1,0 +1,445 @@
+{
+  "run_id": "CISO-1_WF-SA-002_20260522_084403_c27f97",
+  "persona_id": "CISO-1",
+  "persona_name": "David Okonkwo",
+  "workflow_id": "WF-SA-002",
+  "workflow_title": "AI-Powered Code Review Pipeline",
+  "start_time": "2026-05-22T08:44:06.737375+00:00",
+  "end_time": "2026-05-22T08:48:41.467175+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T08:44:08.214044+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T08:44:39.335935+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-22T08:44:41.211950+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as David Okonkwo",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Create an AI-powered code review system that checks PRs for security vulnerabilities, performance anti-patterns, and coding standards violations.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-22T08:44:50.016429+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-22T08:44:50.262180+00:00",
+      "action_type": "psi_loop",
+      "description": "Starting Psi conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-22T08:44:55.377816+00:00",
+      "action_type": "psi_loop",
+      "description": "Psi complete: 0 Qs answered | completion_detected=False | rounds=2",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-22T08:44:55.378061+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after Psi handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-22T08:47:21.632607+00:00",
+      "action_type": "canvas_wait",
+      "description": "Canvas recovery attempted: False",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-22T08:47:21.635077+00:00",
+      "action_type": "screenshot",
+      "description": "Psi→Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-22T08:47:21.635388+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'AGP', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-22T08:47:21.635563+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-22T08:47:47.225403+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-22T08:47:47.225614+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AGP",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-22T08:48:12.812843+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AGP': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-22T08:48:12.813056+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-22T08:48:38.421694+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-22T08:48:38.447549+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-22T08:48:41.387621+00:00",
+      "action_type": "judge",
+      "description": "Verdict: fail | Process:1/10 | Output:1/10 | Visual:0/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-22T08:48:41.466989+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [
+    {
+      "role": "user",
+      "text": "Create an AI-powered code review system that checks PRs for security vulnerabilities, performance anti-patterns, and coding standards violations."
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "CISO-1_WF-SA-002_20260522_084403_c27f97",
+    "flow_view": {
+      "appeared": false,
+      "planned_steps": "",
+      "screenshots": [],
+      "screenshot_path": null,
+      "timestamp": "2026-05-22T08:48:38.422036+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T08:47:21.667775+00:00"
+      },
+      "AGP": {
+        "agent": "AGP",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T08:47:47.235431+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T08:48:12.823712+00:00"
+      }
+    },
+    "canvas_timeline": [],
+    "appeared_agents": [],
+    "final_screenshot": null,
+    "capture_timestamp": "2026-05-22T08:48:38.447536+00:00"
+  },
+  "judge_verdict": {
+    "status": "FAIL",
+    "correctness_verdict": "fail",
+    "confidence_score": 80,
+    "correctness_score": 2,
+    "process_score": 1,
+    "output_score": 1,
+    "reliability_score": 6,
+    "ux_score": 8,
+    "reasoning_score": 2,
+    "per_agent_scores": {
+      "AIA": 0,
+      "AGP": 0,
+      "ETL": 0,
+      "App Studio": 0
+    },
+    "per_agent_subtab_scores": {
+      "AIA": {
+        "Overview": 0,
+        "Output": 0,
+        "Questions": 0,
+        "Thinking": 0,
+        "Workflow": 0,
+        "Architecture": 0,
+        "Execution trace": 0
+      },
+      "AGP": {
+        "Overview": 0,
+        "Output": 0,
+        "Questions": 0,
+        "Thinking": 0,
+        "Workflow": 0,
+        "Architecture": 0,
+        "Execution trace": 0
+      },
+      "ETL": {
+        "Overview": 0,
+        "Output": 0,
+        "Questions": 0,
+        "Thinking": 0,
+        "Workflow": 0,
+        "Architecture": 0,
+        "Execution trace": 0
+      },
+      "App Studio": {
+        "Overview": 0,
+        "Output": 0,
+        "Questions": 0,
+        "Thinking": 0,
+        "Workflow": 0,
+        "Architecture": 0,
+        "Execution trace": 0
+      }
+    },
+    "process_evaluation": "Psi did not ask any clarifying questions, and the process was incomplete. The initial prompt was submitted, but no further questions were asked.",
+    "output_evaluation": "No output was generated, and the expected agents (AIA, AGP, App Studio) did not appear. The system did not produce any meaningful results.",
+    "reasoning_evaluation": "The reasoning quality is poor due to the lack of any meaningful output or agent interaction.",
+    "issues_found": [
+      {
+        "category": "missing_information",
+        "description": "No agents appeared, and no output was generated.",
+        "severity": "critical"
+      },
+      {
+        "category": "incorrect_workflow",
+        "description": "The workflow was not executed correctly, and no canvas evidence was captured.",
+        "severity": "critical"
+      }
+    ],
+    "improvement_flags": [
+      "Improve Psi's question-asking capabilities",
+      "Ensure agents appear and generate meaningful output",
+      "Enhance canvas evidence capture"
+    ],
+    "missing_elements": [
+      "AI-powered code review system",
+      "GitHub Actions trigger",
+      "Parallel AI analysis for security/perf/style",
+      "Inline PR comments",
+      "Merge-blocking for critical issues",
+      "Weekly report"
+    ],
+    "hallucination_flags": [],
+    "empty_sections": [
+      "AIA",
+      "AGP",
+      "App Studio"
+    ],
+    "rationale": "The test run failed due to the lack of any meaningful output or agent interaction. Psi did not ask any clarifying questions, and the expected agents did not appear. The system did not produce any results, and the canvas evidence capture was incomplete.",
+    "psi_questions_rating": "poor",
+    "agents_that_ran": [],
+    "agents_that_should_have_run": [
+      "AIA",
+      "AGP",
+      "App Studio"
+    ],
+    "recovery_needed": true,
+    "recovery_assessment": "Recovery events were triggered, but they were not successful in resolving the issues.",
+    "recommended_workflow_improvements": [
+      "Improve Psi's question-asking capabilities",
+      "Enhance agent interaction and output generation",
+      "Ensure canvas evidence capture is complete and accurate"
+    ],
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "AGP": {
+          "agent_name": "AGP",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        }
+      },
+      "overall": {
+        "visual_verdict": "unclear",
+        "visual_score": 0,
+        "completion_detected": false,
+        "content_visible": false,
+        "ui_anomalies": [
+          "No screenshots were captured"
+        ],
+        "output_description": "No screenshots available for visual evaluation.",
+        "missing_visually": [],
+        "confidence": "low",
+        "note": "no_screenshots"
+      },
+      "evaluated_at": "2026-05-22T08:48:41.387583+00:00"
+    },
+    "visual_score": 0
+  },
+  "overall_status": "fail"
+}

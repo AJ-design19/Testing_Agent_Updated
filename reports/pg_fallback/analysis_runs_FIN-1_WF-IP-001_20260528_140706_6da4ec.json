@@ -1,0 +1,25 @@
+{
+  "run_id": "FIN-1_WF-IP-001_20260528_140706_6da4ec",
+  "persona_id": "FIN-1",
+  "journey_id": "WF-IP-001",
+  "workflow_title": "Enterprise Data Governance Accelerator",
+  "started_at": "2026-05-28T14:07:10.520074+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

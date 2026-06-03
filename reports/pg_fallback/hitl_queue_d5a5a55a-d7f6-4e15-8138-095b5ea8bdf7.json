@@ -1,0 +1,21 @@
+{
+  "item_id": "d5a5a55a-d7f6-4e15-8138-095b5ea8bdf7",
+  "item_type": "candidate_insight",
+  "source_id": "c0c2ecd7-c85f-49ba-aa02-59d070e6106d",
+  "persona_id": "CISO-1",
+  "journey_id": "WF-SA-002",
+  "target_tier": "project",
+  "description": "[PROJECT] sai.persona.pattern: Psi question quality 'poor' for persona CISO-1. Process evaluation: Psi did not ask any clarifying questions, and the process was incomplete. The initial prompt was submitted, but no further questions",
+  "evidence": {
+    "proposed_action": "Improve Psi clarification questions for this persona type",
+    "confidence": 0.7,
+    "insight_type": "sai.persona.pattern"
+  },
+  "agp_template_id": "agp_tmpl_project_review_v1",
+  "status": "open",
+  "assigned_to": null,
+  "deadline": "2026-05-24T08:48:41.533180+00:00",
+  "resolved_at": null,
+  "resolution": null,
+  "created_at": "2026-05-22T08:48:41.533212+00:00"
+}

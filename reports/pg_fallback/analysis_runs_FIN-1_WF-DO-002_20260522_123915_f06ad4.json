@@ -1,0 +1,24 @@
+{
+  "run_id": "FIN-1_WF-DO-002_20260522_123915_f06ad4",
+  "persona_id": "FIN-1",
+  "journey_id": "WF-DO-002",
+  "workflow_title": "Terraform Drift Detection System",
+  "started_at": "2026-05-22T12:39:19.262097+00:00",
+  "finished_at": "2026-05-22T12:40:46.138789+00:00",
+  "overall_status": "error",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

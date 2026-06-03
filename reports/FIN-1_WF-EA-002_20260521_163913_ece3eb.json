@@ -1,0 +1,39 @@
+{
+  "run_id": "FIN-1_WF-EA-002_20260521_163913_ece3eb",
+  "persona_id": "FIN-1",
+  "persona_name": "James Whitfield",
+  "workflow_id": "WF-EA-002",
+  "workflow_title": "Enterprise API Gateway",
+  "start_time": "2026-05-21T16:39:16.886487+00:00",
+  "end_time": "2026-05-21T16:40:59.053074+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-21T16:39:18.038183+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-21T16:40:59.052626+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/FIN-1_WF-EA-002_20260521_163913_ece3eb_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

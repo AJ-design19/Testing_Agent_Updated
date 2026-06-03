@@ -1,0 +1,457 @@
+{
+  "run_id": "DE-1_WF-IP-001_20260521_155645_349378",
+  "persona_id": "DE-1",
+  "persona_name": "Yuki Tanaka",
+  "workflow_id": "WF-IP-001",
+  "workflow_title": "Enterprise Data Governance Accelerator",
+  "start_time": "2026-05-21T15:56:48.806309+00:00",
+  "end_time": "2026-05-21T16:04:07.035467+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-21T15:56:51.775790+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-21T15:57:23.785419+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-21T15:57:28.618025+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Yuki Tanaka",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build a reusable enterprise data governance accelerator that I can deploy for financial services clients in under 3 days.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-21T15:57:34.841592+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-21T15:57:35.230439+00:00",
+      "action_type": "psi_loop",
+      "description": "Starting Psi conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-21T16:04:02.574273+00:00",
+      "action_type": "psi_loop",
+      "description": "Psi complete: 0 Qs answered | completion_detected=False | rounds=2",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-21T16:04:02.574579+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after Psi handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-21T16:04:02.819871+00:00",
+      "action_type": "canvas_wait",
+      "description": "Canvas recovery attempted: False",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-21T16:04:02.823614+00:00",
+      "action_type": "screenshot",
+      "description": "Psi→Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-21T16:04:02.824192+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'AGP', 'ETL', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-21T16:04:02.824469+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-21T16:04:02.943268+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-21T16:04:02.943826+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AGP",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-21T16:04:02.986342+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AGP': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-21T16:04:02.986617+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: ETL",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-21T16:04:03.031341+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'ETL': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-21T16:04:03.031676+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-21T16:04:03.071871+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-21T16:04:03.111891+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 19,
+      "timestamp": "2026-05-21T16:04:06.880701+00:00",
+      "action_type": "judge",
+      "description": "Verdict: fail | Process:1/10 | Output:1/10 | Visual:0/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 20,
+      "timestamp": "2026-05-21T16:04:07.035095+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [
+    {
+      "role": "user",
+      "text": "Build a reusable enterprise data governance accelerator that I can deploy for financial services clients in under 3 days."
+    },
+    {
+      "role": "assistant",
+      "text": "Data Governance Accelerator"
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "DE-1_WF-IP-001_20260521_155645_349378",
+    "flow_view": {
+      "appeared": false,
+      "planned_steps": "",
+      "screenshots": [],
+      "screenshot_path": null,
+      "timestamp": "2026-05-21T16:04:03.072163+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-21T16:04:02.897498+00:00"
+      },
+      "AGP": {
+        "agent": "AGP",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-21T16:04:02.963253+00:00"
+      },
+      "ETL": {
+        "agent": "ETL",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-21T16:04:03.002848+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-21T16:04:03.047351+00:00"
+      }
+    },
+    "canvas_timeline": [],
+    "appeared_agents": [],
+    "final_screenshot": null,
+    "capture_timestamp": "2026-05-21T16:04:03.111870+00:00"
+  },
+  "judge_verdict": {
+    "status": "FAIL",
+    "correctness_verdict": "fail",
+    "confidence_score": 80,
+    "correctness_score": 2,
+    "process_score": 1,
+    "output_score": 1,
+    "reliability_score": 4,
+    "ux_score": 3,
+    "reasoning_score": 2,
+    "per_agent_scores": {
+      "AIA": 0,
+      "AGP": 0,
+      "ETL": 0,
+      "App Studio": 0
+    },
+    "process_evaluation": "Psi failed to ask any clarifying questions, and the conversation log only contains the initial prompt and a generic response. This indicates a severe lack of understanding of the user's context and requirements.",
+    "output_evaluation": "None of the expected agents appeared, and there is no evidence of any output or solution being generated. This is a critical failure, as the system was unable to produce any meaningful results.",
+    "reasoning_evaluation": "The reasoning quality is severely impaired due to the lack of any meaningful output or interaction with the agents.",
+    "issues_found": [
+      {
+        "category": "missing_information",
+        "description": "No agents appeared, and no output was generated.",
+        "severity": "critical"
+      },
+      {
+        "category": "wrong_workflow",
+        "description": "The workflow did not proceed as expected, with no agents appearing or producing output.",
+        "severity": "critical"
+      },
+      {
+        "category": "broken_ui",
+        "description": "The canvas failed to appear, and the system experienced page freezes and stuck states.",
+        "severity": "major"
+      }
+    ],
+    "improvement_flags": [
+      "Implement more robust conversation handling in Psi",
+      "Improve agent invocation and output generation",
+      "Enhance canvas rendering and stability"
+    ],
+    "missing_elements": [
+      "Expected agents (AIA, AGP, ETL, App Studio)",
+      "Meaningful output or solution"
+    ],
+    "hallucination_flags": [
+      "Generic response from Psi without any meaningful content"
+    ],
+    "empty_sections": [
+      "All agent sections were empty"
+    ],
+    "rationale": "The test run was severely impaired due to the lack of meaningful interaction with Psi, the failure of agents to appear, and the absence of any output. The system experienced critical issues, including page freezes and stuck states, which further exacerbated the problems. The overall correctness and output quality scores are severely impacted, resulting in a FAIL status.",
+    "psi_questions_rating": "poor",
+    "agents_that_ran": [],
+    "agents_that_should_have_run": [
+      "AIA",
+      "AGP",
+      "ETL",
+      "App Studio"
+    ],
+    "recovery_needed": true,
+    "recovery_assessment": "The system attempted to recover from page freezes and stuck states but was ultimately unsuccessful in generating any meaningful output.",
+    "recommended_workflow_improvements": [
+      "Enhance Psi conversation handling to better understand user context and requirements",
+      "Improve agent invocation and output generation to ensure meaningful results",
+      "Optimize canvas rendering and stability to prevent page freezes and stuck states"
+    ],
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "AGP": {
+          "agent_name": "AGP",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "ETL": {
+          "agent_name": "ETL",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        }
+      },
+      "overall": {
+        "visual_verdict": "unclear",
+        "visual_score": 0,
+        "completion_detected": false,
+        "content_visible": false,
+        "ui_anomalies": [
+          "No screenshots were captured"
+        ],
+        "output_description": "No screenshots available for visual evaluation.",
+        "missing_visually": [],
+        "confidence": "low",
+        "note": "no_screenshots"
+      },
+      "evaluated_at": "2026-05-21T16:04:06.880632+00:00"
+    },
+    "visual_score": 0
+  },
+  "overall_status": "fail"
+}

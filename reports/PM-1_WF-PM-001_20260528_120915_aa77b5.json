@@ -1,0 +1,39 @@
+{
+  "run_id": "PM-1_WF-PM-001_20260528_120915_aa77b5",
+  "persona_id": "PM-1",
+  "persona_name": "Priya Mehta",
+  "workflow_id": "WF-PM-001",
+  "workflow_title": "SaaS Analytics Dashboard",
+  "start_time": "2026-05-28T12:09:18.335732+00:00",
+  "end_time": "2026-05-28T12:13:06.492615+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-28T12:09:18.991895+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-28T12:13:06.492146+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: ",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/PM-1_WF-PM-001_20260528_120915_aa77b5_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

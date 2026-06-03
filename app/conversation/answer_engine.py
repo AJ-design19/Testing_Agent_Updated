@@ -18,17 +18,24 @@ logger = logging.getLogger(__name__)
 
 def _build_persona_system_prompt(persona: dict, workflow: dict) -> str:
     """Build a system prompt that fully describes the persona to the LLM."""
+    # Support both legacy (name) and BRD YAML (display_name) field names
+    name = persona.get("display_name") or persona.get("name", "User")
+    vocab_signals = persona.get("vocabulary_signals", [])
+    vocab_hint = ""
+    if vocab_signals:
+        vocab_hint = f"\n  Vocabulary signals (use naturally): {', '.join(vocab_signals[:5])}"
+
     return f"""You are roleplaying as a real user testing the SAI platform (by Adya AI).
 
 Your persona:
-  Name: {persona.get('name', 'User')}
+  Name: {name}
   Role: {persona.get('role', 'Business User')}
   Segment: {persona.get('segment', 'N/A')}
   Industry: {persona.get('industry', 'N/A')}
   Technical depth: {persona.get('technical_depth', 'medium')}
   Communication style: {persona.get('communication_style', 'Professional and direct')}
   Goals: {', '.join(persona.get('goals', []))}
-  Pain points: {', '.join(persona.get('pain_points', []))}
+  Pain points: {', '.join(persona.get('pain_points', []))}{vocab_hint}
 
 Your current workflow: {workflow.get('title', 'N/A')}
 Your original request: {workflow.get('initial_prompt', '')}
@@ -36,17 +43,18 @@ Your original request: {workflow.get('initial_prompt', '')}
 Reply rules:
 - Stay in character at ALL times — answer as this persona would
 - Match the technical depth: {persona.get('technical_depth', 'medium')}
-  - "very high": can use technical jargon freely, reference specific tools/frameworks
+  - "very_high" / "very high": use technical jargon freely, reference specific tools/frameworks
   - "high": comfortable with technical terms but focuses on architecture
   - "medium": understands concepts, prefers plain explanations over jargon
-  - "medium-low": business-focused, avoids deep technical details
+  - "medium_low" / "medium-low": business-focused, avoids deep technical details
   - "low": non-technical, describe things in business/process terms only
-  - "very low": purely business language, no technical terms whatsoever
+  - "very_low" / "very low": purely business language, no technical terms whatsoever
 - Be concise: 1-3 sentences per answer
 - Provide specific answers (not "whatever you think is best")
 - If asked about preferences, give a real preference that fits the persona
 - If you don't know or don't care about a technical detail, say so naturally
 - Reference the persona's industry, goals, and pain points when relevant
+- Use vocabulary signals naturally if they match the question context
 """
 
 
@@ -101,31 +109,34 @@ class AnswerEngine:
         Uses persona context to pick appropriate answers.
         """
         q = question.lower()
-        tech_depth = self.persona.get("technical_depth", "medium")
+        raw_td = str(self.persona.get("technical_depth", "medium")).lower()
+        tech_depth = raw_td.replace("-", "_").replace(" ", "_")
         industry = self.persona.get("industry", "")
 
+        _high_tech = tech_depth in ("very_high", "very high", "high")
+
         if any(w in q for w in ["frontend", "ui", "interface", "react", "vue"]):
-            if tech_depth in ("very high", "high"):
+            if _high_tech:
                 return "Use React with TypeScript and Tailwind CSS."
             return "A clean, modern web interface that works on desktop and mobile."
 
         if any(w in q for w in ["backend", "api", "server", "framework"]):
-            if tech_depth in ("very high", "high"):
+            if _high_tech:
                 return "FastAPI with async SQLAlchemy and PostgreSQL."
             return "Whatever is standard and easy to maintain."
 
         if any(w in q for w in ["database", "storage", "data store"]):
-            if tech_depth in ("very high", "high"):
+            if _high_tech:
                 return "PostgreSQL with Redis for caching."
             return "A standard relational database is fine."
 
         if any(w in q for w in ["auth", "login", "authentication", "sso"]):
-            if "enterprise" in industry.lower() or tech_depth in ("very high", "high"):
+            if "enterprise" in industry.lower() or _high_tech:
                 return "SSO with Okta, and role-based access control."
             return "Email and password login with JWT tokens."
 
         if any(w in q for w in ["deploy", "hosting", "cloud", "infrastructure"]):
-            if tech_depth in ("very high", "high"):
+            if _high_tech:
                 return "Docker containers on AWS ECS with a CI/CD pipeline."
             return "Cloud hosted, automated deployment — I don't want to manage servers."
 
@@ -148,9 +159,47 @@ class AnswerEngine:
                 return f"We currently have: {pain_points[0]}. Start fresh where possible."
             return "We have some existing tools but are open to a fresh approach."
 
-        # Generic fallback
-        return (
-            f"Please use whatever best fits a {self.persona.get('role', 'business user')} "
-            f"in {self.persona.get('industry', 'our industry')}. "
-            "Keep it practical and production-ready."
-        )
+        # App name questions — derive from workflow title
+        if any(w in q for w in ["name your app", "app name", "name the app",
+                                  "what would you like to name", "name of your app",
+                                  "what to name"]):
+            title = self.workflow.get("title", "")
+            if title:
+                # Convert "Real-Time SaaS Analytics Dashboard" → "SaaSMetrics"
+                words = [w for w in title.split() if w not in
+                         ("A", "An", "The", "and", "with", "for", "of", "the")]
+                return "".join(w.capitalize() for w in words[:3]) + "App"
+            return f"{self.persona.get('role', 'My').split('/')[0].strip()}App"
+
+        # App description / "what does your app do" questions
+        if any(w in q for w in ["describe", "what does", "what your app does",
+                                  "briefly describe", "what it does", "purpose"]):
+            prompt_text = self.workflow.get("initial_prompt", "")
+            if prompt_text:
+                # Return the first sentence of the initial prompt (up to 120 chars)
+                first = prompt_text.split(".")[0].strip()
+                return first[:120] if first else prompt_text[:120]
+            goals = self.persona.get("goals", [])
+            if goals:
+                return goals[0]
+            return f"A {self.persona.get('role', 'business')}-focused productivity tool."
+
+        # Tech stack / "which application type" — pick the most fitting option based on workflow
+        if any(w in q for w in ["application type", "tech stack", "which stack",
+                                  "technology stack", "framework"]):
+            if _high_tech:
+                return "Next.js"
+            return "React"
+
+        # "Proceed / modify" — always continue
+        if any(w in q for w in ["proceed", "continue", "modification", "execute",
+                                  "begin execution"]):
+            return "Continue and begin execution."
+
+        # Generic fallback — use actual persona content, not meta-text
+        goals = self.persona.get("goals", [])
+        role  = self.persona.get("role", "business user").split("/")[0].strip()
+        ind   = self.persona.get("industry", "")
+        if goals:
+            return f"{goals[0]}. Please keep it practical and production-ready."
+        return f"Please build a solution suitable for a {role}{' in ' + ind if ind else ''}. Keep it simple and production-ready."

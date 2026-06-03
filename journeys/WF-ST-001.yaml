@@ -1,0 +1,142 @@
+id: WF-ST-001
+title: "Study Planner App"
+persona_id: ST-1
+capability_area: productivity
+validation_status: validated
+version: "1.0"
+created_by: adya_team
+execution_mode: automated
+
+initial_prompt: >
+  Build me a study planner app where I can add subjects, set deadlines,
+  and track my progress with a simple dashboard.
+
+preconditions:
+  - SAI is accessible and login credentials are valid
+  - Persona ST-1 loaded with low technical depth
+
+steps:
+  - index: 1
+    label: submit_initial_prompt
+    description: Agent submits study planner prompt as persona ST-1
+    action_type: prompt_submit
+    assertions:
+      - type: ui_element_present
+        selector: '[placeholder*="Ask"], textarea'
+
+  - index: 2
+    label: sai_clarification_question
+    description: SAI asks clarifying question about web vs mobile and features needed
+    action_type: observe
+    expected_content_patterns:
+      - mobile
+      - web
+      - feature
+      - platform
+    assertions:
+      - type: content_match
+        patterns: ["mobile", "web", "feature"]
+        description: SAI should ask about platform preference
+
+  - index: 3
+    label: persona_response_simple
+    description: Agent responds in ST-1 voice — simple, no strong preference
+    action_type: chat_reply
+    answer_context: "Just a web app, keep it simple and nice looking"
+    assertions:
+      - type: reply_sent
+
+  - index: 4
+    label: flow_view_appears
+    description: Flow View appears showing planned steps for study planner build
+    action_type: observe
+    assertions:
+      - type: canvas_element_visible
+
+  - index: 5
+    label: navigate_aia_tab
+    description: AIA tab opens on Canvas, agent reads workflow graph
+    action_type: navigate_canvas_tab
+    tab_name: AIA
+    assertions:
+      - type: agent_tab_present
+        agent: AIA
+
+  - index: 6
+    label: read_aia_overview
+    description: Agent checks AIA Overview sub-tab for solution architecture summary
+    action_type: read_sub_tab
+    tab_name: AIA
+    sub_tab: Overview
+    assertions:
+      - type: sub_tab_has_content
+        min_chars: 30
+
+  - index: 7
+    label: read_aia_output
+    description: Agent checks AIA Output sub-tab for generated workflow details
+    action_type: read_sub_tab
+    tab_name: AIA
+    sub_tab: Output
+    assertions:
+      - type: sub_tab_has_content
+        min_chars: 30
+
+  - index: 8
+    label: navigate_app_studio_tab
+    description: App Studio tab appears, agent navigates and reads code generation progress
+    action_type: navigate_canvas_tab
+    tab_name: App Studio
+    assertions:
+      - type: agent_tab_present
+        agent: App Studio
+
+  - index: 9
+    label: read_app_studio_thinking
+    description: Agent checks App Studio Thinking sub-tab for adversarial agent review
+    action_type: read_sub_tab
+    tab_name: App Studio
+    sub_tab: Thinking
+    assertions:
+      - type: sub_tab_has_content
+        min_chars: 20
+
+  - index: 10
+    label: final_screenshot
+    description: Agent takes screenshot of final App Studio Output showing ready solution
+    action_type: screenshot
+    event_type: final
+    assertions:
+      - type: screenshot_captured
+
+expected_agents:
+  - AIA
+  - App Studio
+
+evaluation_criteria:
+  process: >
+    SAI should ask 1-2 clarifying questions about web vs mobile preference
+    and any specific features needed (reminders, sharing, etc.).
+  output: >
+    Final solution should include: subject list with deadline tracking,
+    progress bar per subject, and a simple dashboard overview.
+  quality_threshold:
+    process_score_min: 6
+    output_score_min: 6
+
+expected_outcomes:
+  - Subject list with add/edit/delete functionality
+  - Deadline tracking with visual indicator
+  - Progress bar or percentage per subject
+  - Dashboard showing all subjects at a glance
+
+failure_modes:
+  - SAI does not ask any clarifying questions
+  - App Studio generates backend-only solution without a UI
+  - Dashboard missing from generated app
+
+tags:
+  - student
+  - productivity
+  - web-app
+  - simple

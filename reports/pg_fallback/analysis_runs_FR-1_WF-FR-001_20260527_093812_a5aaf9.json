@@ -1,0 +1,30 @@
+{
+  "run_id": "FR-1_WF-FR-001_20260527_093812_a5aaf9",
+  "persona_id": "FR-1",
+  "journey_id": "WF-FR-001",
+  "workflow_title": "White-Label E-Commerce Dashboard",
+  "started_at": "2026-05-27T09:38:18.825666+00:00",
+  "finished_at": "2026-05-27T10:24:15.816512+00:00",
+  "overall_status": "fail",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "poor",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [
+    "Judge error: Connection error."
+  ],
+  "missing_elements": [],
+  "judge_rationale": "LLM judge could not complete evaluation: Connection error.",
+  "artifact_run_record_path": "",
+  "screenshot_paths": [
+    "local://artifacts/FR-1_WF-FR-001_20260527_093812_a5aaf9/102415_initial_prompt_sent_WF-FR-001_initial_prompt_sent_20260527_093851_076.png",
+    "local://artifacts/FR-1_WF-FR-001_20260527_093812_a5aaf9/102415_prompt_submitted_WF-FR-001_prompt_submitted_20260527_093851_586.png"
+  ]
+}

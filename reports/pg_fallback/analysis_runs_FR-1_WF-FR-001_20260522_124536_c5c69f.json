@@ -1,0 +1,25 @@
+{
+  "run_id": "FR-1_WF-FR-001_20260522_124536_c5c69f",
+  "persona_id": "FR-1",
+  "journey_id": "WF-FR-001",
+  "workflow_title": "White-Label E-Commerce Dashboard",
+  "started_at": "2026-05-22T12:45:40.337926+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

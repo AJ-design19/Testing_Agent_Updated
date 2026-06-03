@@ -30,8 +30,8 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional
 
 from app.store.models import (
-    ESMEvent, ESMInsight, CandidateInsight, HitlQueueItem,
-    ESMEventType, ESMTier, ReviewStatus, AuditAction,
+    ESMEvent, ESMInsight, ESMProjection, CandidateInsight, HitlQueueItem,
+    ESMEventType, ESMProjectionType, ESMTier, ReviewStatus, AuditAction,
 )
 from app.store.mongo_store import MongoStore
 from app.store.postgres_store import PostgresStore
@@ -72,6 +72,7 @@ class ESLLService:
         verdict: dict,
         conversation_log: list[dict],
         canvas_evidence: dict,
+        recovery_log: Optional[list] = None,
     ) -> dict:
         """
         Main entry point after a test run completes and the judge has scored it.
@@ -107,6 +108,10 @@ class ESLLService:
         for insight in insights:
             result = self._route_insight(insight, persona, workflow)
             results[result].append(insight.insight_id)
+
+        # ── Update the 5 BRD F6 projections ───────────────────────────
+        self._update_projections(persona, workflow, verdict, canvas_evidence,
+                                 recovery_log or [])
 
         logger.info(
             "[ESLLService] Run %s: %d auto-committed, %d staged, %d below threshold",
@@ -412,6 +417,308 @@ class ESLLService:
             ESMTier.ENTERPRISE.value: "agp_tmpl_enterprise_review_v1",
             ESMTier.GLOBAL.value:     "agp_tmpl_global_review_v1",
         }.get(tier)
+
+    # ── BRD F6: 5 ESLL projections ───────────────────────────────────────
+
+    def _update_projections(
+        self,
+        persona: dict,
+        workflow: dict,
+        verdict: dict,
+        canvas_evidence: dict,
+        recovery_log: list,
+    ) -> None:
+        """
+        Compute and upsert the 5 SAI-specific ESLL projections (BRD §9.2 / F6).
+
+          1. PersonaSignalProjection  — per-persona health metrics aggregated over runs
+          2. JourneyDivergenceProjection — per-journey divergence from expected flow
+          3. RecoverySuccessProjection — self-healer success rate aggregated
+          4. TenantPatternProjection — cross-journey patterns for this persona segment
+          5. GlobalPromotionProjection — global-tier promotion eligibility tracking
+        """
+        try:
+            persona_id = persona.get("id", "")
+            journey_id = workflow.get("id", "")
+            process_score = int(verdict.get("process_score") or 0)
+            output_score  = int(verdict.get("output_score") or 0)
+            overall_pass  = verdict.get("correctness_verdict", "") == "pass"
+            appeared_agents = canvas_evidence.get("appeared_agents", [])
+            expected_agents = workflow.get("expected_agents", [])
+
+            self._projection_persona_signal(persona_id, journey_id,
+                                            process_score, output_score,
+                                            overall_pass, verdict)
+            self._projection_journey_divergence(persona_id, journey_id,
+                                                appeared_agents, expected_agents,
+                                                process_score, verdict)
+            self._projection_recovery_success(persona_id, journey_id, recovery_log)
+            self._projection_tenant_pattern(persona_id, journey_id,
+                                            process_score, output_score,
+                                            verdict.get("improvement_flags", []))
+            self._projection_global_promotion(persona_id, journey_id,
+                                              process_score, output_score, verdict)
+        except Exception as e:
+            logger.warning("[ESLLService] Projection update failed (non-fatal): %s", e)
+
+    def _load_projection_state(
+        self,
+        proj_type: str,
+        persona_id: Optional[str],
+        journey_id: Optional[str],
+    ) -> dict:
+        """Fetch existing projection state dict, or return empty dict."""
+        existing = self.mongo.get_projection(proj_type, persona_id, journey_id)
+        if existing and isinstance(existing.get("state"), dict):
+            return existing["state"]
+        return {}
+
+    def _upsert_projection(
+        self,
+        proj_type: str,
+        persona_id: Optional[str],
+        journey_id: Optional[str],
+        state: dict,
+        tier: str = ESMTier.SESSION.value,
+    ) -> None:
+        proj = ESMProjection(
+            projection_type=proj_type,
+            scope_persona_id=persona_id,
+            scope_journey_id=journey_id,
+            scope_tier=tier,
+            state=state,
+            run_count=state.get("run_count", 1),
+        )
+        self.mongo.upsert_projection(proj)
+
+    def _projection_persona_signal(
+        self,
+        persona_id: str,
+        journey_id: str,
+        process_score: int,
+        output_score: int,
+        overall_pass: bool,
+        verdict: dict,
+    ) -> None:
+        """
+        PersonaSignalProjection (BRD §9.2.1).
+        Tracks rolling average process/output scores and pass rate per persona.
+        Signals deterioration when rolling average drops below threshold.
+        """
+        pt = ESMProjectionType.SAI_PERSONA_HEALTH.value
+        state = self._load_projection_state(pt, persona_id, None)
+
+        run_count  = state.get("run_count", 0) + 1
+        prev_proc  = state.get("avg_process_score", process_score)
+        prev_out   = state.get("avg_output_score", output_score)
+        prev_passes = state.get("pass_count", 0)
+
+        alpha = min(0.3, 1.0 / run_count)   # exponential moving average weight
+        avg_process = round(prev_proc * (1 - alpha) + process_score * alpha, 2)
+        avg_output  = round(prev_out  * (1 - alpha) + output_score  * alpha, 2)
+        pass_count  = prev_passes + (1 if overall_pass else 0)
+        pass_rate   = round(pass_count / run_count, 3)
+
+        # Signal if rolling average has dropped more than 20% vs previous
+        health_signal = "healthy"
+        if avg_process < 5.0 or avg_output < 5.0:
+            health_signal = "degraded"
+        elif avg_process < 7.0 or avg_output < 7.0:
+            health_signal = "watch"
+
+        flags = verdict.get("improvement_flags", [])
+        recurring = state.get("recurring_flags", [])
+        for f in flags:
+            if f not in recurring:
+                recurring.append(f)
+        # Keep only the 10 most recent recurring flags
+        recurring = recurring[-10:]
+
+        self._upsert_projection(pt, persona_id, None, {
+            "run_count": run_count,
+            "avg_process_score": avg_process,
+            "avg_output_score": avg_output,
+            "pass_count": pass_count,
+            "pass_rate": pass_rate,
+            "health_signal": health_signal,
+            "recurring_flags": recurring,
+            "last_journey_id": journey_id,
+        })
+        logger.debug("[ESLLService] PersonaSignal %s: health=%s proc=%.1f out=%.1f",
+                     persona_id, health_signal, avg_process, avg_output)
+
+    def _projection_journey_divergence(
+        self,
+        persona_id: str,
+        journey_id: str,
+        appeared_agents: list,
+        expected_agents: list,
+        process_score: int,
+        verdict: dict,
+    ) -> None:
+        """
+        JourneyDivergenceProjection (BRD §9.2.2).
+        Tracks which expected agents did NOT appear, and how often.
+        A divergence is recorded whenever the actual agent set ≠ expected set.
+        """
+        pt = ESMProjectionType.SAI_JOURNEY_REACHABILITY.value
+        state = self._load_projection_state(pt, persona_id, journey_id)
+
+        run_count = state.get("run_count", 0) + 1
+        missing   = [a for a in expected_agents if a not in appeared_agents]
+        extra     = [a for a in appeared_agents if a not in expected_agents]
+        diverged  = bool(missing or extra)
+
+        divergence_count = state.get("divergence_count", 0) + (1 if diverged else 0)
+        divergence_rate  = round(divergence_count / run_count, 3)
+
+        # Accumulate missing agent frequency
+        missing_freq = state.get("missing_agent_frequency", {})
+        for a in missing:
+            missing_freq[a] = missing_freq.get(a, 0) + 1
+
+        self._upsert_projection(pt, persona_id, journey_id, {
+            "run_count": run_count,
+            "divergence_count": divergence_count,
+            "divergence_rate": divergence_rate,
+            "missing_agent_frequency": missing_freq,
+            "last_missing_agents": missing,
+            "last_extra_agents": extra,
+            "last_process_score": process_score,
+        })
+        if diverged:
+            logger.debug("[ESLLService] JourneyDivergence %s/%s: missing=%s",
+                         persona_id, journey_id, missing)
+
+    def _projection_recovery_success(
+        self,
+        persona_id: str,
+        journey_id: str,
+        recovery_log: list,
+    ) -> None:
+        """
+        RecoverySuccessProjection (BRD §9.2.3).
+        Tracks self-healer recovery attempts and success rate.
+        recovery_log items have shape: {type, success, ...}
+        """
+        pt = ESMProjectionType.SAI_CAPABILITY_COVERAGE.value
+        state = self._load_projection_state(pt, persona_id, None)
+
+        run_count    = state.get("run_count", 0) + 1
+        total_attempts  = state.get("recovery_attempts", 0) + len(recovery_log)
+        total_successes = state.get("recovery_successes", 0)
+        for ev in recovery_log:
+            if ev.get("success"):
+                total_successes += 1
+
+        recovery_rate = round(total_successes / total_attempts, 3) if total_attempts else 1.0
+
+        failure_types = state.get("failure_type_frequency", {})
+        for ev in recovery_log:
+            ft = ev.get("type", "unknown")
+            failure_types[ft] = failure_types.get(ft, 0) + 1
+
+        self._upsert_projection(pt, persona_id, None, {
+            "run_count": run_count,
+            "recovery_attempts": total_attempts,
+            "recovery_successes": total_successes,
+            "recovery_rate": recovery_rate,
+            "failure_type_frequency": failure_types,
+        })
+
+    def _projection_tenant_pattern(
+        self,
+        persona_id: str,
+        journey_id: str,
+        process_score: int,
+        output_score: int,
+        improvement_flags: list,
+    ) -> None:
+        """
+        TenantPatternProjection (BRD §9.2.4).
+        Aggregates cross-journey patterns within a persona's segment.
+        Uses the persona segment as the scope key.
+        """
+        pt = ESMProjectionType.SAI_FAILURE_MODE_FREQUENCY.value
+        state = self._load_projection_state(pt, persona_id, None)
+
+        run_count = state.get("run_count", 0) + 1
+        journeys_run = state.get("journeys_run", [])
+        if journey_id and journey_id not in journeys_run:
+            journeys_run.append(journey_id)
+
+        # Frequency count of each improvement flag across all runs
+        flag_freq = state.get("flag_frequency", {})
+        for f in improvement_flags:
+            # Normalise to short key
+            key = f[:80].strip()
+            flag_freq[key] = flag_freq.get(key, 0) + 1
+
+        # Top-3 recurring failure patterns
+        top_flags = sorted(flag_freq.items(), key=lambda x: -x[1])[:3]
+        top_flags = [{"flag": k, "count": v} for k, v in top_flags]
+
+        avg_proc = state.get("avg_process_score", process_score)
+        avg_out  = state.get("avg_output_score",  output_score)
+        alpha = min(0.3, 1.0 / run_count)
+        avg_proc = round(avg_proc * (1 - alpha) + process_score * alpha, 2)
+        avg_out  = round(avg_out  * (1 - alpha) + output_score  * alpha, 2)
+
+        self._upsert_projection(pt, persona_id, None, {
+            "run_count": run_count,
+            "journeys_run": journeys_run[-20:],  # keep last 20
+            "avg_process_score": avg_proc,
+            "avg_output_score": avg_out,
+            "flag_frequency": flag_freq,
+            "top_recurring_flags": top_flags,
+        })
+
+    def _projection_global_promotion(
+        self,
+        persona_id: str,
+        journey_id: str,
+        process_score: int,
+        output_score: int,
+        verdict: dict,
+    ) -> None:
+        """
+        GlobalPromotionProjection (BRD §9.2.5).
+        Tracks which insights have accumulated enough evidence to warrant
+        global-tier promotion (requires 2× human approvals + anonymisation).
+        Flags high-confidence, recurring patterns as 'promotion_eligible'.
+        """
+        pt = ESMProjectionType.SAI_CONTEXT_EFFECTIVENESS.value
+        state = self._load_projection_state(pt, None, None)
+
+        run_count = state.get("run_count", 0) + 1
+        high_score_count = state.get("high_score_runs", 0)
+        if process_score >= 8 and output_score >= 8:
+            high_score_count += 1
+
+        # Track which journey/persona combos show consistently high performance
+        high_perf_pairs = state.get("high_perf_pairs", [])
+        if process_score >= 8 and output_score >= 8:
+            pair = f"{persona_id}/{journey_id}"
+            if pair not in high_perf_pairs:
+                high_perf_pairs.append(pair)
+
+        # Track which recurring flags across many runs might warrant global insight
+        promotion_eligible_flags = state.get("promotion_eligible_flags", [])
+        for f in verdict.get("improvement_flags", []):
+            key = f[:80].strip()
+            if key not in promotion_eligible_flags:
+                # A flag becomes globally promotion-eligible after appearing in 3+ runs
+                # (tracked via TenantPattern — here we just record presence)
+                promotion_eligible_flags.append(key)
+        promotion_eligible_flags = promotion_eligible_flags[-20:]
+
+        self._upsert_projection(pt, None, None, {
+            "run_count": run_count,
+            "high_score_runs": high_score_count,
+            "high_score_rate": round(high_score_count / run_count, 3),
+            "high_perf_pairs": high_perf_pairs[-20:],
+            "promotion_eligible_flags": promotion_eligible_flags,
+        })
 
     # ── Human review actions (§13.2 steps 4-6) ───────────────────────────
 

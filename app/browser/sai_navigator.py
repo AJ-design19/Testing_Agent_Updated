@@ -56,92 +56,126 @@ MORE_ACTIONS_SELECTORS = [
     'button[id^="radix-"]',
 ]
 
-# Psi copilot chat area — the orchestrator textarea IS the Psi interface
-PSI_CHAT_SELECTORS = [
+# SAI copilot chat area — the orchestrator textarea IS the SAI interface
+SAI_CHAT_SELECTORS = [
     'textarea[aria-label="Write your prompt here"]',
     'textarea[placeholder*="Ask Orchestrator" i]',
     'textarea',
 ]
 
-# Canvas container — appears after Psi hands off
+# Canvas container — appears after SAI hands off
+# Covers the "Flow View" right-panel panel confirmed in live screenshots
 CANVAS_SELECTORS = [
+    # Confirmed from live DOM (vanijstaging.adya.ai)
+    '[data-testid="flow-view"]',
+    'text=Flow View',
+    '[class*="flow-view"]',
+    '[class*="FlowView"]',
+    '[class*="canvas"]',
     '[data-testid="canvas"]',
     ".canvas-panel",
     ".canvas-container",
     '[aria-label="Canvas"]',
     ".right-panel",
     ".agent-canvas",
+    # Agent tab names — any of these appearing = canvas is live
+    'button:has-text("AIA")',
+    'button:has-text("AGP")',
+    'button:has-text("ETL")',
+    'button:has-text("App Studio")',
 ]
 
-# Flow View
+# Flow View — the right panel that shows the planned agent flow diagram
 FLOW_VIEW_SELECTORS = [
-    '[data-testid="flow-view"]',
-    ".flow-view",
-    ".workflow-steps",
-    '[aria-label="Flow View"]',
+    # Confirmed from live DOM text content
     'text=Flow View',
+    '[data-testid="flow-view"]',
+    '[class*="flow-view"]',
+    '[class*="FlowView"]',
+    '[aria-label="Flow View"]',
+    # Broader fallbacks
+    '[class*="workflow-plan"]',
     'text=Workflow Steps',
     'text=Planned Steps',
+    'text=Agent Flow',
+    '[class*="agent-flow"]',
 ]
 
-# Canvas agent tabs — names confirmed from Vanij platform
+# Canvas agent tabs — names confirmed from Vanij platform (live screenshots)
 AGENT_TAB_SELECTORS: dict[str, list[str]] = {
     "AIA": [
         'button:has-text("AIA")',
+        '[role="tab"]:has-text("AIA")',
         '[data-testid="tab-aia"]',
         '[aria-label="AIA"]',
-        'text=AIA',
-        '.tab-aia',
+        '[class*="tab"]:has-text("AIA")',
     ],
     "AGP": [
         'button:has-text("AGP")',
+        '[role="tab"]:has-text("AGP")',
         '[data-testid="tab-agp"]',
         '[aria-label="AGP"]',
-        'text=AGP',
-        '.tab-agp',
+        '[class*="tab"]:has-text("AGP")',
     ],
     "ETL": [
         'button:has-text("ETL")',
+        '[role="tab"]:has-text("ETL")',
         '[data-testid="tab-etl"]',
         '[aria-label="ETL"]',
-        'text=ETL',
-        '.tab-etl',
+        '[class*="tab"]:has-text("ETL")',
     ],
     "App Studio": [
         'button:has-text("App Studio")',
+        '[role="tab"]:has-text("App Studio")',
         '[data-testid="tab-app-studio"]',
         '[aria-label="App Studio"]',
-        'text=App Studio',
-        '.tab-app-studio',
+        '[class*="tab"]:has-text("App Studio")',
     ],
 }
 
 # Sub-tabs inside each agent tab
+# Vanij renders these as tab buttons; also covers "Execution trace" and "Architecture"
 SUB_TAB_SELECTORS: dict[str, list[str]] = {
     "Overview": [
         'button:has-text("Overview")',
+        '[role="tab"]:has-text("Overview")',
         '[data-testid="subtab-overview"]',
-        'text=Overview',
-        '.subtab-overview',
+        '[class*="subtab"]:has-text("Overview")',
     ],
     "Output": [
         'button:has-text("Output")',
+        '[role="tab"]:has-text("Output")',
         '[data-testid="subtab-output"]',
-        'text=Output',
-        '.subtab-output',
+        '[class*="subtab"]:has-text("Output")',
     ],
     "Questions": [
         'button:has-text("Questions")',
+        '[role="tab"]:has-text("Questions")',
         '[data-testid="subtab-questions"]',
-        'text=Questions',
-        '.subtab-questions',
+        '[class*="subtab"]:has-text("Questions")',
     ],
     "Thinking": [
         'button:has-text("Thinking")',
+        '[role="tab"]:has-text("Thinking")',
         '[data-testid="subtab-thinking"]',
-        'text=Thinking',
-        'text=Steps',
-        '.subtab-thinking',
+        'button:has-text("Steps")',
+        '[class*="subtab"]:has-text("Thinking")',
+    ],
+    "Workflow": [
+        'button:has-text("Workflow")',
+        '[role="tab"]:has-text("Workflow")',
+        '[data-testid="subtab-workflow"]',
+    ],
+    "Architecture": [
+        'button:has-text("Architecture")',
+        '[role="tab"]:has-text("Architecture")',
+        '[data-testid="subtab-architecture"]',
+    ],
+    "Execution trace": [
+        'button:has-text("Execution trace")',
+        '[role="tab"]:has-text("Execution trace")',
+        'button:has-text("Execution Trace")',
+        '[data-testid="subtab-execution-trace"]',
     ],
 }
 
@@ -181,18 +215,27 @@ async def _try_selectors(page, selectors: list[str], timeout: int = 4000) -> Opt
 
 
 async def _click_selector(page, selectors: list[str], label: str, timeout: int = 4000) -> bool:
-    """Click the first matching visible selector. Returns True on success."""
-    sel = await _try_selectors(page, selectors, timeout=timeout)
-    if sel:
-        await page.click(sel)
-        logger.info("Clicked '%s' via: %s", label, sel)
-        # Let the DOM settle after click
-        try:
-            await page.wait_for_load_state("networkidle", timeout=3000)
-        except Exception:
-            pass
-        return True
-    logger.warning("Could not find '%s' with any selector", label)
+    """
+    Click the first matching visible+enabled selector with real pointer events.
+    hover → small pause → click (behaves like a human).
+    """
+    loop = asyncio.get_event_loop()
+    dead = loop.time() + timeout / 1000.0
+    while loop.time() < dead:
+        for sel in selectors:
+            try:
+                el = page.locator(sel).first
+                if await el.count() > 0 and await el.is_visible() and await el.is_enabled():
+                    await el.hover()
+                    await asyncio.sleep(0.12)
+                    await el.click()
+                    logger.info("Clicked '%s' via: %s", label, sel)
+                    await asyncio.sleep(0.4)
+                    return True
+            except Exception:
+                pass
+        await asyncio.sleep(0.4)
+    logger.warning("Could not click '%s' with any selector", label)
     return False
 
 
@@ -269,33 +312,81 @@ class SAINavigator:
             return True
         return True
 
-    # ── Psi copilot (convenience wrappers used by psi_handler) ───────────────
+    # ── SAI copilot (convenience wrappers used by sai_handler) ───────────────
 
-    async def get_psi_panel_text(self) -> str:
-        """Return visible text in the Psi / orchestrator chat area."""
-        return await _read_text(self.page, PSI_CHAT_SELECTORS, "Psi panel", timeout=5000)
+    async def get_sai_panel_text(self) -> str:
+        """Return visible text in the SAI / orchestrator chat area."""
+        return await _read_text(self.page, SAI_CHAT_SELECTORS, "SAI panel", timeout=5000)
 
     async def is_psi_visible(self) -> bool:
-        sel = await _try_selectors(self.page, PSI_CHAT_SELECTORS, timeout=3000)
+        sel = await _try_selectors(self.page, SAI_CHAT_SELECTORS, timeout=3000)
         return sel is not None
 
     # ── Canvas ────────────────────────────────────────────────────────────────
 
-    async def wait_for_canvas(self, timeout_ms: int = 30000) -> bool:
+    async def wait_for_canvas(self, timeout_ms: int = 60000) -> bool:
         """
-        Wait for the canvas panel or any agent tab to appear after Psi handoff.
-        Returns True when found.
+        Wait for the canvas right panel or any agent tab to appear.
+        All selectors are polled concurrently against a single shared deadline
+        so we don't waste the full timeout on each selector sequentially.
         """
+        deadline = asyncio.get_event_loop().time() + timeout_ms / 1000.0
+
         all_sels = CANVAS_SELECTORS + [
             sel for tab_sels in AGENT_TAB_SELECTORS.values() for sel in tab_sels
         ]
-        for sel in all_sels:
+
+        # First: nudge the page to reveal the right panel (scroll right + JS reveal)
+        try:
+            await self.page.evaluate("""() => {
+                // Scroll the rightmost scrollable container into view
+                const candidates = Array.from(document.querySelectorAll(
+                    'aside, [class*="right"], [class*="panel"], [class*="canvas"], [class*="sidebar"]'
+                )).filter(el => el.scrollWidth > el.clientWidth || el.offsetParent);
+                if (candidates.length) candidates[candidates.length - 1].scrollIntoView();
+                window.scrollTo(window.scrollMaxX || 9999, 0);
+            }""")
+        except Exception:
+            pass
+
+        logger.info("[SAINavigator] Waiting for canvas (timeout=%dms)…", timeout_ms)
+
+        while asyncio.get_event_loop().time() < deadline:
+            remaining_ms = max(500, int((deadline - asyncio.get_event_loop().time()) * 1000))
+            for sel in all_sels:
+                try:
+                    el = self.page.locator(sel).first
+                    if await el.count() > 0 and await el.is_visible():
+                        logger.info("[SAINavigator] Canvas appeared: %s", sel)
+                        return True
+                except Exception:
+                    pass
+
+            # Also check via DOM intelligence (catches dynamic class names)
             try:
-                await self.page.wait_for_selector(sel, state="visible", timeout=timeout_ms)
-                logger.info("[SAINavigator] Canvas appeared: %s", sel)
-                return True
+                found = await self.page.evaluate("""() => {
+                    const agents = ['AIA', 'AGP', 'ETL', 'App Studio'];
+                    for (const name of agents) {
+                        const els = Array.from(document.querySelectorAll(
+                            'button, [role="tab"], [class*="tab"]'
+                        )).filter(el => el.offsetParent &&
+                            (el.innerText||'').trim() === name);
+                        if (els.length) return name;
+                    }
+                    // Canvas/flow view container
+                    const panel = document.querySelector(
+                        '[class*="canvas"],[class*="Canvas"],[class*="flow-view"],[data-testid="flow-view"]'
+                    );
+                    return panel && panel.offsetParent ? 'panel' : null;
+                }""")
+                if found:
+                    logger.info("[SAINavigator] Canvas detected via JS: %s", found)
+                    return True
             except Exception:
-                continue
+                pass
+
+            await asyncio.sleep(1.0)
+
         logger.warning("[SAINavigator] Canvas did not appear within %dms", timeout_ms)
         return False
 
@@ -316,18 +407,104 @@ class SAINavigator:
 
     # ── Canvas agent tabs ─────────────────────────────────────────────────────
 
-    async def wait_for_agent_tab(self, agent_name: str, timeout: int = 30000) -> bool:
+    async def wait_for_agent_tab(self, agent_name: str, timeout: int = 60000) -> bool:
+        """Wait for an agent tab using a shared deadline across all selectors."""
         selectors = AGENT_TAB_SELECTORS.get(agent_name, [f'button:has-text("{agent_name}")'])
-        sel = await _try_selectors(self.page, selectors, timeout=timeout)
-        if sel:
-            logger.info("[SAINavigator] Agent tab '%s' appeared: %s", agent_name, sel)
-            return True
+        deadline = asyncio.get_event_loop().time() + timeout / 1000.0
+
+        while asyncio.get_event_loop().time() < deadline:
+            for sel in selectors:
+                try:
+                    el = self.page.locator(sel).first
+                    if await el.count() > 0 and await el.is_visible():
+                        logger.info("[SAINavigator] Agent tab '%s' appeared: %s", agent_name, sel)
+                        return True
+                except Exception:
+                    pass
+            # JS fallback: find by exact text match
+            try:
+                found = await self.page.evaluate("""(name) => {
+                    return !!Array.from(document.querySelectorAll(
+                        'button, [role="tab"], [class*="tab"], a'
+                    )).find(el => el.offsetParent &&
+                        (el.innerText||'').trim() === name);
+                }""", agent_name)
+                if found:
+                    logger.info("[SAINavigator] Agent tab '%s' found via JS", agent_name)
+                    return True
+            except Exception:
+                pass
+            await asyncio.sleep(1.0)
+
         logger.warning("[SAINavigator] Agent tab '%s' did not appear within %dms", agent_name, timeout)
         return False
 
     async def navigate_to_agent_tab(self, agent_name: str) -> bool:
         selectors = AGENT_TAB_SELECTORS.get(agent_name, [f'button:has-text("{agent_name}")'])
         return await _click_selector(self.page, selectors, f"agent tab '{agent_name}'", timeout=10000)
+
+    async def wait_for_agent_loaded(
+        self, agent_name: str, timeout_seconds: int = 120
+    ) -> bool:
+        """
+        After navigating to an agent tab, wait until the agent finishes loading
+        (spinner gone, content non-empty) before we read or screenshot it.
+
+        Returns True when the agent appears ready, False on timeout.
+        """
+        # JS that returns True while the agent is still in a loading state.
+        agent_loading_js = """() => {
+            // 1. Any visible spinner / loading animation in the canvas area
+            const canvasArea = document.querySelector(
+                '[data-testid="canvas"], [class*="canvas"], [class*="Canvas"], main'
+            );
+            const root = canvasArea || document.body;
+
+            const spinners = Array.from(root.querySelectorAll(
+                '.animate-spin, .animate-pulse, [class*="spinner"], [class*="Spinner"], ' +
+                '[class*="loading"], [class*="Loading"], [aria-label*="loading" i]'
+            )).filter(el => el.offsetParent !== null);
+            if (spinners.length > 0) return true;
+
+            // 2. "Loading…" / "Generating…" text inside the canvas panel
+            const text = (root.innerText || '').toLowerCase();
+            if (/\\bloading\\b|\\bgenerating\\b|\\bprocessing\\b|\\bbuilding\\b/.test(text)) {
+                // Only flag if there are no substantial content blocks yet
+                const contentBlocks = root.querySelectorAll('pre, code, table, [class*="output"], p');
+                const hasContent = Array.from(contentBlocks).some(el => {
+                    return el.offsetParent !== null && (el.innerText || '').trim().length > 40;
+                });
+                if (!hasContent) return true;
+            }
+
+            return false;
+        }"""
+
+        deadline = asyncio.get_event_loop().time() + timeout_seconds
+        poll = 1.0
+        prev_loading = None
+
+        while asyncio.get_event_loop().time() < deadline:
+            try:
+                still_loading = await self.page.evaluate(agent_loading_js)
+            except Exception:
+                still_loading = False
+
+            if still_loading != prev_loading:
+                state = "loading" if still_loading else "ready"
+                logger.info("[SAINavigator] Agent '%s' state: %s", agent_name, state)
+                prev_loading = still_loading
+
+            if not still_loading:
+                return True
+
+            await asyncio.sleep(poll)
+
+        logger.warning(
+            "[SAINavigator] Agent '%s' still loading after %ds — proceeding anyway",
+            agent_name, timeout_seconds,
+        )
+        return False
 
     async def get_active_agent_tab(self) -> str:
         active_selectors = [

@@ -1,0 +1,31 @@
+{
+  "run_id": "PM-1_WF-AC-001_20260528_160935_3f7e8e",
+  "persona_id": "PM-1",
+  "journey_id": "WF-AC-001",
+  "workflow_title": "Research Survey Platform",
+  "started_at": "2026-05-28T16:09:40.673696+00:00",
+  "finished_at": "2026-05-28T16:35:17.205417+00:00",
+  "overall_status": "fail",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "poor",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [
+    "Judge error: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}"
+  ],
+  "missing_elements": [],
+  "judge_rationale": "LLM judge could not complete evaluation: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}",
+  "artifact_run_record_path": "",
+  "screenshot_paths": [
+    "local://artifacts/PM-1_WF-AC-001_20260528_160935_3f7e8e/163517_initial_prompt_sent_WF-AC-001_initial_prompt_sent_20260528_161247_432.png",
+    "local://artifacts/PM-1_WF-AC-001_20260528_160935_3f7e8e/163517_prompt_submitted_WF-AC-001_prompt_submitted_20260528_161247_661.png",
+    "local://artifacts/PM-1_WF-AC-001_20260528_160935_3f7e8e/163517_sai_round1_WF-AC-001_sai_round1_20260528_161258_799.png"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "candidate_id": "a621c9f8-2ee9-4737-be7d-37c383556975",
+  "insight_id": "09356229-e2df-43b7-b4a7-85456315f09f",
+  "target_tier": "project",
+  "persona_id": "DE-1",
+  "journey_id": "WF-IP-001",
+  "proposed_action": "Improve Psi clarification questions for this persona type",
+  "pattern_description": "Psi question quality 'poor' for persona DE-1. Process evaluation: Psi failed to ask any clarifying questions, and the conversation log only contains the initial prompt and a generic response. This indicates a severe lack of understanding of the user's context and re",
+  "confidence_score": 0.7,
+  "evidence_summary": "Run evidence: ['DE-1_WF-IP-001_20260521_155645_349378']",
+  "agp_review_template_id": "agp_tmpl_project_review_v1",
+  "review_status": "pending",
+  "reviewer_id": null,
+  "reviewer_role": "",
+  "review_deadline": "2026-05-23T16:04:07.264389+00:00",
+  "reviewed_at": null,
+  "review_notes": null,
+  "counter_proposal": null,
+  "is_anonymised": false,
+  "anonymisation_verified": false,
+  "created_at": "2026-05-21T16:04:07.264369+00:00",
+  "updated_at": "2026-05-21T16:04:07.264380+00:00"
+}

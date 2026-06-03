@@ -1,0 +1,25 @@
+{
+  "run_id": "IB-1_WF-IB-001_20260526_164027_0ab98f",
+  "persona_id": "IB-1",
+  "journey_id": "WF-IB-001",
+  "workflow_title": "Freelancer Contract Tracker SaaS",
+  "started_at": "2026-05-26T16:40:31.818793+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

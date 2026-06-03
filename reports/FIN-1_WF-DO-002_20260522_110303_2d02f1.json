@@ -1,0 +1,39 @@
+{
+  "run_id": "FIN-1_WF-DO-002_20260522_110303_2d02f1",
+  "persona_id": "FIN-1",
+  "persona_name": "James Whitfield",
+  "workflow_id": "WF-DO-002",
+  "workflow_title": "Terraform Drift Detection System",
+  "start_time": "2026-05-22T11:03:06.132625+00:00",
+  "end_time": "2026-05-22T11:04:53.648241+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T11:03:07.701730+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T11:04:53.648029+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

@@ -1,0 +1,76 @@
+{
+  "workflow_id": "WF-IB-002",
+  "workflow_title": "Waitlist App with Viral Referral",
+  "observations": [
+    {
+      "ts": "2026-05-29T14:46:03.809178+00:00",
+      "round": 1,
+      "response_time_s": 0.88,
+      "was_question": false,
+      "was_completion": false,
+      "was_card": false,
+      "input_length": 116,
+      "output_length": 45,
+      "question_keywords": [],
+      "input_preview": "[CARD ANSWERED] AGENT QUESTION\nWould you like to proceed with executing this plan, or would you prefer to make modif",
+      "output_preview": "Completed\nIn Progress\nPending\nCancelled\nError"
+    },
+    {
+      "ts": "2026-05-29T14:46:09.250822+00:00",
+      "round": 2,
+      "response_time_s": 3.92,
+      "was_question": false,
+      "was_completion": false,
+      "was_card": false,
+      "input_length": 116,
+      "output_length": 297,
+      "question_keywords": [],
+      "input_preview": "[CARD ANSWERED] AGENT QUESTION\nWould you like to proceed with executing this plan, or would you prefer to make modif",
+      "output_preview": "Design the complete technical architecture for the waitlist app including file/folder structure, data models (waitlist entries, referrals, positions), API contracts (signup, referral tracking, position reveal, admin CRUD), component hierarchy, state management, routing, and security architecture."
+    },
+    {
+      "ts": "2026-05-29T14:48:47.457529+00:00",
+      "round": 3,
+      "response_time_s": 156.68,
+      "was_question": true,
+      "was_completion": false,
+      "was_card": true,
+      "input_length": 30,
+      "output_length": 600,
+      "question_keywords": [],
+      "input_preview": "[AGENT QUESTION CARD ANSWERED]",
+      "output_preview": "New Workspace\nWORKSPACES\nTEMPLATES\n10:43 AM\nViral Waitlist Manager\nViral Waitlist App with Referral System\nPRD Generation\nwaiting\nFlow View\nUsage\n9:24 AM\nNew Project Workspace\n12:28 PM\nNew Project Workspace\n12:24 PM\nCoin Recharge Portal\n12:24 PM\nCoin Recharge Portal\n12:12 PM\nResearch Survey Platform"
+    },
+    {
+      "ts": "2026-05-29T14:48:48.554953+00:00",
+      "round": 4,
+      "response_time_s": 1.08,
+      "was_question": false,
+      "was_completion": false,
+      "was_card": false,
+      "input_length": 116,
+      "output_length": 106,
+      "question_keywords": [],
+      "input_preview": "[CARD ANSWERED] New Workspace\nWORKSPACES\nTEMPLATES\n10:43 AM\nViral Waitlist Manager\nViral Waitlist App with Referral ",
+      "output_preview": "Note: Requirements are tagged with MoSCoW priority: [Must Have], [Should Have], [Could Have], [Won't Have]"
+    },
+    {
+      "ts": "2026-05-29T14:49:06.218474+00:00",
+      "round": 6,
+      "response_time_s": 5.19,
+      "was_question": false,
+      "was_completion": false,
+      "was_card": false,
+      "input_length": 116,
+      "output_length": 65,
+      "question_keywords": [],
+      "input_preview": "[CARD ANSWERED] New Workspace\nWORKSPACES\nTEMPLATES\n10:43 AM\nViral Waitlist Manager\nViral Waitlist App with Referral ",
+      "output_preview": "⚠️ These assumptions must be validated before development begins."
+    }
+  ],
+  "aggregates": {
+    "total_runs": 0,
+    "avg_response_time_s": 33.55,
+    "question_freq": {}
+  }
+}

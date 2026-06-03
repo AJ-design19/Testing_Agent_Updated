@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Test Report · DE-1_WF-IP-001_20260521_155645_349378</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+       background:#f8fafc;color:#1e293b;font-size:14px;line-height:1.6}
+  .page{max-width:1200px;margin:0 auto;padding:24px}
+  h1{font-size:1.6rem;font-weight:700}
+  h2{font-size:1.15rem;font-weight:700;margin-bottom:14px;color:#0f172a;
+      border-bottom:2px solid #e2e8f0;padding-bottom:6px}
+  h3{font-size:0.95rem;font-weight:700;color:#334155;margin-bottom:8px}
+  .card{background:#fff;border-radius:12px;border:1px solid #e2e8f0;
+         padding:24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .meta-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+  .badge{display:inline-block;padding:3px 12px;border-radius:20px;font-size:0.75rem;
+          font-weight:700;color:#fff}
+  .pill{display:inline-block;padding:2px 10px;border-radius:10px;font-size:0.78rem;
+         background:#f1f5f9;color:#475569;border:1px solid #cbd5e1;margin:2px}
+  .step-row{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #f1f5f9}
+  .step-row:last-child{border-bottom:none}
+  .step-num{min-width:32px;height:32px;border-radius:50%;background:#f1f5f9;
+             display:flex;align-items:center;justify-content:center;
+             font-size:0.75rem;font-weight:700;color:#64748b;flex-shrink:0}
+  .step-body{flex:1}
+  .step-desc{font-weight:500;color:#1e293b}
+  .step-meta{font-size:0.75rem;color:#94a3b8;margin-top:2px}
+  .step-content{background:#f8fafc;border-left:3px solid #cbd5e1;padding:6px 10px;
+                 margin-top:6px;font-size:0.78rem;color:#475569;border-radius:0 4px 4px 0;
+                 white-space:pre-wrap;word-break:break-word}
+  .psi-msg{padding:10px 14px;border-radius:10px;margin-bottom:8px;max-width:85%}
+  .psi-assistant{background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;margin-right:auto}
+  .psi-user{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;margin-left:auto}
+  .psi-system{background:#fefce8;border:1px solid #fde68a;color:#92400e;margin:0 auto;
+               font-style:italic;font-size:0.82rem}
+  .psi-role{font-size:0.7rem;font-weight:700;margin-bottom:3px;opacity:.7;text-transform:uppercase}
+  .agent-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:12px}
+  .subtab{background:#fff;border:1px solid #e2e8f0;border-radius:6px;padding:10px 14px;
+           margin-top:8px}
+  .subtab-name{font-size:0.72rem;font-weight:700;color:#7c3aed;margin-bottom:4px;
+                text-transform:uppercase;letter-spacing:.05em}
+  .subtab-content{font-size:0.82rem;color:#334155;white-space:pre-wrap;word-break:break-word;
+                   max-height:220px;overflow-y:auto}
+  .screenshot{border-radius:8px;border:1px solid #e2e8f0;width:100%;
+               object-fit:contain;background:#000;cursor:zoom-in}
+  .screenshot-caption{font-size:0.72rem;color:#94a3b8;text-align:center;margin-top:4px}
+  .flag-item{padding:6px 12px;background:#fef2f2;border-left:3px solid #f87171;
+              border-radius:0 4px 4px 0;margin-bottom:6px;font-size:0.85rem;color:#991b1b}
+  .missing-item{padding:6px 12px;background:#fff7ed;border-left:3px solid #fb923c;
+                 border-radius:0 4px 4px 0;margin-bottom:6px;font-size:0.85rem;color:#9a3412}
+  .rationale{background:#f8fafc;border-radius:8px;padding:16px;font-size:0.9rem;
+              color:#334155;line-height:1.7;border:1px solid #e2e8f0}
+  .stat-num{font-size:2rem;font-weight:700;line-height:1}
+  .stat-label{font-size:0.75rem;color:#64748b;margin-top:4px}
+  .toc-link{display:block;color:#2563eb;text-decoration:none;padding:3px 0;font-size:0.9rem}
+  .toc-link:hover{text-decoration:underline}
+  details>summary{cursor:pointer;font-weight:600;padding:8px 0;color:#2563eb;list-style:none}
+  details>summary::-webkit-details-marker{display:none}
+  details>summary::before{content:'▶ ';font-size:0.7em;transition:.15s}
+  details[open]>summary::before{content:'▼ '}
+  @media(max-width:700px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<div class="card" style="background:linear-gradient(135deg,#1e293b 0%,#334155 100%);color:#fff;border:none">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
+    <div>
+      <div style="font-size:0.75rem;opacity:.6;margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em">
+        Adya AI · SAI Browser Testing Agent
+      </div>
+      <h1 style="color:#fff;margin-bottom:6px">Enterprise Data Governance Accelerator</h1>
+      <div class="meta-row">
+        <span class="badge" style="background:#dc2626">FAIL</span>
+        <span class="pill" style="background:rgba(255,255,255,.12);color:#e2e8f0;border-color:rgba(255,255,255,.2)">
+          DE-1 · Yuki Tanaka
+        </span>
+        <span class="pill" style="background:rgba(255,255,255,.12);color:#e2e8f0;border-color:rgba(255,255,255,.2)">
+          WF-IP-001
+        </span>
+      </div>
+    </div>
+    <div style="text-align:right;opacity:.8;font-size:0.8rem">
+      <div>Run ID: <code style="background:rgba(255,255,255,.1);padding:1px 6px;border-radius:4px">DE-1_WF-IP-001_20260521_155645_349378</code></div>
+      <div style="margin-top:4px">Duration: <strong>7m 18s</strong></div>
+      <div style="margin-top:2px">2026-05-21 15:56:48 UTC</div>
+    </div>
+  </div>
+
+  <!-- Score rings -->
+  <div style="display:flex;gap:0;margin-top:20px;border-top:1px solid rgba(255,255,255,.15);
+              padding-top:16px;flex-wrap:wrap">
+    <div style='text-align:center;padding:12px 20px'><div style='width:72px;height:72px;border-radius:50%;border:5px solid #dc2626;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:1.5rem;font-weight:700;color:#dc2626'>2</div><div style='margin-top:6px;font-size:0.75rem;color:#6b7280;font-weight:600'>Correctness</div></div>
+    <div style='text-align:center;padding:12px 20px'><div style='width:72px;height:72px;border-radius:50%;border:5px solid #dc2626;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:1.5rem;font-weight:700;color:#dc2626'>1</div><div style='margin-top:6px;font-size:0.75rem;color:#6b7280;font-weight:600'>Process</div></div>
+    <div style='text-align:center;padding:12px 20px'><div style='width:72px;height:72px;border-radius:50%;border:5px solid #dc2626;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:1.5rem;font-weight:700;color:#dc2626'>1</div><div style='margin-top:6px;font-size:0.75rem;color:#6b7280;font-weight:600'>Output</div></div>
+    <div style="flex:1;min-width:200px;padding:12px 20px;display:flex;flex-direction:column;
+                justify-content:center;border-left:1px solid rgba(255,255,255,.15)">
+      <div style="font-size:0.75rem;opacity:.6;text-transform:uppercase;letter-spacing:.06em">
+        Psi Quality
+      </div>
+      <div style="font-size:1.4rem;font-weight:700;color:#93c5fd;margin-top:4px">
+        POOR
+      </div>
+      <div style="font-size:0.75rem;opacity:.6;margin-top:4px">
+        21 steps · 2 conversation turns
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
+<div class="card" style="padding:16px 24px">
+  <h2 style="border:none;margin-bottom:8px">Contents</h2>
+  <div class="grid-2">
+    <div>
+      <a href="#persona"   class="toc-link">1 · Persona Profile</a>
+      <a href="#workflow"  class="toc-link">2 · Workflow Summary</a>
+      <a href="#qa-table"  class="toc-link">3 · QA Step Table</a>
+      <a href="#journey"   class="toc-link">4 · Journey Timeline</a>
+      <a href="#psi"       class="toc-link">5 · Psi Conversation</a>
+    </div>
+    <div>
+      <a href="#canvas"    class="toc-link">6 · Canvas Agent Evidence</a>
+      <a href="#verdict"   class="toc-link">7 · LLM Judge Verdict</a>
+      <a href="#failures"  class="toc-link">8 · Failure Analysis</a>
+      <a href="#metrics"   class="toc-link">9 · Final Metrics</a>
+      <a href="#gallery"   class="toc-link">10 · Screenshot Gallery</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="persona" class="card">
+  <h2>1 · Persona Profile</h2>
+  <div class="grid-2">
+    <div>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);
+                    display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+                    color:#fff;font-weight:700;flex-shrink:0">DE</div>
+        <div>
+          <div style="font-size:1.2rem;font-weight:700">Yuki Tanaka</div>
+          <div style="color:#64748b;font-size:0.85rem">Data Engineer</div>
+          <div class="meta-row" style="margin-top:4px">
+            <span class="badge" style="background:#6366f1">DE-1</span>
+            <span class="pill">N/A</span>
+          </div>
+        </div>
+      </div>
+
+      <table style="width:100%;border-collapse:collapse;font-size:0.85rem">
+        <tr><td style="padding:5px 0;color:#64748b;width:130px">Industry</td><td style="font-weight:500">Media & Entertainment</td></tr><tr><td style="padding:5px 0;color:#64748b;width:130px">Org Size</td><td style="font-weight:500">Mid-size, 600 employees</td></tr><tr><td style="padding:5px 0;color:#64748b;width:130px">Buyer Profile</td><td style="font-weight:500">N/A</td></tr><tr><td style="padding:5px 0;color:#64748b;width:130px">SAI Usage</td><td style="font-weight:500">N/A</td></tr><tr><td style="padding:5px 0;color:#64748b;width:130px">Dev Usage</td><td style="font-weight:500">N/A</td></tr>
+        <tr>
+          <td style="padding:5px 0;color:#64748b;vertical-align:top">Technical Depth</td>
+          <td><span style="font-weight:700;color:#6b7280">VERY HIGH</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>Goals</h3>
+      <ul style="list-style:none;padding:0;margin-bottom:14px;color:#334155;font-size:0.85rem">
+        <li style='margin-bottom:4px'>✦ Build a real-time streaming data pipeline for content engagement metrics</li><li style='margin-bottom:4px'>✦ Create a data quality monitoring system for our data lake</li><li style='margin-bottom:4px'>✦ Migrate ETL pipelines from on-prem Informatica to cloud-native</li>
+      </ul>
+      <h3>Pain Points</h3>
+      <ul style="list-style:none;padding:0;color:#334155;font-size:0.85rem">
+        <li style='margin-bottom:4px'>⚡ Data lake is a swamp, lineage is unknown, nobody trusts the numbers</li><li style='margin-bottom:4px'>⚡ Informatica licenses cost $400K/year, board wants cloud migration</li><li style='margin-bottom:4px'>⚡ Kafka consumer lag spikes every morning at 9am, root cause unknown</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top:16px;border-top:1px solid #f1f5f9;padding-top:14px">
+    <h3>Communication Style</h3>
+    <p style="color:#475569;font-size:0.85rem;margin-bottom:14px">Highly technical, talks about partitioning strategies, CAP theorem, idempotency; uses dbt, Spark, Kafka terminology</p>
+    <h3>Sample Prompts This Persona Would Send</h3>
+    <div style='background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:8px 12px;margin-bottom:6px;font-size:0.82rem;color:#334155;font-style:italic'>"Build a Kafka-based real-time pipeline ingesting clickstream events with exactly-once semantics and a consumer lag monitoring dashboard"</div><div style='background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:8px 12px;margin-bottom:6px;font-size:0.82rem;color:#334155;font-style:italic'>"Create a data quality framework using Great Expectations over our S3 data lake with automated anomaly alerts and lineage tracking"</div><div style='background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:8px 12px;margin-bottom:6px;font-size:0.82rem;color:#334155;font-style:italic'>"Design a dbt-based transformation layer replacing our Informatica pipelines with incremental models, tests, and documentation"</div>
+  </div>
+</div>
+
+<div id="workflow" class="card">
+  <h2>2 · Workflow Summary</h2>
+  <div class="grid-2">
+    <div>
+      <table style="width:100%;border-collapse:collapse;font-size:0.85rem">
+        <tr><td style="padding:5px 0;color:#64748b;width:120px">Workflow ID</td>
+            <td><code style="background:#f1f5f9;padding:1px 6px;border-radius:4px">WF-IP-001</code></td></tr>
+        <tr><td style="padding:5px 0;color:#64748b">Title</td>
+            <td style="font-weight:600">Enterprise Data Governance Accelerator</td></tr>
+        <tr><td style="padding:5px 0;color:#64748b">Persona</td>
+            <td>DE-1 · Yuki Tanaka</td></tr>
+        <tr><td style="padding:5px 0;color:#64748b">Status</td>
+            <td><span class="badge" style="background:#dc2626">
+              FAIL</span></td></tr>
+        <tr><td style="padding:5px 0;color:#64748b">Start</td>
+            <td>2026-05-21 15:56:48 UTC</td></tr>
+        <tr><td style="padding:5px 0;color:#64748b">End</td>
+            <td>2026-05-21 16:04:07 UTC</td></tr>
+        <tr><td style="padding:5px 0;color:#64748b">Duration</td>
+            <td>7m 18s</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Agents Expected</h3>
+      <div style="margin-bottom:12px">
+        <span style='display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;background:#2563eb1a;color:#2563eb;border-radius:12px;font-size:0.8rem;border:1px solid #2563eb44'>AIA</span><span style='display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;background:#2563eb1a;color:#2563eb;border-radius:12px;font-size:0.8rem;border:1px solid #2563eb44'>AGP</span><span style='display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;background:#2563eb1a;color:#2563eb;border-radius:12px;font-size:0.8rem;border:1px solid #2563eb44'>ETL</span><span style='display:inline-block;margin:2px 4px 2px 0;padding:2px 10px;background:#2563eb1a;color:#2563eb;border-radius:12px;font-size:0.8rem;border:1px solid #2563eb44'>App Studio</span>
+      </div>
+      <h3>Agents That Ran</h3>
+      <div>
+        <span style='color:#9ca3af'>None</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="qa-table" class="card">
+  <h2>3 · QA Step Table
+    <span style="font-size:0.85rem;font-weight:400;color:#64748b">
+      (21 steps · 15 passed · 6 failed · 71% accuracy)
+    </span>
+  </h2>
+  <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;min-width:700px">
+      <thead>
+        <tr style="background:#f8fafc">
+          <th style="padding:10px 12px;text-align:center;font-size:0.75rem;font-weight:700;
+                     color:#64748b;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap">Step</th>
+          <th style="padding:10px 12px;font-size:0.75rem;font-weight:700;
+                     color:#64748b;text-transform:uppercase;letter-spacing:.05em">Action</th>
+          <th style="padding:10px 12px;font-size:0.75rem;font-weight:700;
+                     color:#64748b;text-transform:uppercase;letter-spacing:.05em">Expected</th>
+          <th style="padding:10px 12px;font-size:0.75rem;font-weight:700;
+                     color:#64748b;text-transform:uppercase;letter-spacing:.05em">Actual</th>
+          <th style="padding:10px 12px;text-align:center;font-size:0.75rem;font-weight:700;
+                     color:#64748b;text-transform:uppercase;letter-spacing:.05em">Screenshot</th>
+          <th style="padding:10px 12px;text-align:center;font-size:0.75rem;font-weight:700;
+                     color:#64748b;text-transform:uppercase;letter-spacing:.05em">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#2563eb">0</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#2563eb1a;color:#2563eb;border:1px solid #2563eb44">login</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Navigating to SAI and logging in</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#2563eb">1</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#2563eb1a;color:#2563eb;border:1px solid #2563eb44">login</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Login completed</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">URL: https://vanijstaging.adya.ai/orchestrator</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#7c3aed">2</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed44">send_prompt</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Sending initial workflow prompt as Yuki Tanaka</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">Build a reusable enterprise data governance accelerator that I can deploy for financial services clients in under 3 days.</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#7c3aed">3</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed44">send_prompt</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Initial prompt submitted</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#0891b2">4</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#0891b21a;color:#0891b2;border:1px solid #0891b244">psi_loop</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Starting Psi conversation loop</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#0891b2">5</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#0891b21a;color:#0891b2;border:1px solid #0891b244">psi_loop</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Psi complete: 0 Qs answered | completion_detected=False | rounds=2</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#6b7280">6</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#6b72801a;color:#6b7280;border:1px solid #6b728044">canvas_wait</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Waiting for canvas to appear after Psi handoff</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fef2f2">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#6b7280">7</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#6b72801a;color:#6b7280;border:1px solid #6b728044">canvas_wait</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Canvas recovery attempted: False</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#dc2626'>FAIL</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#9333ea">8</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#9333ea1a;color:#9333ea;border:1px solid #9333ea44">screenshot</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Psi→Canvas handoff screenshot</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#059669">9</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#0596691a;color:#059669;border:1px solid #05966944">canvas_capture</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Capturing canvas for agents: ['AIA', 'AGP', 'ETL', 'App Studio']</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">10</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Starting capture: AIA</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fef2f2">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">11</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Agent 'AIA': appeared=False, screenshots=0, state=unknown</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#dc2626'>FAIL</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">12</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Starting capture: AGP</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fef2f2">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">13</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Agent 'AGP': appeared=False, screenshots=0, state=unknown</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#dc2626'>FAIL</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">14</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Starting capture: ETL</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fef2f2">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">15</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Agent 'ETL': appeared=False, screenshots=0, state=unknown</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#dc2626'>FAIL</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">16</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Starting capture: App Studio</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fef2f2">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#16a34a">17</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Agent 'App Studio': appeared=False, screenshots=0, state=unknown</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#dc2626'>FAIL</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#d97706">18</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#d977061a;color:#d97706;border:1px solid #d9770644">judge</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Running LLM Judge + Visual Judge evaluation</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fef2f2">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#d97706">19</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#d977061a;color:#d97706;border:1px solid #d9770644">judge</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Verdict: fail | Process:1/10 | Output:1/10 | Visual:0/10</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#dc2626'>FAIL</span></td>
+</tr>
+<tr style="border-bottom:1px solid #f1f5f9;background:#fff">
+  <td style="padding:8px 12px;text-align:center;font-weight:700;color:#9333ea">20</td>
+  <td style="padding:8px 12px">
+    <span style="font-size:0.75rem;font-weight:700;padding:2px 8px;border-radius:10px;
+                 background:#9333ea1a;color:#9333ea;border:1px solid #9333ea44">screenshot</span>
+    <div style="font-size:0.82rem;color:#475569;margin-top:3px">Final screenshot</div>
+  </td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#475569;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;font-size:0.82rem;color:#334155;max-width:220px;word-break:break-word">—</td>
+  <td style="padding:8px 12px;text-align:center"><span style='color:#cbd5e1;font-size:0.75rem'>—</span></td>
+  <td style="padding:8px 12px;text-align:center"><span class='badge' style='background:#16a34a'>PASS</span></td>
+</tr></tbody>
+    </table>
+  </div>
+</div>
+
+<div id="journey" class="card">
+  <h2>4 · Journey Timeline <span style="font-size:0.85rem;font-weight:400;color:#64748b">
+    (21 steps)</span></h2>
+  
+<div class="step-row">
+  <div class="step-num" style="background:#2563eb1a;color:#2563eb">0</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#2563eb1a;color:#2563eb;border:1px solid #2563eb44">login</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 15:56:51</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Navigating to SAI and logging in</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#2563eb1a;color:#2563eb">1</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#2563eb1a;color:#2563eb;border:1px solid #2563eb44">login</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 15:57:23</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Login completed</div>
+    <div style='font-size:0.75rem;color:#6b7280;margin-top:4px;font-style:italic'>ℹ URL: https://vanijstaging.adya.ai/orchestrator</div>
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#7c3aed1a;color:#7c3aed">2</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed44">send_prompt</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 15:57:28</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Sending initial workflow prompt as Yuki Tanaka</div>
+    <div class='step-content'>Build a reusable enterprise data governance accelerator that I can deploy for financial services clients in under 3 days.</div>
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#7c3aed1a;color:#7c3aed">3</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed44">send_prompt</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 15:57:34</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Initial prompt submitted</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#0891b21a;color:#0891b2">4</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#0891b21a;color:#0891b2;border:1px solid #0891b244">psi_loop</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 15:57:35</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Starting Psi conversation loop</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#0891b21a;color:#0891b2">5</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#0891b21a;color:#0891b2;border:1px solid #0891b244">psi_loop</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Psi complete: 0 Qs answered | completion_detected=False | rounds=2</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#6b72801a;color:#6b7280">6</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#6b72801a;color:#6b7280;border:1px solid #6b728044">canvas_wait</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Waiting for canvas to appear after Psi handoff</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#6b72801a;color:#6b7280">7</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#6b72801a;color:#6b7280;border:1px solid #6b728044">canvas_wait</span>
+      
+      <span style="font-size:0.75rem;color:#dc2626;font-weight:700">✗</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Canvas recovery attempted: False</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#9333ea1a;color:#9333ea">8</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#9333ea1a;color:#9333ea;border:1px solid #9333ea44">screenshot</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Psi→Canvas handoff screenshot</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#0596691a;color:#059669">9</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#0596691a;color:#059669;border:1px solid #05966944">canvas_capture</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Capturing canvas for agents: ['AIA', 'AGP', 'ETL', 'App Studio']</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">10</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>AIA</span>
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Starting capture: AIA</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">11</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>AIA</span>
+      <span style="font-size:0.75rem;color:#dc2626;font-weight:700">✗</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Agent 'AIA': appeared=False, screenshots=0, state=unknown</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">12</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>AGP</span>
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Starting capture: AGP</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">13</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>AGP</span>
+      <span style="font-size:0.75rem;color:#dc2626;font-weight:700">✗</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Agent 'AGP': appeared=False, screenshots=0, state=unknown</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">14</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>ETL</span>
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Starting capture: ETL</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">15</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>ETL</span>
+      <span style="font-size:0.75rem;color:#dc2626;font-weight:700">✗</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:03</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Agent 'ETL': appeared=False, screenshots=0, state=unknown</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">16</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>App Studio</span>
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:03</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Starting capture: App Studio</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#16a34a1a;color:#16a34a">17</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+      <span class='pill' style='background:#ede9fe;color:#6d28d9;border-color:#c4b5fd'>App Studio</span>
+      <span style="font-size:0.75rem;color:#dc2626;font-weight:700">✗</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:03</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Agent 'App Studio': appeared=False, screenshots=0, state=unknown</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#d977061a;color:#d97706">18</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#d977061a;color:#d97706;border:1px solid #d9770644">judge</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:03</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Running LLM Judge + Visual Judge evaluation</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#d977061a;color:#d97706">19</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#d977061a;color:#d97706;border:1px solid #d9770644">judge</span>
+      
+      <span style="font-size:0.75rem;color:#dc2626;font-weight:700">✗</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:06</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Verdict: fail | Process:1/10 | Output:1/10 | Visual:0/10</div>
+    
+  </div>
+</div>
+<div class="step-row">
+  <div class="step-num" style="background:#9333ea1a;color:#9333ea">20</div>
+  <div class="step-body">
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+      <span style="font-size:0.7rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                   background:#9333ea1a;color:#9333ea;border:1px solid #9333ea44">screenshot</span>
+      
+      <span style="font-size:0.75rem;color:#16a34a;font-weight:700">✓</span>
+      <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:07</span>
+    </div>
+    <div class="step-desc" style="margin-top:4px">Final screenshot</div>
+    
+  </div>
+</div>
+</div>
+
+<div id="psi" class="card">
+  <h2>5 · Psi Conversation
+    <span style="font-size:0.85rem;font-weight:400;color:#64748b">
+      (1 Psi messages · 1 user replies)
+    </span>
+  </h2>
+  <div style="max-height:600px;overflow-y:auto;padding:4px 0">
+    
+<div class="psi-msg psi-user">
+  <div class="psi-role">User (Persona)</div>
+  <div>Build a reusable enterprise data governance accelerator that I can deploy for financial services clients in under 3 days.</div>
+  
+</div>
+<div class="psi-msg psi-assistant">
+  <div class="psi-role">Psi (SAI)</div>
+  <div>Data Governance Accelerator</div>
+  
+</div>
+  </div>
+</div>
+
+<div id="canvas" class="card">
+  <h2>6 · Canvas Agent Evidence</h2>
+  
+<div class="agent-card" style="border-color:#6366f1">
+  <h3 style="color:#6366f1">⬡ Flow View</h3>
+  <div style="font-size:0.82rem;color:#475569;margin-bottom:8px">
+    Appeared: <strong>No</strong>
+  </div>
+  
+  
+</div>
+<div class="agent-card" style="border-color:#dc2626">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <div style="font-size:1.1rem;font-weight:700;color:#dc2626">AIA</div>
+    <span style="font-size:0.75rem;font-weight:700;color:#dc2626">Did Not Appear ✗</span>
+  </div>
+  
+  
+</div>
+<div class="agent-card" style="border-color:#dc2626">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <div style="font-size:1.1rem;font-weight:700;color:#dc2626">AGP</div>
+    <span style="font-size:0.75rem;font-weight:700;color:#dc2626">Did Not Appear ✗</span>
+  </div>
+  
+  
+</div>
+<div class="agent-card" style="border-color:#dc2626">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <div style="font-size:1.1rem;font-weight:700;color:#dc2626">ETL</div>
+    <span style="font-size:0.75rem;font-weight:700;color:#dc2626">Did Not Appear ✗</span>
+  </div>
+  
+  
+</div>
+<div class="agent-card" style="border-color:#dc2626">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+    <div style="font-size:1.1rem;font-weight:700;color:#dc2626">App Studio</div>
+    <span style="font-size:0.75rem;font-weight:700;color:#dc2626">Did Not Appear ✗</span>
+  </div>
+  
+  
+</div>
+</div>
+
+<div id="verdict" class="card">
+  <h2>7 · LLM Judge Verdict</h2>
+
+  <!-- Score summary row -->
+  <div class="grid-4" style="margin-bottom:20px">
+    <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+      <div class="stat-num" style="color:#dc2626">2<span style="font-size:1rem">/10</span></div>
+      <div class="stat-label">Correctness</div>
+    </div>
+    <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+      <div class="stat-num" style="color:#dc2626">1<span style="font-size:1rem">/10</span></div>
+      <div class="stat-label">Process (Psi)</div>
+    </div>
+    <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+      <div class="stat-num" style="color:#dc2626">1<span style="font-size:1rem">/10</span></div>
+      <div class="stat-label">Output (Canvas)</div>
+    </div>
+    <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+      <div class="stat-num" style="color:#6366f1;font-size:1.3rem">POOR</div>
+      <div class="stat-label">Psi Q Rating</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:20px">
+    <div>
+      <h3 style="margin-bottom:8px">Process Evaluation (Psi)</h3>
+      <div class="rationale">Psi failed to ask any clarifying questions, and the conversation log only contains the initial prompt and a generic response. This indicates a severe lack of understanding of the user's context and requirements.</div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:8px">Output Evaluation (Canvas)</h3>
+      <div class="rationale">None of the expected agents appeared, and there is no evidence of any output or solution being generated. This is a critical failure, as the system was unable to produce any meaningful results.</div>
+    </div>
+  </div>
+
+  <h3 style="margin-bottom:8px">Overall Rationale</h3>
+  <div class="rationale" style="margin-bottom:20px">The test run was severely impaired due to the lack of meaningful interaction with Psi, the failure of agents to appear, and the absence of any output. The system experienced critical issues, including page freezes and stuck states, which further exacerbated the problems. The overall correctness and output quality scores are severely impacted, resulting in a FAIL status.</div>
+
+  <div class="grid-2">
+    <div>
+      <h3 style="margin-bottom:8px">Improvement Flags (3)</h3>
+      <div class='flag-item'>⚑ Implement more robust conversation handling in Psi</div><div class='flag-item'>⚑ Improve agent invocation and output generation</div><div class='flag-item'>⚑ Enhance canvas rendering and stability</div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:8px">Missing Elements (2)</h3>
+      <div class='missing-item'>○ Expected agents (AIA, AGP, ETL, App Studio)</div><div class='missing-item'>○ Meaningful output or solution</div>
+    </div>
+  </div>
+</div>
+
+<div id="failures" class="card">
+  <h2>8 · Failure Analysis</h2>
+  
+<div style="margin-bottom:20px">
+  <h3 style="color:#dc2626;margin-bottom:10px">
+    ✗ Failed Steps (6)
+  </h3>
+  
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;
+            padding:14px 16px;margin-bottom:10px">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+    <span style="font-size:1rem;color:#dc2626;font-weight:700">✗</span>
+    <span style="font-size:0.75rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                 background:#6b72801a;color:#6b7280;border:1px solid #6b728044">canvas_wait</span>
+    <span style="font-weight:600;color:#1e293b">Canvas recovery attempted: False</span>
+    <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+  </div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:6px;font-style:italic'>No screenshot captured for this failure.</div>
+</div>
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;
+            padding:14px 16px;margin-bottom:10px">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+    <span style="font-size:1rem;color:#dc2626;font-weight:700">✗</span>
+    <span style="font-size:0.75rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <span style="font-weight:600;color:#1e293b">Agent 'AIA': appeared=False, screenshots=0, state=unknown</span>
+    <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+  </div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:6px;font-style:italic'>No screenshot captured for this failure.</div>
+</div>
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;
+            padding:14px 16px;margin-bottom:10px">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+    <span style="font-size:1rem;color:#dc2626;font-weight:700">✗</span>
+    <span style="font-size:0.75rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <span style="font-weight:600;color:#1e293b">Agent 'AGP': appeared=False, screenshots=0, state=unknown</span>
+    <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:02</span>
+  </div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:6px;font-style:italic'>No screenshot captured for this failure.</div>
+</div>
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;
+            padding:14px 16px;margin-bottom:10px">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+    <span style="font-size:1rem;color:#dc2626;font-weight:700">✗</span>
+    <span style="font-size:0.75rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <span style="font-weight:600;color:#1e293b">Agent 'ETL': appeared=False, screenshots=0, state=unknown</span>
+    <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:03</span>
+  </div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:6px;font-style:italic'>No screenshot captured for this failure.</div>
+</div>
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;
+            padding:14px 16px;margin-bottom:10px">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+    <span style="font-size:1rem;color:#dc2626;font-weight:700">✗</span>
+    <span style="font-size:0.75rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                 background:#16a34a1a;color:#16a34a;border:1px solid #16a34a44">canvas_agent</span>
+    <span style="font-weight:600;color:#1e293b">Agent 'App Studio': appeared=False, screenshots=0, state=unknown</span>
+    <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:03</span>
+  </div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:6px;font-style:italic'>No screenshot captured for this failure.</div>
+</div>
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;
+            padding:14px 16px;margin-bottom:10px">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+    <span style="font-size:1rem;color:#dc2626;font-weight:700">✗</span>
+    <span style="font-size:0.75rem;font-weight:700;padding:1px 8px;border-radius:10px;
+                 background:#d977061a;color:#d97706;border:1px solid #d9770644">judge</span>
+    <span style="font-weight:600;color:#1e293b">Verdict: fail | Process:1/10 | Output:1/10 | Visual:0/10</span>
+    <span style="font-size:0.72rem;color:#94a3b8;margin-left:auto">2026-05-21 16:04:06</span>
+  </div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:6px;font-style:italic'>No screenshot captured for this failure.</div>
+</div>
+</div>
+<div style="margin-bottom:20px">
+  <h3 style="color:#ea580c;margin-bottom:10px">
+    ⚠ Agents That Did Not Appear (4)
+  </h3>
+  <div style="display:flex;gap:12px;flex-wrap:wrap">
+    
+<div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;
+            padding:14px 16px;flex:1;min-width:200px">
+  <div style="font-weight:700;color:#9a3412;font-size:1rem;margin-bottom:4px">AIA</div>
+  <div style="font-size:0.82rem;color:#c2410c">Agent tab never appeared — workflow may have stalled before this agent ran.</div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:4px;font-style:italic'>No screenshot available.</div>
+</div>
+<div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;
+            padding:14px 16px;flex:1;min-width:200px">
+  <div style="font-weight:700;color:#9a3412;font-size:1rem;margin-bottom:4px">AGP</div>
+  <div style="font-size:0.82rem;color:#c2410c">Agent tab never appeared — workflow may have stalled before this agent ran.</div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:4px;font-style:italic'>No screenshot available.</div>
+</div>
+<div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;
+            padding:14px 16px;flex:1;min-width:200px">
+  <div style="font-weight:700;color:#9a3412;font-size:1rem;margin-bottom:4px">ETL</div>
+  <div style="font-size:0.82rem;color:#c2410c">Agent tab never appeared — workflow may have stalled before this agent ran.</div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:4px;font-style:italic'>No screenshot available.</div>
+</div>
+<div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;
+            padding:14px 16px;flex:1;min-width:200px">
+  <div style="font-weight:700;color:#9a3412;font-size:1rem;margin-bottom:4px">App Studio</div>
+  <div style="font-size:0.82rem;color:#c2410c">Agent tab never appeared — workflow may have stalled before this agent ran.</div>
+  <div style='font-size:0.75rem;color:#9ca3af;margin-top:4px;font-style:italic'>No screenshot available.</div>
+</div>
+  </div>
+</div>
+<div style="margin-bottom:20px">
+  <h3 style="color:#d97706;margin-bottom:10px">
+    ○ Missing Elements Identified by Judge (2)
+  </h3>
+  <div style='padding:6px 12px;background:#fff7ed;border-left:3px solid #fb923c;border-radius:0 4px 4px 0;margin-bottom:6px;font-size:0.85rem;color:#9a3412'>○ Expected agents (AIA, AGP, ETL, App Studio)</div><div style='padding:6px 12px;background:#fff7ed;border-left:3px solid #fb923c;border-radius:0 4px 4px 0;margin-bottom:6px;font-size:0.85rem;color:#9a3412'>○ Meaningful output or solution</div>
+</div>
+<div style="margin-bottom:20px">
+  <h3 style="color:#dc2626;margin-bottom:10px">
+    ⚑ Improvement Flags from Judge (3)
+  </h3>
+  <div style='padding:6px 12px;background:#fef2f2;border-left:3px solid #f87171;border-radius:0 4px 4px 0;margin-bottom:6px;font-size:0.85rem;color:#991b1b'>⚑ Implement more robust conversation handling in Psi</div><div style='padding:6px 12px;background:#fef2f2;border-left:3px solid #f87171;border-radius:0 4px 4px 0;margin-bottom:6px;font-size:0.85rem;color:#991b1b'>⚑ Improve agent invocation and output generation</div><div style='padding:6px 12px;background:#fef2f2;border-left:3px solid #f87171;border-radius:0 4px 4px 0;margin-bottom:6px;font-size:0.85rem;color:#991b1b'>⚑ Enhance canvas rendering and stability</div>
+</div>
+</div>
+
+<div id="metrics" class="card">
+  <h2>9 · Final Metrics</h2>
+
+  <!-- Top-level run stats -->
+  <div class="grid-4" style="margin-bottom:24px">
+    <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+      <div class="stat-num">21</div>
+      <div class="stat-label">Total Steps</div>
+    </div>
+    <div style="text-align:center;padding:16px;background:#f0fdf4;border-radius:8px;border:1px solid #bbf7d0">
+      <div class="stat-num" style="color:#16a34a">15</div>
+      <div class="stat-label">Steps Passed</div>
+    </div>
+    <div style="text-align:center;padding:16px;background:#fef2f2;border-radius:8px;border:1px solid #fecaca">
+      <div class="stat-num" style="color:#dc2626">6</div>
+      <div class="stat-label">Steps Failed</div>
+    </div>
+    <div style="text-align:center;padding:16px;background:#f0fdf4;border-radius:8px;border:1px solid #bbf7d0">
+      <div class="stat-num" style="color:#d97706">71%</div>
+      <div class="stat-label">Step Accuracy</div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <!-- Score bars -->
+    <div>
+      <h3 style="margin-bottom:14px">Score Breakdown</h3>
+      <div style='margin-bottom:10px'><div style='display:flex;justify-content:space-between;margin-bottom:3px'><span style='font-size:0.82rem;color:#475569'>Correctness</span><span style='font-weight:700;color:#dc2626'>2/10</span></div><div style='height:8px;background:#f1f5f9;border-radius:4px;overflow:hidden'><div style='height:100%;width:20%;background:#dc2626;border-radius:4px'></div></div></div><div style='margin-bottom:10px'><div style='display:flex;justify-content:space-between;margin-bottom:3px'><span style='font-size:0.82rem;color:#475569'>Process</span><span style='font-weight:700;color:#dc2626'>1/10</span></div><div style='height:8px;background:#f1f5f9;border-radius:4px;overflow:hidden'><div style='height:100%;width:10%;background:#dc2626;border-radius:4px'></div></div></div><div style='margin-bottom:10px'><div style='display:flex;justify-content:space-between;margin-bottom:3px'><span style='font-size:0.82rem;color:#475569'>Output</span><span style='font-weight:700;color:#dc2626'>1/10</span></div><div style='height:8px;background:#f1f5f9;border-radius:4px;overflow:hidden'><div style='height:100%;width:10%;background:#dc2626;border-radius:4px'></div></div></div><div style='margin-bottom:10px'><div style='display:flex;justify-content:space-between;margin-bottom:3px'><span style='font-size:0.82rem;color:#475569'>Reliability</span><span style='font-weight:700;color:#dc2626'>4/10</span></div><div style='height:8px;background:#f1f5f9;border-radius:4px;overflow:hidden'><div style='height:100%;width:40%;background:#dc2626;border-radius:4px'></div></div></div><div style='margin-bottom:10px'><div style='display:flex;justify-content:space-between;margin-bottom:3px'><span style='font-size:0.82rem;color:#475569'>UX</span><span style='font-weight:700;color:#dc2626'>3/10</span></div><div style='height:8px;background:#f1f5f9;border-radius:4px;overflow:hidden'><div style='height:100%;width:30%;background:#dc2626;border-radius:4px'></div></div></div><div style='margin-bottom:10px'><div style='display:flex;justify-content:space-between;margin-bottom:3px'><span style='font-size:0.82rem;color:#475569'>Reasoning</span><span style='font-weight:700;color:#dc2626'>2/10</span></div><div style='height:8px;background:#f1f5f9;border-radius:4px;overflow:hidden'><div style='height:100%;width:20%;background:#dc2626;border-radius:4px'></div></div></div><div style='margin-bottom:10px'><div style='display:flex;justify-content:space-between;margin-bottom:3px'><span style='font-size:0.82rem;color:#475569'>Visual</span><span style='font-weight:700;color:#dc2626'>0/10</span></div><div style='height:8px;background:#f1f5f9;border-radius:4px;overflow:hidden'><div style='height:100%;width:0%;background:#dc2626;border-radius:4px'></div></div></div>
+    </div>
+    <!-- Run summary -->
+    <div>
+      <h3 style="margin-bottom:14px">Run Summary</h3>
+      <table style="width:100%;border-collapse:collapse;font-size:0.85rem">
+        <tr><td style="padding:6px 0;color:#64748b;width:140px">Overall Status</td>
+            <td><span class="badge" style="background:#dc2626">FAIL</span></td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Confidence Score</td>
+            <td><strong>80</strong>/100</td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Psi Rating</td>
+            <td><strong>POOR</strong></td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Recovery Needed</td>
+            <td>Yes</td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Issues (critical)</td>
+            <td><span style="color:#dc2626;font-weight:700">2</span></td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Issues (major)</td>
+            <td><span style="color:#d97706;font-weight:700">1</span></td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Issues (minor)</td>
+            <td><span style="color:#64748b;font-weight:700">0</span></td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Empty Sections</td>
+            <td>1</td></tr>
+        <tr><td style="padding:6px 0;color:#64748b">Hallucination Flags</td>
+            <td>1</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Per-agent scores -->
+  <div style="margin-top:20px">
+    <h3 style="margin-bottom:12px">Per-Agent Scores</h3>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><div style='text-align:center;padding:12px 16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0;flex:1;min-width:100px'><div style='font-size:1.4rem;font-weight:700;color:#dc2626'>0</div><div style='font-size:0.72rem;color:#64748b;margin-top:2px'>AIA</div></div><div style='text-align:center;padding:12px 16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0;flex:1;min-width:100px'><div style='font-size:1.4rem;font-weight:700;color:#dc2626'>0</div><div style='font-size:0.72rem;color:#64748b;margin-top:2px'>AGP</div></div><div style='text-align:center;padding:12px 16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0;flex:1;min-width:100px'><div style='font-size:1.4rem;font-weight:700;color:#dc2626'>0</div><div style='font-size:0.72rem;color:#64748b;margin-top:2px'>ETL</div></div><div style='text-align:center;padding:12px 16px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0;flex:1;min-width:100px'><div style='font-size:1.4rem;font-weight:700;color:#dc2626'>0</div><div style='font-size:0.72rem;color:#64748b;margin-top:2px'>App Studio</div></div></div>
+  </div>
+
+  
+<div style="margin-top:20px">
+  <h3 style="margin-bottom:10px">Issues Found (3)
+    <span style="font-size:0.82rem;font-weight:400;color:#64748b;margin-left:8px">
+      <span style="color:#dc2626">2 critical</span> ·
+      <span style="color:#d97706">1 major</span> ·
+      <span style="color:#64748b">0 minor</span>
+    </span>
+  </h3>
+  <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr style="background:#f8fafc">
+          <th style="padding:8px 12px;font-size:0.72rem;font-weight:700;color:#64748b;
+                     text-transform:uppercase;letter-spacing:.05em;white-space:nowrap">Severity</th>
+          <th style="padding:8px 12px;font-size:0.72rem;font-weight:700;color:#64748b;
+                     text-transform:uppercase;letter-spacing:.05em">Category</th>
+          <th style="padding:8px 12px;font-size:0.72rem;font-weight:700;color:#64748b;
+                     text-transform:uppercase;letter-spacing:.05em">Description</th>
+        </tr>
+      </thead>
+      <tbody><tr style='border-bottom:1px solid #f1f5f9'><td style='padding:7px 12px'><span style='font-size:0.72rem;font-weight:700;padding:1px 8px;border-radius:10px;background:#fef2f2;color:#dc2626'>CRITICAL</span></td><td style='padding:7px 12px;font-size:0.8rem;color:#475569'>missing_information</td><td style='padding:7px 12px;font-size:0.82rem;color:#1e293b'>No agents appeared, and no output was generated.</td></tr><tr style='border-bottom:1px solid #f1f5f9'><td style='padding:7px 12px'><span style='font-size:0.72rem;font-weight:700;padding:1px 8px;border-radius:10px;background:#fef2f2;color:#dc2626'>CRITICAL</span></td><td style='padding:7px 12px;font-size:0.8rem;color:#475569'>wrong_workflow</td><td style='padding:7px 12px;font-size:0.82rem;color:#1e293b'>The workflow did not proceed as expected, with no agents appearing or producing output.</td></tr><tr style='border-bottom:1px solid #f1f5f9'><td style='padding:7px 12px'><span style='font-size:0.72rem;font-weight:700;padding:1px 8px;border-radius:10px;background:#fff7ed;color:#d97706'>MAJOR</span></td><td style='padding:7px 12px;font-size:0.8rem;color:#475569'>broken_ui</td><td style='padding:7px 12px;font-size:0.82rem;color:#1e293b'>The canvas failed to appear, and the system experienced page freezes and stuck states.</td></tr></tbody>
+    </table>
+  </div>
+</div>
+  <div style='margin-top:20px'><h3 style='margin-bottom:10px'>Common Failure Patterns / Improvements</h3><div style='padding:6px 12px;background:#fef9ee;border-left:3px solid #fbbf24;border-radius:0 4px 4px 0;margin-bottom:5px;font-size:0.82rem;color:#78350f'>→ Implement more robust conversation handling in Psi</div><div style='padding:6px 12px;background:#fef9ee;border-left:3px solid #fbbf24;border-radius:0 4px 4px 0;margin-bottom:5px;font-size:0.82rem;color:#78350f'>→ Improve agent invocation and output generation</div><div style='padding:6px 12px;background:#fef9ee;border-left:3px solid #fbbf24;border-radius:0 4px 4px 0;margin-bottom:5px;font-size:0.82rem;color:#78350f'>→ Enhance canvas rendering and stability</div></div>
+</div>
+<div id="gallery" class="card"><h2>10 · Screenshot Gallery</h2>
+                      <p style="color:#9ca3af">No screenshots captured.</p></div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<div style="text-align:center;padding:20px 0;color:#94a3b8;font-size:0.78rem">
+  Generated by Adya AI · SAI Browser Testing Agent · 2026-05-21 16:04 UTC
+</div>
+
+</div><!-- /page -->
+</body>
+</html>

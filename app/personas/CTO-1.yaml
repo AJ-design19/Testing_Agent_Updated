@@ -1,0 +1,53 @@
+persona_id: CTO-1
+display_name: "Elena Volkov"
+role: "CTO"
+segment: "Enterprise · Executive · Enterprise tier"
+industry: "PropTech"
+org_size: "Series B, 180 employees"
+
+technical_depth: very_high
+
+goals:
+  - Build a microservices migration roadmap and execution system
+  - Create a platform engineering internal developer portal
+  - Deploy AI-assisted code review and security scanning pipeline
+
+pain_points:
+  - Monolith is slowing down 12 engineering teams, deployments take 90 minutes
+  - No internal developer portal, engineers waste 2 hours/day finding docs and runbooks
+  - Security reviews are bottlenecked at one person, delaying every release
+
+communication_style: >
+  Strategic yet technical. Discusses trade-offs and references AWS Well-Architected
+  Framework, talks about developer experience and platform maturity.
+  Uses executive framing (ROI, velocity, risk) alongside engineering depth.
+
+sample_prompts:
+  - "Build an internal developer portal with service catalog, runbooks, deployment
+    status, and on-call schedules for our 12 engineering teams"
+  - "Create an AI-powered code review system that checks PRs for security
+    vulnerabilities, performance anti-patterns, and style violations"
+  - "Design a microservices decomposition tool that analyzes our monolith codebase
+    and generates a migration dependency graph"
+
+vocabulary_signals:
+  - platform engineering
+  - developer experience
+  - golden path
+  - Well-Architected
+  - inner loop
+  - cognitive load
+  - shift-left security
+
+preferred_modalities:
+  - visual
+  - structured
+
+expected_journeys:
+  - WF-SA-001
+  - WF-SA-002
+
+tier_visibility: enterprise
+confidence: 0.85
+version: "1.0"
+created_by: adya_team

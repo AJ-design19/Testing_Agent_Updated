@@ -1,0 +1,414 @@
+{
+  "run_id": "CTO-1_WF-CD-001_20260521_180947_27138f",
+  "persona_id": "CTO-1",
+  "persona_name": "Elena Volkov",
+  "workflow_id": "WF-CD-001",
+  "workflow_title": "Warehouse Barcode Intake Form",
+  "start_time": "2026-05-21T18:09:50.507853+00:00",
+  "end_time": "2026-05-21T18:18:02.043133+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-21T18:09:54.992575+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-21T18:11:19.913273+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-21T18:11:25.553828+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Elena Volkov",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build a mobile-friendly warehouse intake form that scans barcodes and logs items into our inventory automatically.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-21T18:11:31.011622+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-21T18:11:31.341489+00:00",
+      "action_type": "psi_loop",
+      "description": "Starting Psi conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-21T18:16:42.318658+00:00",
+      "action_type": "psi_loop",
+      "description": "Psi complete: 1 Qs answered | completion_detected=False | rounds=2",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-21T18:16:42.318990+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after Psi handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-21T18:16:42.722620+00:00",
+      "action_type": "canvas_wait",
+      "description": "Canvas recovery attempted: False",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-21T18:16:42.727998+00:00",
+      "action_type": "screenshot",
+      "description": "Psi→Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-21T18:16:42.728550+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'ETL', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-21T18:16:42.728822+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-21T18:17:08.284546+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-21T18:17:08.284904+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: ETL",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-21T18:17:34.068571+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'ETL': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-21T18:17:34.069205+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-21T18:17:59.616548+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-21T18:17:59.681962+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-21T18:18:02.027387+00:00",
+      "action_type": "judge",
+      "description": "Verdict: fail | Process:1/10 | Output:1/10 | Visual:0/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-21T18:18:02.042785+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [
+    {
+      "role": "user",
+      "text": "Build a mobile-friendly warehouse intake form that scans barcodes and logs items into our inventory automatically."
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Intercompany transactions, Inventory / COGS, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Year-to-date figures, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "CTO-1_WF-CD-001_20260521_180947_27138f",
+    "flow_view": {
+      "appeared": false,
+      "planned_steps": "",
+      "screenshots": [],
+      "screenshot_path": null,
+      "timestamp": "2026-05-21T18:17:59.616798+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-21T18:16:42.767977+00:00"
+      },
+      "ETL": {
+        "agent": "ETL",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-21T18:17:08.315824+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-21T18:17:34.093921+00:00"
+      }
+    },
+    "canvas_timeline": [],
+    "appeared_agents": [],
+    "final_screenshot": null,
+    "capture_timestamp": "2026-05-21T18:17:59.681937+00:00"
+  },
+  "judge_verdict": {
+    "status": "FAIL",
+    "correctness_verdict": "fail",
+    "confidence_score": 80,
+    "correctness_score": 2,
+    "process_score": 1,
+    "output_score": 1,
+    "reliability_score": 4,
+    "ux_score": 3,
+    "reasoning_score": 2,
+    "per_agent_scores": {
+      "AIA": 0,
+      "AGP": 0,
+      "ETL": 0,
+      "App Studio": 0
+    },
+    "process_evaluation": "Psi failed to ask relevant questions about the existing inventory system, barcode type, and offline capability needs. The conversation log shows no evidence of Psi attempting to clarify these points.",
+    "output_evaluation": "No solution was produced, and none of the expected agents appeared. The canvas evidence shows that no screenshots were captured for any of the agents.",
+    "reasoning_evaluation": "The reasoning quality is poor due to the lack of any coherent or logical steps taken by the agents.",
+    "issues_found": [
+      {
+        "category": "missing_information",
+        "description": "No solution was produced, and none of the expected agents appeared.",
+        "severity": "critical"
+      },
+      {
+        "category": "wrong_workflow",
+        "description": "Psi conversation log shows no relevant questions asked.",
+        "severity": "critical"
+      },
+      {
+        "category": "broken_ui",
+        "description": "Page freeze and modal blocking issues were encountered during the test run.",
+        "severity": "major"
+      }
+    ],
+    "improvement_flags": [
+      "Improve Psi's question-asking capabilities to clarify user needs.",
+      "Enhance agent appearance and functionality.",
+      "Fix UI issues such as page freezing and modal blocking."
+    ],
+    "missing_elements": [
+      "Mobile-optimized PWA solution",
+      "1D barcode scanning via camera",
+      "Offline capability",
+      "Sync to Excel/Google Sheets"
+    ],
+    "hallucination_flags": [],
+    "empty_sections": [
+      "AIA",
+      "ETL",
+      "App Studio"
+    ],
+    "rationale": "The test run failed due to the lack of relevant questions asked by Psi, no solution being produced, and none of the expected agents appearing. The UI issues encountered during the test run further contributed to the failure. The lack of evidence and the presence of critical issues justify a 'FAIL' status.",
+    "psi_questions_rating": "poor",
+    "agents_that_ran": [],
+    "agents_that_should_have_run": [
+      "AIA",
+      "ETL",
+      "App Studio"
+    ],
+    "recovery_needed": true,
+    "recovery_assessment": "Recovery events were triggered due to page freezing and modal blocking issues, but the test run still failed to produce a solution.",
+    "recommended_workflow_improvements": [
+      "Improve Psi's conversation loop to ask relevant questions.",
+      "Enhance agent functionality to produce a solution.",
+      "Fix UI issues to prevent page freezing and modal blocking."
+    ],
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "ETL": {
+          "agent_name": "ETL",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        }
+      },
+      "overall": {
+        "visual_verdict": "unclear",
+        "visual_score": 0,
+        "completion_detected": false,
+        "content_visible": false,
+        "ui_anomalies": [
+          "No screenshots were captured"
+        ],
+        "output_description": "No screenshots available for visual evaluation.",
+        "missing_visually": [],
+        "confidence": "low",
+        "note": "no_screenshots"
+      },
+      "evaluated_at": "2026-05-21T18:18:02.027343+00:00"
+    },
+    "visual_score": 0
+  },
+  "overall_status": "fail"
+}

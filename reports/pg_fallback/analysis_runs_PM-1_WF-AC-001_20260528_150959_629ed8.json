@@ -1,0 +1,25 @@
+{
+  "run_id": "PM-1_WF-AC-001_20260528_150959_629ed8",
+  "persona_id": "PM-1",
+  "journey_id": "WF-AC-001",
+  "workflow_title": "Research Survey Platform",
+  "started_at": "2026-05-28T15:10:04.115006+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

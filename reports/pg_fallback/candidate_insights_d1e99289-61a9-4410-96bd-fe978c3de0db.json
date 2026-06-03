@@ -1,0 +1,23 @@
+{
+  "candidate_id": "d1e99289-61a9-4410-96bd-fe978c3de0db",
+  "insight_id": "a36cce2b-267e-4205-a084-0822dd3c0dda",
+  "target_tier": "project",
+  "persona_id": "FR-1",
+  "journey_id": "WF-FR-001",
+  "proposed_action": "Improve Psi clarification questions for this persona type",
+  "pattern_description": "Psi question quality 'poor' for persona FR-1. Process evaluation: Evaluation failed \u2014 judge error.",
+  "confidence_score": 0.7,
+  "evidence_summary": "Run evidence: ['FR-1_WF-FR-001_20260527_093812_a5aaf9']",
+  "agp_review_template_id": "agp_tmpl_project_review_v1",
+  "review_status": "pending",
+  "reviewer_id": null,
+  "reviewer_role": "",
+  "review_deadline": "2026-05-29T10:24:15.832713+00:00",
+  "reviewed_at": null,
+  "review_notes": null,
+  "counter_proposal": null,
+  "is_anonymised": false,
+  "anonymisation_verified": false,
+  "created_at": "2026-05-27T10:24:15.832699+00:00",
+  "updated_at": "2026-05-27T10:24:15.832708+00:00"
+}

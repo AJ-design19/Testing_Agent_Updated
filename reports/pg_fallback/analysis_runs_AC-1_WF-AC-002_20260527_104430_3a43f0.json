@@ -1,0 +1,23 @@
+{
+  "run_id": "AC-1_WF-AC-002_20260527_104430_3a43f0",
+  "persona_id": "AC-1",
+  "journey_id": "WF-AC-002",
+  "workflow_title": "Literature Review Tool",
+  "started_at": "2026-05-27T10:44:35.127851+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "DS-1_WF-IB-001_20260522_114724_23b825",
+  "persona_id": "DS-1",
+  "persona_name": "Ravi Nair",
+  "workflow_id": "WF-IB-001",
+  "workflow_title": "Freelancer Contract Tracker SaaS",
+  "start_time": "2026-05-22T11:47:27.360424+00:00",
+  "end_time": "2026-05-22T11:48:55.164249+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T11:47:28.128284+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T11:48:55.163928+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/DS-1_WF-IB-001_20260522_114724_23b825_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

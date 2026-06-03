@@ -1,0 +1,21 @@
+{
+  "item_id": "dc815627-ddc5-435b-a4f2-650641e16f2b",
+  "item_type": "candidate_insight",
+  "source_id": "e7fa21b3-c960-4a5f-bbbe-38a127c983bd",
+  "persona_id": "BL-1",
+  "journey_id": "WF-BL-002",
+  "target_tier": "project",
+  "description": "[PROJECT] sai.persona.pattern: Psi question quality 'poor' for persona BL-1. Process evaluation: Psi failed to ask any clarifying questions and did not understand the persona's context and needs. The conversation log only contains ",
+  "evidence": {
+    "proposed_action": "Improve Psi clarification questions for this persona type",
+    "confidence": 0.7,
+    "insight_type": "sai.persona.pattern"
+  },
+  "agp_template_id": "agp_tmpl_project_review_v1",
+  "status": "open",
+  "assigned_to": null,
+  "deadline": "2026-05-23T11:20:19.386350+00:00",
+  "resolved_at": null,
+  "resolution": null,
+  "created_at": "2026-05-21T11:20:19.386412+00:00"
+}

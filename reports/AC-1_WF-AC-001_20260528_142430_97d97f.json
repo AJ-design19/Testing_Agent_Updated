@@ -1,0 +1,63 @@
+{
+  "run_id": "AC-1_WF-AC-001_20260528_142430_97d97f",
+  "persona_id": "AC-1",
+  "persona_name": "Prof. Ananya Singh",
+  "workflow_id": "WF-AC-001",
+  "workflow_title": "Research Survey Platform",
+  "start_time": "2026-05-28T14:24:33.620320+00:00",
+  "end_time": "2026-05-28T14:28:13.581308+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-28T14:24:34.737980+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-28T14:27:46.554907+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-28T14:27:48.395308+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Prof. Ananya Singh",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build a research survey platform with randomized question ordering, consent forms, and CSV export compatible with SPSS.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-28T14:28:13.580859+00:00",
+      "action_type": "send_prompt",
+      "description": "Failed to send initial prompt",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-AC-001_ERROR_prompt_send_failed_20260528_142813_462.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

@@ -1,0 +1,820 @@
+{
+  "run_id": "MK-1_WF-FN-002_20260529_095600_88a73f",
+  "persona_id": "MK-1",
+  "persona_name": "Sofia Reyes",
+  "workflow_id": "WF-FN-002",
+  "workflow_title": "Lead Qualification Workflow",
+  "start_time": "2026-05-29T09:56:00+00:00",
+  "end_time": "2026-05-29T10:04:00+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-29T09:56:11+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-29T09:56:22+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator",
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-29T09:56:33+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Sofia Reyes",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Create a lead scoring system that auto-qualifies inbound leads from website contact forms.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-29T09:56:44+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-29T09:56:55+00:00",
+      "action_type": "sai_loop",
+      "description": "Starting SAI conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-29T09:57:06+00:00",
+      "action_type": "sai_loop",
+      "description": "SAI complete: 0 Qs answered | completion_detected=True | rounds=1",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-29T09:57:17+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after SAI handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-29T09:57:28+00:00",
+      "action_type": "screenshot",
+      "description": "SAI to Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-FN-002_sai_handoff_20260529_095600.png",
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-29T09:57:39+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'AGP', 'ETL', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-29T09:57:50+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-29T09:58:01+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Overview",
+      "agent_tab": "AIA",
+      "sub_tab": "Overview",
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-29T09:58:12+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Output",
+      "agent_tab": "AIA",
+      "sub_tab": "Output",
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-29T09:58:23+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Questions",
+      "agent_tab": "AIA",
+      "sub_tab": "Questions",
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-29T09:58:34+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Thinking",
+      "agent_tab": "AIA",
+      "sub_tab": "Thinking",
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-29T09:58:45+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Workflow",
+      "agent_tab": "AIA",
+      "sub_tab": "Workflow",
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-29T09:58:56+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Architecture",
+      "agent_tab": "AIA",
+      "sub_tab": "Architecture",
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-29T09:59:07+00:00",
+      "action_type": "canvas_subtab",
+      "description": "Read sub-tab Execution trace",
+      "agent_tab": "AIA",
+      "sub_tab": "Execution trace",
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-29T09:59:18+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=True, screenshots=3, state=ready",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-29T09:59:29+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AGP",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 19,
+      "timestamp": "2026-05-29T09:59:40+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AGP': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 20,
+      "timestamp": "2026-05-29T09:59:51+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: ETL",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 21,
+      "timestamp": "2026-05-29T10:00:02+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'ETL': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 22,
+      "timestamp": "2026-05-29T10:00:13+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 23,
+      "timestamp": "2026-05-29T10:00:24+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 24,
+      "timestamp": "2026-05-29T10:00:35+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 25,
+      "timestamp": "2026-05-29T10:00:46+00:00",
+      "action_type": "judge",
+      "description": "Verdict: fail | Process:2/10 | Output:2/10 | Visual:4/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    },
+    {
+      "step_number": 26,
+      "timestamp": "2026-05-29T10:00:57+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-FN-002_final_20260529_095600.png",
+      "success": true,
+      "notes": null,
+      "reasoning": null,
+      "input_sent": null,
+      "sai_output": null,
+      "canvas_result": null
+    }
+  ],
+  "psi_conversation": [
+    {
+      "role": "assistant",
+      "text": "What would you like me to help with today?"
+    },
+    {
+      "role": "user",
+      "text": "Please proceed as described in my prompt."
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "MK-1_WF-FN-002_20260529_095600_88a73f",
+    "flow_view": {
+      "appeared": false,
+      "planned_steps": "",
+      "screenshots": [],
+      "screenshot_path": null,
+      "timestamp": "2026-05-29T09:56:05+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {
+          "Overview": "",
+          "Output": "",
+          "Questions": "",
+          "Thinking": "",
+          "Workflow": "",
+          "Architecture": "",
+          "Execution trace": ""
+        },
+        "screenshots": [
+          {
+            "label": "tab_opened",
+            "path": "screenshots\\MK-1_WF-FN-002_20260529_095600_88a73f_AIA_tab_opened_20260529_095600.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "canvas_panel_zoomed",
+            "path": "screenshots\\MK-1_WF-FN-002_20260529_095600_88a73f_AIA_canvas_zoomed_20260529_095600.png",
+            "sub_tab": ""
+          },
+          {
+            "label": "Output_zoomed",
+            "path": "screenshots\\MK-1_WF-FN-002_20260529_095600_88a73f_AIA_Output_zoomed_20260529_095600.png",
+            "sub_tab": "Output"
+          }
+        ],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "AIA",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\MK-1_WF-FN-002_20260529_095600_88a73f_AIA_appeared_20260529_095600.png",
+            "timestamp": "2026-05-29T09:56:05+00:00"
+          }
+        ],
+        "timestamp": "2026-05-29T09:56:10+00:00"
+      },
+      "AGP": {
+        "agent": "AGP",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-29T09:56:10+00:00"
+      },
+      "ETL": {
+        "agent": "ETL",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-29T09:56:10+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-29T09:56:10+00:00"
+      }
+    },
+    "canvas_timeline": [
+      {
+        "event_type": "flow_view_appeared",
+        "agent": "flow_view",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\MK-1_WF-FN-002_20260529_095600_88a73f_flow_view_20260529_095600.png",
+        "timestamp": "2026-05-29T09:56:03+00:00"
+      },
+      {
+        "event_type": "agent_tab_appeared",
+        "agent": "AIA",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\MK-1_WF-FN-002_20260529_095600_88a73f_AIA_appeared_20260529_095600.png",
+        "timestamp": "2026-05-29T09:56:06+00:00"
+      }
+    ],
+    "appeared_agents": [
+      "AIA"
+    ],
+    "final_screenshot": "screenshots\\MK-1_WF-FN-002_20260529_095600_88a73f_final_20260529_095600.png",
+    "capture_timestamp": "2026-05-29T10:04:00+00:00"
+  },
+  "judge_verdict": {
+    "status": "FAIL",
+    "correctness_verdict": "fail",
+    "confidence_score": 60,
+    "correctness_score": 3,
+    "process_score": 2,
+    "output_score": 2,
+    "reliability_score": 5,
+    "ux_score": 6,
+    "reasoning_score": 3,
+    "a11y_score": 6,
+    "layout_score": 6,
+    "flow_graph_score": 2,
+    "visual_score": 4,
+    "per_agent_scores": {
+      "AIA": 2,
+      "AGP": 0,
+      "ETL": 0,
+      "App Studio": 0
+    },
+    "per_agent_subtab_scores": {
+      "AIA": {
+        "Overview": 2,
+        "Output": 1,
+        "Questions": 1,
+        "Thinking": 2,
+        "Workflow": 1,
+        "Architecture": 1,
+        "Execution trace": 1
+      },
+      "AGP": {
+        "Overview": 0,
+        "Output": 0,
+        "Questions": 0,
+        "Thinking": 0,
+        "Workflow": 0,
+        "Architecture": 0,
+        "Execution trace": 0
+      },
+      "ETL": {
+        "Overview": 0,
+        "Output": 0,
+        "Questions": 0,
+        "Thinking": 0,
+        "Workflow": 0,
+        "Architecture": 0,
+        "Execution trace": 0
+      },
+      "App Studio": {
+        "Overview": 0,
+        "Output": 0,
+        "Questions": 0,
+        "Thinking": 0,
+        "Workflow": 0,
+        "Architecture": 0,
+        "Execution trace": 0
+      }
+    },
+    "process_evaluation": "Psi asked only generic questions that did not address the workflow requirements.",
+    "output_evaluation": "Expected agents did not appear and no meaningful output was produced in the canvas.",
+    "reasoning_evaluation": "Reasoning was absent or irrelevant.",
+    "a11y_evaluation": "Accessibility evaluation incomplete due to missing canvas content.",
+    "layout_evaluation": "Canvas was largely empty so layout could not be fully evaluated.",
+    "flow_graph_evaluation": "Flow graph did not appear or phases failed to complete.",
+    "flow_graph_issues": [
+      {
+        "rule": "FLOW-001",
+        "severity": "critical",
+        "description": "Flow graph phases failed to reach Completed status.",
+        "fix_recommendation": "Check agent orchestration pipeline and ensure handoff from Psi triggers all workflow phases."
+      }
+    ],
+    "issues_found": [
+      {
+        "category": "missing_information",
+        "description": "Psi did not ask clarifying questions relevant to the workflow requirements.",
+        "severity": "critical",
+        "affected_component": "Psi conversation",
+        "evidence": "Conversation log shows only generic questions unrelated to the workflow.",
+        "reasoning": "Without clarifying questions SAI cannot understand specific requirements, producing unusable output.",
+        "fix_recommendation": "Improve Psi domain-specific question generation for this workflow type."
+      },
+      {
+        "category": "empty_section",
+        "description": "AIA, ETL, and App Studio agents did not appear or produce output.",
+        "severity": "critical",
+        "affected_component": "Canvas — AIA, ETL, App Studio",
+        "evidence": "agents.AIA.appeared=false, agents.ETL.appeared=false, agents.AppStudio.appeared=false",
+        "reasoning": "Without these agents no architecture, data pipeline, or code was produced.",
+        "fix_recommendation": "Investigate why workflow handoff from Psi to canvas agents failed."
+      }
+    ],
+    "improvement_flags": [
+      "Psi must ask domain-specific clarifying questions before proceeding to canvas."
+    ],
+    "missing_elements": [
+      "AIA architecture output",
+      "ETL pipeline definition",
+      "App Studio code generation",
+      "Complete Psi Q&A"
+    ],
+    "hallucination_flags": [],
+    "empty_sections": [
+      "AIA",
+      "ETL",
+      "App Studio"
+    ],
+    "a11y_issues": [],
+    "layout_issues": [],
+    "rationale": "The test run failed to meet workflow objectives. Psi did not ask sufficient clarifying questions. Several expected agents did not appear and canvas output was largely empty. No actionable deliverable was produced.",
+    "psi_questions_rating": "poor",
+    "agents_that_ran": [
+      "AIA"
+    ],
+    "agents_that_should_have_run": [
+      "AIA",
+      "AGP",
+      "ETL",
+      "App Studio"
+    ],
+    "recovery_needed": true,
+    "recovery_assessment": "Multiple agents failed to appear. Manual investigation required.",
+    "recommended_workflow_improvements": [
+      "Investigate Psi question generation and agent orchestration pipeline."
+    ],
+    "document_quality": {
+      "agent": "App Studio",
+      "doc_type": "PRD",
+      "completeness_score": 2,
+      "specificity_score": 2,
+      "structure_score": 2,
+      "acceptance_criteria_quality": "absent",
+      "priority_labelling_correct": false,
+      "features_covered": [],
+      "features_missing": [
+        "All features missing"
+      ],
+      "doc_evaluation": "No meaningful document was produced."
+    },
+    "capabilities_detected": [
+      "app_builder"
+    ],
+    "capability_scores": {
+      "app_builder_score": 2,
+      "workflow_builder_score": 2,
+      "data_pipeline_score": 2,
+      "document_generator_score": 2,
+      "diagram_creator_score": null,
+      "governance_score": 2,
+      "image_generator_score": null
+    },
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 4,
+          "content_complete": false,
+          "still_loading": false,
+          "has_errors": true,
+          "visible_content_summary": "Canvas content for AIA is not visible.",
+          "issues": [],
+          "note": ""
+        },
+        "AGP": {
+          "agent_name": "AGP",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 4,
+          "content_complete": false,
+          "still_loading": false,
+          "has_errors": true,
+          "visible_content_summary": "Canvas content for AGP is not visible.",
+          "issues": [],
+          "note": ""
+        },
+        "ETL": {
+          "agent_name": "ETL",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 4,
+          "content_complete": false,
+          "still_loading": false,
+          "has_errors": true,
+          "visible_content_summary": "Canvas content for ETL is not visible.",
+          "issues": [],
+          "note": ""
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 4,
+          "content_complete": false,
+          "still_loading": false,
+          "has_errors": true,
+          "visible_content_summary": "Canvas content for App Studio is not visible.",
+          "issues": [],
+          "note": ""
+        }
+      },
+      "overall": {
+        "visual_verdict": "unclear",
+        "visual_score": 4,
+        "completion_detected": false,
+        "content_visible": false,
+        "ui_anomalies": [],
+        "output_description": "Visual evaluation could not complete — canvas content missing.",
+        "missing_visually": [
+          "AIA",
+          "AGP",
+          "ETL",
+          "App Studio"
+        ],
+        "confidence": "low"
+      },
+      "evaluated_at": "2026-05-29T10:04:00+00:00"
+    }
+  },
+  "overall_status": "fail",
+  "a11y_report": {
+    "score": 6,
+    "summary": {
+      "total": 2,
+      "critical": 0,
+      "major": 0,
+      "minor": 2
+    },
+    "issues": []
+  },
+  "style_report": {
+    "score": 6,
+    "summary": {
+      "overlaps": 0,
+      "spacing": 1,
+      "hidden": 0
+    },
+    "all_layout_issues": []
+  },
+  "brd_result": {
+    "doc_type": "PRD",
+    "download_success": false,
+    "verdict": "fail",
+    "overall_score": 2,
+    "skipped": true
+  },
+  "health_checks": {
+    "overall_status": "fail",
+    "summary": "Copilot failed. Canvas missing.",
+    "copilot": {
+      "status": "fail",
+      "score": 2,
+      "label": "Copilot Health",
+      "summary": "Psi asked poor questions.",
+      "evidence": [],
+      "issues": []
+    },
+    "canvas": {
+      "status": "fail",
+      "score": 2,
+      "label": "Canvas Correctness",
+      "summary": "Canvas output missing.",
+      "evidence": [],
+      "issues": []
+    }
+  }
+}

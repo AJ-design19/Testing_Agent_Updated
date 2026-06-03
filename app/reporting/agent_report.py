@@ -3,7 +3,7 @@ Per-Agent Detailed Report Generator.
 
 For EVERY canvas agent that ran (AIA, AGP, ETL, App Studio, etc.), generates:
   - Metadata (session, workflow, persona, timing, agent name)
-  - Interaction summary (what Psi said before this agent started)
+  - Interaction summary (what SAI said before this agent started)
   - Canvas observations (all sub-tabs visited, content captured)
   - Timeline events (from CanvasMonitor)
   - Output evaluation (correctness, quality, hallucination flags)
@@ -108,7 +108,7 @@ class AgentReportGenerator:
         workflow: dict,
         agent_name: str,
         evidence: dict,
-        psi_log: list[dict],
+        sai_log: list[dict],
         timeline: list[dict],
         verdict: dict,
         meta: dict,
@@ -198,13 +198,13 @@ class AgentReportGenerator:
             for h in hallucinations
         ) or "<p style='color:#9ca3af;font-size:0.85rem'>None detected.</p>"
 
-        # ── Psi messages before this agent ────────────────────────────────────
+        # ── SAI messages before this agent ────────────────────────────────────
         psi_html = ""
-        for entry in psi_log:
+        for entry in sai_log:
             role = entry.get("role", "").lower()
             text = (entry.get("text") or "").replace("<", "&lt;").replace(">", "&gt;")
             if role == "assistant":
-                css, label = "background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af", "Psi (SAI)"
+                css, label = "background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af", "SAI (SAI)"
             elif role == "user":
                 css, label = "background:#f0fdf4;border:1px solid #bbf7d0;color:#166534", "User (Persona)"
             else:
@@ -337,9 +337,9 @@ class AgentReportGenerator:
   {timeline_html}
 </div>
 
-<!-- Psi Conversation context -->
+<!-- SAI Conversation context -->
 <div class="card">
-  <h2>4 · Psi Conversation (Context Before This Agent)</h2>
+  <h2>4 · SAI Conversation (Context Before This Agent)</h2>
   <div style="max-height:400px;overflow-y:auto">
     {psi_html}
   </div>

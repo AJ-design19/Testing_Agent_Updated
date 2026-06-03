@@ -1,0 +1,25 @@
+{
+  "run_id": "EA-1_WF-EA-001_20260525_065442_59f5ea",
+  "persona_id": "EA-1",
+  "journey_id": "WF-EA-001",
+  "workflow_title": "Data Governance Platform",
+  "started_at": "2026-05-25T06:54:46.875787+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

@@ -1,0 +1,502 @@
+{
+  "run_id": "AG-1_WF-AG-001_20260522_025604_b8a7d8",
+  "persona_id": "AG-1",
+  "persona_name": "Marco Delgado",
+  "workflow_id": "WF-AG-001",
+  "workflow_title": "Agency Project Management Dashboard",
+  "start_time": "2026-05-22T02:56:07.619308+00:00",
+  "end_time": "2026-05-22T03:00:38.873826+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T02:56:09.123441+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T02:57:01.537283+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-22T02:57:04.440925+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Marco Delgado",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build a project management dashboard for our agency tracking all client projects, team utilization, deadlines, and billing status.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-22T02:57:09.705071+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-22T02:57:10.068528+00:00",
+      "action_type": "psi_loop",
+      "description": "Starting Psi conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-22T02:58:17.862762+00:00",
+      "action_type": "psi_loop",
+      "description": "Psi complete: 12 Qs answered | completion_detected=False | rounds=12",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-22T02:58:17.863723+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after Psi handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-22T02:58:54.323725+00:00",
+      "action_type": "canvas_wait",
+      "description": "Canvas recovery attempted: False",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-22T02:58:54.328542+00:00",
+      "action_type": "screenshot",
+      "description": "Psi→Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-22T02:58:54.329111+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'AGP', 'ETL', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-22T02:58:54.329363+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-22T02:59:19.928409+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-22T02:59:19.929056+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AGP",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-22T02:59:45.571328+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AGP': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-22T02:59:45.571643+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: ETL",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-22T03:00:11.043486+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'ETL': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-22T03:00:11.043720+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-22T03:00:36.577433+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-22T03:00:36.628145+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 19,
+      "timestamp": "2026-05-22T03:00:38.863991+00:00",
+      "action_type": "judge",
+      "description": "Verdict: fail | Process:0/10 | Output:0/10 | Visual:0/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 20,
+      "timestamp": "2026-05-22T03:00:38.873486+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    }
+  ],
+  "SAI_conversation": [
+    {
+      "role": "user",
+      "text": "Build a project management dashboard for our agency tracking all client projects, team utilization, deadlines, and billing status."
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.)"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Current month vs. prior month comparison, Current month vs. budget/forecast variance, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable"
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "AG-1_WF-AG-001_20260522_025604_b8a7d8",
+    "flow_view": {
+      "appeared": false,
+      "planned_steps": "",
+      "screenshots": [],
+      "screenshot_path": null,
+      "timestamp": "2026-05-22T03:00:36.577694+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T02:58:54.364071+00:00"
+      },
+      "AGP": {
+        "agent": "AGP",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T02:59:19.960676+00:00"
+      },
+      "ETL": {
+        "agent": "ETL",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T02:59:45.594618+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T03:00:11.065221+00:00"
+      }
+    },
+    "canvas_timeline": [],
+    "appeared_agents": [],
+    "final_screenshot": null,
+    "capture_timestamp": "2026-05-22T03:00:36.628123+00:00"
+  },
+  "judge_verdict": {
+    "status": "FAIL",
+    "correctness_verdict": "fail",
+    "confidence_score": 100,
+    "correctness_score": 0,
+    "process_score": 0,
+    "output_score": 0,
+    "reliability_score": 2,
+    "ux_score": 2,
+    "reasoning_score": 0,
+    "per_agent_scores": {
+      "AIA": 0,
+      "AGP": 0,
+      "ETL": 0,
+      "App Studio": 0
+    },
+    "process_evaluation": "The process failed as SAI did not ask relevant questions and the conversation log was filled with repetitive and irrelevant answers. The expected questions about team size, existing PM tools, and billing system integration were not asked.",
+    "output_evaluation": "The output was completely missing as none of the expected agents appeared and no dashboard was generated. The canvas evidence showed that all agents had zero screenshots and unknown states.",
+    "reasoning_evaluation": "The reasoning quality was poor as the system failed to understand the user's context and generate a relevant solution.",
+    "issues_found": [
+      {
+        "category": "missing_information",
+        "description": "The system failed to ask relevant questions and gather necessary information about the user's requirements.",
+        "severity": "critical"
+      },
+      {
+        "category": "wrong_workflow",
+        "description": "The workflow did not proceed as expected, and the agents did not appear as required.",
+        "severity": "critical"
+      },
+      {
+        "category": "broken_ui",
+        "description": "The canvas did not appear, and the agents did not generate any output.",
+        "severity": "critical"
+      }
+    ],
+    "improvement_flags": [
+      "Improve SAI's question-asking capabilities to gather relevant information.",
+      "Enhance the workflow to ensure that agents appear and generate output as expected.",
+      "Fix the canvas and agent issues to provide a smooth user experience."
+    ],
+    "missing_elements": [
+      "Project management dashboard",
+      "Team utilization heatmap",
+      "Deadline calendar",
+      "Invoice status"
+    ],
+    "hallucination_flags": [
+      "The repetitive and irrelevant answers in the conversation log."
+    ],
+    "empty_sections": [
+      "All agent sections were empty."
+    ],
+    "rationale": "The test run failed due to the system's inability to ask relevant questions, gather necessary information, and generate a relevant solution. The workflow did not proceed as expected, and the agents did not appear as required. The canvas and agent issues resulted in a poor user experience. Improvements are needed in SAI's question-asking capabilities, workflow, and canvas and agent functionality.",
+    "psi_questions_rating": "poor",
+    "agents_that_ran": [],
+    "agents_that_should_have_run": [
+      "AIA",
+      "AGP",
+      "ETL",
+      "App Studio"
+    ],
+    "recovery_needed": true,
+    "recovery_assessment": "The system attempted to recover from the issues but was unsuccessful. A modal blocking issue was resolved, but the canvas missing issue was not.",
+    "recommended_workflow_improvements": [
+      "Improve the workflow to handle cases where agents do not appear as expected.",
+      "Add more robust error handling and recovery mechanisms."
+    ],
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "AGP": {
+          "agent_name": "AGP",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "ETL": {
+          "agent_name": "ETL",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        }
+      },
+      "overall": {
+        "visual_verdict": "unclear",
+        "visual_score": 0,
+        "completion_detected": false,
+        "content_visible": false,
+        "ui_anomalies": [
+          "No screenshots were captured"
+        ],
+        "output_description": "No screenshots available for visual evaluation.",
+        "missing_visually": [],
+        "confidence": "low",
+        "note": "no_screenshots"
+      },
+      "evaluated_at": "2026-05-22T03:00:38.863925+00:00"
+    },
+    "visual_score": 0
+  },
+  "overall_status": "fail"
+}

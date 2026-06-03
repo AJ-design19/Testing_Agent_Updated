@@ -1,0 +1,39 @@
+{
+  "run_id": "FIN-1_WF-CD-001_20260522_131428_abac0d",
+  "persona_id": "FIN-1",
+  "persona_name": "James Whitfield",
+  "workflow_id": "WF-CD-001",
+  "workflow_title": "Warehouse Barcode Intake Form",
+  "start_time": "2026-05-22T13:14:31.858792+00:00",
+  "end_time": "2026-05-22T13:15:37.610535+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T13:14:32.523059+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T13:15:37.610160+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/FIN-1_WF-CD-001_20260522_131428_abac0d_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

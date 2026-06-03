@@ -1,0 +1,25 @@
+{
+  "run_id": "SA-1_WF-SA-001_20260527_114302_1b77df",
+  "persona_id": "SA-1",
+  "journey_id": "WF-SA-001",
+  "workflow_title": "Internal Developer Portal",
+  "started_at": "2026-05-27T11:43:06.707747+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

@@ -1,0 +1,39 @@
+{
+  "run_id": "PM-1_WF-PM-001_20260528_110100_fc72a8",
+  "persona_id": "PM-1",
+  "persona_name": "Priya Mehta",
+  "workflow_id": "WF-PM-001",
+  "workflow_title": "SaaS Analytics Dashboard",
+  "start_time": "2026-05-28T11:01:03.756856+00:00",
+  "end_time": "2026-05-28T11:01:48.120313+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-28T11:01:04.208081+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-28T11:01:48.120055+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Could not click Sign In button",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/PM-1_WF-PM-001_20260528_110100_fc72a8_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

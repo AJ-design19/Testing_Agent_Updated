@@ -32,6 +32,11 @@ class ActionStep:
     screenshot_path: Optional[str] = None
     success: bool = True
     notes: Optional[str] = None
+    # ── Enriched fields ───────────────────────────────────────────────────────
+    reasoning: Optional[str] = None        # WHY this step passed or failed
+    input_sent: Optional[str] = None       # exact prompt/message sent to SAI
+    sai_output: Optional[str] = None       # exact response received from SAI
+    canvas_result: Optional[str] = None    # canvas sub-tab content for this step
 
 
 @dataclass
@@ -43,11 +48,15 @@ class TestRunRecord:
     workflow_title: str
     start_time: str
     end_time: Optional[str] = None
-    steps: list = field(default_factory=list)  # list of ActionStep dicts
+    steps: list = field(default_factory=list)          # list of ActionStep dicts
     psi_conversation: list = field(default_factory=list)  # [{role, text}]
     canvas_evidence: dict = field(default_factory=dict)
     judge_verdict: Optional[dict] = None
     overall_status: str = "in_progress"   # "pass" | "partial" | "fail" | "error"
+    # Full per-turn SAI interaction log with untruncated output + derived reasoning
+    interaction_log: list = field(default_factory=list)
+    # Self-learning summary for this run (response times, question patterns, etc.)
+    learning_summary: dict = field(default_factory=dict)
 
     def to_dict(self) -> dict:
         d = asdict(self)
@@ -88,6 +97,10 @@ class ActionRecorder:
         screenshot_path: Optional[str] = None,
         success: bool = True,
         notes: Optional[str] = None,
+        reasoning: Optional[str] = None,
+        input_sent: Optional[str] = None,
+        sai_output: Optional[str] = None,
+        canvas_result: Optional[str] = None,
     ) -> ActionStep:
         step = ActionStep(
             step_number=self._step_counter,
@@ -100,6 +113,10 @@ class ActionRecorder:
             screenshot_path=screenshot_path,
             success=success,
             notes=notes,
+            reasoning=reasoning,
+            input_sent=input_sent,
+            sai_output=sai_output,          # never truncated — store full SAI text
+            canvas_result=canvas_result,    # never truncated — store full canvas text
         )
         self.record_obj.steps.append(asdict(step))
         self._step_counter += 1

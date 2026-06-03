@@ -1,0 +1,39 @@
+{
+  "run_id": "CTO-1_WF-SA-002_20260521_161749_eb7cc4",
+  "persona_id": "CTO-1",
+  "persona_name": "Elena Volkov",
+  "workflow_id": "WF-SA-002",
+  "workflow_title": "AI-Powered Code Review Pipeline",
+  "start_time": "2026-05-21T16:17:52.930653+00:00",
+  "end_time": "2026-05-21T16:19:28.467460+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-21T16:17:54.143068+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-21T16:19:28.466918+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not found on page. Check screenshots/debug_login_error_no_signin_button.png",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/CTO-1_WF-SA-002_20260521_161749_eb7cc4_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

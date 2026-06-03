@@ -1,0 +1,25 @@
+{
+  "run_id": "IP-1_WF-IP-002_20260529_150805_a8ed77",
+  "persona_id": "IP-1",
+  "journey_id": "WF-IP-002",
+  "workflow_title": "Multi-Client Deployment Dashboard",
+  "started_at": "2026-05-29T15:08:09.858124+00:00",
+  "finished_at": null,
+  "overall_status": "in_progress",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "ETL",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

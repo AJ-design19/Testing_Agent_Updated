@@ -1,0 +1,505 @@
+{
+  "run_id": "AI-1_WF-AI-001_20260522_041827_cb6b7d",
+  "persona_id": "AI-1",
+  "persona_name": "Dr. Sana Torres",
+  "workflow_id": "WF-AI-001",
+  "workflow_title": "ML Model Monitoring System",
+  "start_time": "2026-05-22T04:18:30.530749+00:00",
+  "end_time": "2026-05-22T04:28:56.033623+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T04:18:32.147364+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T04:19:43.855600+00:00",
+      "action_type": "login",
+      "description": "Login completed",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": "URL: https://vanijstaging.adya.ai/orchestrator"
+    },
+    {
+      "step_number": 2,
+      "timestamp": "2026-05-22T04:19:47.521079+00:00",
+      "action_type": "send_prompt",
+      "description": "Sending initial workflow prompt as Dr. Sana Torres",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": "Build an ML model monitoring system with Prometheus metrics, KL-divergence drift detection, and automated Slack alerts on model degradation.",
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 3,
+      "timestamp": "2026-05-22T04:19:58.911296+00:00",
+      "action_type": "send_prompt",
+      "description": "Initial prompt submitted",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 4,
+      "timestamp": "2026-05-22T04:19:59.418158+00:00",
+      "action_type": "psi_loop",
+      "description": "Starting Psi conversation loop",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 5,
+      "timestamp": "2026-05-22T04:21:16.972192+00:00",
+      "action_type": "psi_loop",
+      "description": "Psi complete: 1 Qs answered | completion_detected=False | rounds=3",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 6,
+      "timestamp": "2026-05-22T04:21:16.972532+00:00",
+      "action_type": "canvas_wait",
+      "description": "Waiting for canvas to appear after Psi handoff",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 7,
+      "timestamp": "2026-05-22T04:21:56.284800+00:00",
+      "action_type": "screenshot",
+      "description": "Psi→Canvas handoff screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots\\WF-AI-001_psi_handoff_20260522_042155_491.png",
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 8,
+      "timestamp": "2026-05-22T04:21:56.285834+00:00",
+      "action_type": "canvas_capture",
+      "description": "Capturing canvas for agents: ['AIA', 'AGP', 'ETL', 'App Studio']",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 9,
+      "timestamp": "2026-05-22T04:21:56.286284+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AIA",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 10,
+      "timestamp": "2026-05-22T04:24:07.945485+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AIA': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "AIA",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 11,
+      "timestamp": "2026-05-22T04:24:07.945768+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: AGP",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 12,
+      "timestamp": "2026-05-22T04:28:01.449408+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'AGP': appeared=True, screenshots=0, state=ready",
+      "agent_tab": "AGP",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 13,
+      "timestamp": "2026-05-22T04:28:01.449873+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: ETL",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 14,
+      "timestamp": "2026-05-22T04:28:26.996329+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'ETL': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "ETL",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 15,
+      "timestamp": "2026-05-22T04:28:26.996638+00:00",
+      "action_type": "canvas_agent",
+      "description": "Starting capture: App Studio",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 16,
+      "timestamp": "2026-05-22T04:28:52.543236+00:00",
+      "action_type": "canvas_agent",
+      "description": "Agent 'App Studio': appeared=False, screenshots=0, state=unknown",
+      "agent_tab": "App Studio",
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 17,
+      "timestamp": "2026-05-22T04:28:52.610913+00:00",
+      "action_type": "judge",
+      "description": "Running LLM Judge + Visual Judge evaluation",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 18,
+      "timestamp": "2026-05-22T04:28:56.020474+00:00",
+      "action_type": "judge",
+      "description": "Verdict: fail | Process:1/10 | Output:1/10 | Visual:5/10",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": false,
+      "notes": null
+    },
+    {
+      "step_number": 19,
+      "timestamp": "2026-05-22T04:28:56.033235+00:00",
+      "action_type": "screenshot",
+      "description": "Final screenshot",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [
+    {
+      "role": "user",
+      "text": "Build an ML model monitoring system with Prometheus metrics, KL-divergence drift detection, and automated Slack alerts on model degradation."
+    },
+    {
+      "role": "user",
+      "text": "[CARD ANSWER] Bank reconciliation, Accounts receivable / payable, Revenue recognition, Key financial ratios (margins, EBITDA, etc.), Executive summary / commentary section"
+    }
+  ],
+  "canvas_evidence": {
+    "run_id": "AI-1_WF-AI-001_20260522_041827_cb6b7d",
+    "flow_view": {
+      "appeared": false,
+      "planned_steps": "",
+      "screenshots": [],
+      "screenshot_path": null,
+      "timestamp": "2026-05-22T04:28:52.543642+00:00"
+    },
+    "agents": {
+      "AIA": {
+        "agent": "AIA",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T04:23:42.391563+00:00"
+      },
+      "AGP": {
+        "agent": "AGP",
+        "appeared": true,
+        "state": "ready",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [
+          {
+            "event_type": "agent_tab_appeared",
+            "agent": "AGP",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\WF-AI-001_AGP_tab_appeared_20260522_042156_918.png",
+            "timestamp": "2026-05-22T04:21:57.434651+00:00"
+          },
+          {
+            "event_type": "agent_output_ready",
+            "agent": "AGP",
+            "sub_tab": "",
+            "content_preview": "",
+            "screenshot_path": "screenshots\\WF-AI-001_AGP_agent_ready_20260522_042157_466.png",
+            "timestamp": "2026-05-22T04:21:57.958012+00:00"
+          }
+        ],
+        "timestamp": "2026-05-22T04:24:07.978589+00:00"
+      },
+      "ETL": {
+        "agent": "ETL",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T04:28:01.480083+00:00"
+      },
+      "App Studio": {
+        "agent": "App Studio",
+        "appeared": false,
+        "state": "unknown",
+        "sub_tabs": {},
+        "screenshots": [],
+        "timeline_events": [],
+        "timestamp": "2026-05-22T04:28:27.027025+00:00"
+      }
+    },
+    "canvas_timeline": [
+      {
+        "event_type": "flow_view_appeared",
+        "agent": "flow_view",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\WF-AI-001_flow_view_appeared_20260522_042156_332.png",
+        "timestamp": "2026-05-22T04:21:56.893226+00:00"
+      },
+      {
+        "event_type": "agent_tab_appeared",
+        "agent": "AGP",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\WF-AI-001_AGP_tab_appeared_20260522_042156_918.png",
+        "timestamp": "2026-05-22T04:21:57.434651+00:00"
+      },
+      {
+        "event_type": "agent_output_ready",
+        "agent": "AGP",
+        "sub_tab": "",
+        "content_preview": "",
+        "screenshot_path": "screenshots\\WF-AI-001_AGP_agent_ready_20260522_042157_466.png",
+        "timestamp": "2026-05-22T04:21:57.958012+00:00"
+      },
+      {
+        "event_type": "content_updated",
+        "agent": "unknown",
+        "sub_tab": "",
+        "content_preview": "Month-End Close Automation\nML Model Monitoring System\nDefault Workflow\nClickstream Kafka Pipeline\nLiterature Review Generator\nNew Project Workspace\nSaaS AI Dashboard\nEnterprise Onboarding AI\nEnterprise AI Workflow Platform\nAI Workflow Automation Platform\nNew Project Workspace\nNew Project Workspace\nAI Flashcard App\nAI Flashcard App\nAI Support Chatbot\nAI Chatbot Builder\nAI Support Chatbot\nBuild an M",
+        "screenshot_path": "",
+        "timestamp": "2026-05-22T04:21:57.987647+00:00"
+      }
+    ],
+    "appeared_agents": [
+      "AGP"
+    ],
+    "final_screenshot": null,
+    "capture_timestamp": "2026-05-22T04:28:52.610884+00:00"
+  },
+  "judge_verdict": {
+    "status": "FAIL",
+    "correctness_verdict": "fail",
+    "confidence_score": 80,
+    "correctness_score": 2,
+    "process_score": 1,
+    "output_score": 1,
+    "reliability_score": 6,
+    "ux_score": 4,
+    "reasoning_score": 2,
+    "per_agent_scores": {
+      "AIA": 0,
+      "AGP": 2,
+      "ETL": 0,
+      "App Studio": 0
+    },
+    "process_evaluation": "Psi failed to ask relevant clarifying questions, and the conversation log showed no evidence of discussing model type, feature count, drift detection method preference, or alerting threshold. The user's second turn seemed unrelated to the initial prompt.",
+    "output_evaluation": "The expected output, including Prometheus metrics, KL divergence computation, and Slack alert configuration, was not produced. Only the AGP agent appeared, but its output was not meaningful in the context of the task.",
+    "reasoning_evaluation": "The reasoning quality was poor due to the lack of relevant questions asked by Psi and the absence of coherent output from the agents.",
+    "issues_found": [
+      {
+        "category": "missing_information",
+        "description": "No discussion about model type, feature count, drift detection method preference, or alerting threshold.",
+        "severity": "critical"
+      },
+      {
+        "category": "wrong_workflow",
+        "description": "The user's second turn seemed unrelated to the initial prompt, indicating a potential workflow issue.",
+        "severity": "major"
+      },
+      {
+        "category": "incorrect_answer",
+        "description": "The AGP agent's output did not address the task requirements.",
+        "severity": "major"
+      },
+      {
+        "category": "broken_ui",
+        "description": "The Flow View did not appear as expected.",
+        "severity": "minor"
+      }
+    ],
+    "improvement_flags": [
+      "Improve Psi's question-asking strategy to ensure relevant clarifying questions are asked.",
+      "Enhance agent output to address task requirements.",
+      "Fix the Flow View appearance issue."
+    ],
+    "missing_elements": [
+      "Prometheus metrics export",
+      "KL divergence computation",
+      "Slack alert configuration"
+    ],
+    "hallucination_flags": [
+      "The user's second turn seemed unrelated to the initial prompt, potentially indicating hallucination."
+    ],
+    "empty_sections": [
+      "AIA agent output",
+      "ETL agent output",
+      "App Studio agent output"
+    ],
+    "rationale": "The test run failed due to the lack of relevant questions asked by Psi, the absence of meaningful output from the agents, and the unrelated user input in the second turn. The AGP agent's appearance was not sufficient to produce a correct output. The Flow View did not appear as expected, and the recovery event indicated a modal blocking issue. Overall, the test run demonstrated significant issues with the process, output, and reasoning quality.",
+    "psi_questions_rating": "poor",
+    "agents_that_ran": [
+      "AGP"
+    ],
+    "agents_that_should_have_run": [
+      "AIA",
+      "AGP",
+      "ETL",
+      "App Studio"
+    ],
+    "recovery_needed": true,
+    "recovery_assessment": "A recovery event occurred due to a modal blocking issue, which was successfully resolved by clicking the 'Close' button.",
+    "recommended_workflow_improvements": [
+      "Improve the question-asking strategy for Psi.",
+      "Enhance the output of the AGP agent to address task requirements.",
+      "Fix the Flow View appearance issue."
+    ],
+    "visual_evaluation": {
+      "per_agent": {
+        "AIA": {
+          "agent_name": "AIA",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "AGP": {
+          "agent_name": "AGP",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "ETL": {
+          "agent_name": "ETL",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        },
+        "App Studio": {
+          "agent_name": "App Studio",
+          "agent_visual_verdict": "unclear",
+          "agent_visual_score": 5,
+          "content_complete": true,
+          "still_loading": false,
+          "has_errors": false,
+          "visible_content_summary": "Visual evaluation not available.",
+          "issues": [],
+          "note": "vision_model_unavailable"
+        }
+      },
+      "overall": {
+        "visual_verdict": "unclear",
+        "visual_score": 5,
+        "completion_detected": true,
+        "content_visible": true,
+        "ui_anomalies": [],
+        "output_description": "Visual evaluation skipped — model does not support vision.",
+        "missing_visually": [],
+        "confidence": "low",
+        "note": "vision_model_unavailable"
+      },
+      "evaluated_at": "2026-05-22T04:28:56.020372+00:00"
+    },
+    "visual_score": 5
+  },
+  "overall_status": "fail"
+}

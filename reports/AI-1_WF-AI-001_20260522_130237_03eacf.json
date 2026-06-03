@@ -1,0 +1,39 @@
+{
+  "run_id": "AI-1_WF-AI-001_20260522_130237_03eacf",
+  "persona_id": "AI-1",
+  "persona_name": "Dr. Sana Torres",
+  "workflow_id": "WF-AI-001",
+  "workflow_title": "ML Model Monitoring System",
+  "start_time": "2026-05-22T13:02:40.159384+00:00",
+  "end_time": "2026-05-22T13:03:46.377918+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T13:02:40.852213+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T13:03:46.377461+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/AI-1_WF-AI-001_20260522_130237_03eacf_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}

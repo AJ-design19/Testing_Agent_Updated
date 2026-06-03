@@ -1,0 +1,24 @@
+{
+  "run_id": "ST-1_WF-ST-001_20260529_122718_562633",
+  "persona_id": "ST-1",
+  "journey_id": "WF-ST-001",
+  "workflow_title": "Study Planner App",
+  "started_at": "2026-05-29T12:27:24.206575+00:00",
+  "finished_at": "2026-05-29T12:29:30.408318+00:00",
+  "overall_status": "error",
+  "correctness_score": 0,
+  "process_score": 0,
+  "output_score": 0,
+  "psi_questions_rating": "",
+  "agents_that_ran": [],
+  "agents_expected": [
+    "AIA",
+    "AGP",
+    "App Studio"
+  ],
+  "improvement_flags": [],
+  "missing_elements": [],
+  "judge_rationale": "",
+  "artifact_run_record_path": "",
+  "screenshot_paths": []
+}

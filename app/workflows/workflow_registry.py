@@ -734,9 +734,31 @@ def get_random_workflow(persona_id: Optional[str] = None) -> dict:
 
 
 def load_persona(persona_id: str) -> Optional[dict]:
+    """
+    Load a persona by ID. YAML files (BRD F1 schema) take precedence over JSON.
+    Falls back to legacy JSON format transparently.
+    """
+    from app.personas.persona_schema import normalise_persona, validate_persona
+
     personas_dir = os.path.join(os.path.dirname(__file__), "..", "personas")
+
+    # Try YAML first (BRD F1 preferred format)
+    try:
+        import yaml
+        for ext in (".yaml", ".yml"):
+            yaml_path = os.path.join(personas_dir, f"{persona_id}{ext}")
+            if os.path.exists(yaml_path):
+                with open(yaml_path, "r", encoding="utf-8") as f:
+                    data = yaml.safe_load(f)
+                if isinstance(data, dict):
+                    return normalise_persona(data)
+    except Exception:
+        pass
+
+    # Fallback to JSON
     path = os.path.join(personas_dir, f"{persona_id}.json")
     if not os.path.exists(path):
         return None
-    with open(path, "r") as f:
-        return json.load(f)
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return normalise_persona(data)

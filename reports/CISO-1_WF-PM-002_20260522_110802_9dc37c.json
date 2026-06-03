@@ -1,0 +1,39 @@
+{
+  "run_id": "CISO-1_WF-PM-002_20260522_110802_9dc37c",
+  "persona_id": "CISO-1",
+  "persona_name": "David Okonkwo",
+  "workflow_id": "WF-PM-002",
+  "workflow_title": "Customer Journey Funnel Tracker",
+  "start_time": "2026-05-22T11:08:05.703762+00:00",
+  "end_time": "2026-05-22T11:09:29.130608+00:00",
+  "steps": [
+    {
+      "step_number": 0,
+      "timestamp": "2026-05-22T11:08:06.397793+00:00",
+      "action_type": "login",
+      "description": "Navigating to SAI and logging in",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": null,
+      "success": true,
+      "notes": null
+    },
+    {
+      "step_number": 1,
+      "timestamp": "2026-05-22T11:09:29.129861+00:00",
+      "action_type": "error",
+      "description": "Unexpected error: [Login] Sign In button not visible after page load.\nPage text: Loading...",
+      "agent_tab": null,
+      "sub_tab": null,
+      "content_snapshot": null,
+      "screenshot_path": "screenshots/CISO-1_WF-PM-002_20260522_110802_9dc37c_fatal_error.png",
+      "success": false,
+      "notes": null
+    }
+  ],
+  "psi_conversation": [],
+  "canvas_evidence": {},
+  "judge_verdict": null,
+  "overall_status": "error"
+}
